@@ -1,0 +1,74 @@
+.login-box-body {
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.img-xs {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+.img-md {
+    width: 100%;
+    min-width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* MODAL */
+
+.modal-danger {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+}
+.modal-primary {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #007bff;
+}
+
+
+.min-width1 {
+    min-width: 130px;
+    max-width: 130px;
+}
+
+.min-width2 {
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.ordem {
+    font-size: 1.5rem;
+}
+  
+.input-symbol-real {
+    position: relative;
+}
+.input-symbol-real input {
+    padding-left:20px;
+}
+.input-symbol-real:before {
+    position: absolute;
+    bottom: 7px;
+    content:"R$";
+    left: 5px;
+}
+
+
+.grafico {
+    width: 100%; 
+    min-height: 450px;
+  }
+
+  .filtro-width{
+      max-width: 95px;
+  }
+
+#example1{
+    vertical-align: center!important;
+}
