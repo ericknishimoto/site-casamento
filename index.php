@@ -327,7 +327,7 @@ if ($valor == 0) {
     </script>
     <script>
       let bg2 = document.querySelector("#mensagens");
-      bg2.style.background= "url('img/bg-2.jpg')";
+      bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('img/bg-2.jpg')";
       bg2.style.backgroundRepeat = "no-repeat";
       bg2.style.backgroundAttachment = "fixed";
       bg2.style.backgroundPosition = "center center";
