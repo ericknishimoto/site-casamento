@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TrampoAdmin</title>
+  <title>Meu site</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -19,20 +19,16 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-   <!-- daterange picker -->
-   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap datepicker -->
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-   <!-- CKEditor 4 -->
-   <script src="//cdn.ckeditor.com/4.10.1/full/ckeditor.js"></script>
+  <!-- CKEditor 4 -->
+  <script src="//cdn.ckeditor.com/4.10.1/full/ckeditor.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="dist/css/style.css">
   <link rel="stylesheet" href="dist/css/espacamento.css">
@@ -57,11 +53,11 @@
     <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">
-      <b>T</b> | A
+      <b>M</b>S
       </span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-      <b>Trampo</b> | Admin
+      <b>Meu</b> site
       </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -75,12 +71,6 @@
         <ul class="nav navbar-nav">
           <!-- User Account: style can be found in dropdown.less -->
 <?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
-          <li class="user user-menu">
-            <a href="form-novo-lancamento">
-
-              <span>Novo Lançamento</span>
-            </a>
-          </li>
           <li class="dropdown user user-menu hidden-xs">
             <a href="cadastro-usuarios">
               <img src="dist/img/user.png" class="user-image" alt="User Image">
@@ -112,50 +102,8 @@
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">PRINCIPAL</li>
 <?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
-        <li id="dashboard">
-          <a href="dashboard">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-          </a>
-        </li>
-<?php } ?>
-        <li id="lancamentos">
-          <a href="todos-lancamentos">
-            <i class="fa fa-list"></i> <span>Lançamentos</span>
-          </a>
-        </li>    
-<?php if ($_SESSION["usuario_permissao"] == "admin"){?>
-        <li id="relatorios">
-          <a href="#">
-            <i class="fa fa-line-chart"></i> <span>Relatórios</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">EM DEV</small>
-            </span>
-          </a>
-        </li>
         <li class="header">CONFIGURAÇÕES</li>
-        <li class="treeview" id="cadastros">
-            <a href="#">
-              <i class="fa fa fa-edit"></i> <span>Cadastros Gerais</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li id="motoristas"><a href="cadastro-motoristas"><i class="fa fa-circle-o"></i> Motoristas</a></li>
-              <li id="empresas"><a href="cadastro-empresas"><i class="fa fa-circle-o"></i> Empresas</a></li>
-              <li id="produtos"><a href="cadastro-produtos"><i class="fa fa-circle-o"></i> Produtos</a></li>
-              <li id="servicos"><a href="cadastro-servicos"><i class="fa fa-circle-o"></i> Serviços</a></li>
-            </ul>
-          </li>
-        <li id="usuarios"><a href="cadastro-usuarios"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
-        <li id="regras"><a href="#">
-          <i class="fa fa-cogs"></i> <span>Regras de Negócio</span>
-          <span class="pull-right-container">
-            <small class="label pull-right bg-red">EM DEV</small>
-          </span>
-        </a></li>
         <li id="regras"><a href="meusite">
           <i class="fa fa-desktop"></i> <span>Meu site</span>
           <span class="pull-right-container">

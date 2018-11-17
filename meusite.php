@@ -6,6 +6,7 @@ require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
+$mensagens = listaMensagens($conexao);
 
 ?>
  <!-- Content Wrapper. Contains page content -->
@@ -26,13 +27,13 @@ $infos = listaMeusite($conexao);
     <section class="content">
 
 <!-- //Alert de alteração confirmada -->
-<?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
+<?php if(isset($_GET["confirmacao"]) && $_GET["confirmacao"]==true) {
   ?>
     <div class="row">
       <div class="col-xs-8">
       <div class="box box-success box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Site alterado</h3>
+              <h3 class="box-title">Mensagem confirmada</h3>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
@@ -40,8 +41,33 @@ $infos = listaMeusite($conexao);
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            Informações alteradas com sucesso!
-            <a href="index" target="_blank"> Veja as alterações</a>
+            A mensagem será incluída no site principal.
+            <a href="index#mensagens" target="_blank"> Veja as alterações</a>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+  <?php
+  }
+?>
+
+<?php if(isset($_GET["confirmacao"]) && $_GET["confirmacao"]=='0') {
+  ?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-default box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Mensagem pendente</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            A mensagem será removida no site principal.
+            <a href="index#mensagens" target="_blank"> Veja as alterações</a>
             </div>
             <!-- /.box-body -->
           </div>
@@ -124,7 +150,7 @@ $infos = listaMeusite($conexao);
           </div>
         </div>
 
-        <!-- Serviços -->
+        <!-- Seção #01 -->
         <div class="box collapsed-box">
           <div class="box-header with-border">
             <h3 class="box-title">Seção #01</h3>
@@ -171,10 +197,10 @@ $infos = listaMeusite($conexao);
           </div>
         </div>
 
-        <!-- Seção #02 -->
-        <div class="box collapsed-box">
+        <!-- Mensagens -->
+        <div class="box collapsed-box mensagens">
           <div class="box-header with-border">
-            <h3 class="box-title">Seção #02</h3>
+            <h3 class="box-title">Mensagens</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -184,114 +210,70 @@ $infos = listaMeusite($conexao);
           </div>
           <!-- /.box-header -->
           <div class="box-body pad" style="">
+            <div class="col-md-6">
+              <div class="form-group">
+                <p>Título:</p>
+                <input value="<?= ($infos['mensagens_titulo']) ?>" type="text" name="mensagens_titulo" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <p>Subtítulo:</p>
+                <input value="<?= ($infos['mensagens_subtitulo']) ?>" type="text" name="mensagens_subtitulo" class="form-control">
+              </div>
+            </div>
             <div class="box-body mb-1">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <p>Subtítulo:</p>
-                    <input value="<?= ($infos['subtitulo_trabalhos']) ?>" type="text" name="subtitulo_trabalhos" class="form-control">
-                  </div>
-                </div>
-              </div>
-
-              <!-- Trabalho1 -->
-              <div class="box-body">
-                <h5 ><b>Trabalho #1</b></h5>
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Imagem:</p>
-                      <img src="upload/<?= ($infos['trabalho1_imagem']) ?>" class="thumbnail img-rounded img-xs"/>
-                      <input value="<?= ($infos['trabalho1_imagem']) ?>" type="file" name="trabalho1_imagem" class="form-control-file">
-                      <input value="<?= ($infos['trabalho1_imagem']) ?>" type="hidden" name="trabalho1_imagem_anterior">
+                    <div class="col-xs-12">
+                    <p>Aprovação de mensagens:</p>
+                          <table id="tabela" class="table table-bordered table-striped table-hover">
+                            <thead>
+                            <tr>
+                              <th>#ID</th>
+                              <th>Nome</th>
+                              <th>Mensagem</th>
+                              <th>Aprovada</th>
+                              <th class="text-center">Ações</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+            
+                            <?php
+                            foreach ($mensagens as $mensagem) {
+                            ?>
+            
+                                  <td><?= $mensagem['id'] ?></td>
+                                  <td><?= $mensagem['nome'] ?></td>
+                                  <td><?= $mensagem['mensagem'] ?></td>
+                                  <td>
+                                  <?php
+                                    if($mensagem['confirmacao'] == 1) {
+                                  ?>
+                                    Confirmado
+                                  <?php
+                                    } else {
+                                  ?>
+                                    Pendente
+                                  <?php
+                                    }
+                                  ?>
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="confirma-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-success mr-1">Aceitar</a>
+                                    <a href="nega-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1">Negar</a>
+                                  </td>
+                              </tr>
+            
+                            <?php
+                            }
+                            ?>
+                            </tbody>
+                          </table>
+                  
                     </div>
+                    <!-- /.col -->
                   </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Título:</p>
-                      <input value="<?= ($infos['trabalho1_titulo']) ?>" type="text" name="trabalho1_titulo" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="form-group">
-                        <p>Subtítulo:</p>
-                        <input value="<?= ($infos['trabalho1_subtitulo']) ?>" type="text" name="trabalho1_subtitulo" class="form-control">
-                      </div>
-                  </div>
-                  <div class="col-md-8">
-                      <div class="form-group">
-                        <p>Texto:</p>
-                        <textarea rows="5" type="text" name="trabalho1_texto" class="form-control"><?= ($infos['trabalho1_texto']) ?></textarea>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Trabalho2 -->
-              <div class="box-body">
-                <h5 ><b>Trabalho #2</b></h5>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Imagem:</p>
-                      <img src="upload/<?= ($infos['trabalho2_imagem']) ?>" class="thumbnail img-rounded img-xs"/>
-                      <input value="<?= ($infos['trabalho2_imagem']) ?>" type="file" name="trabalho2_imagem" class="form-control-file">
-                      <input value="<?= ($infos['trabalho2_imagem']) ?>" type="hidden" name="trabalho2_imagem_anterior">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Título:</p>
-                      <input value="<?= ($infos['trabalho2_titulo']) ?>" type="text" name="trabalho2_titulo" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="form-group">
-                        <p>Subtítulo:</p>
-                        <input value="<?= ($infos['trabalho2_subtitulo']) ?>" type="text" name="trabalho2_subtitulo" class="form-control">
-                      </div>
-                  </div>
-                  <div class="col-md-8">
-                      <div class="form-group">
-                        <p>Texto:</p>
-                        <textarea rows="5" type="text" name="trabalho2_texto" class="form-control"><?= ($infos['trabalho2_texto']) ?></textarea>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Trabalho3 -->
-              <div class="box-body">
-                <h5 ><b>Trabalho #3</b></h5>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Imagem:</p>
-                      <img src="upload/<?= ($infos['trabalho3_imagem']) ?>" class="thumbnail img-rounded img-xs"/>
-                      <input value="<?= ($infos['trabalho3_imagem']) ?>" type="file" name="trabalho3_imagem" class="form-control-file">
-                      <input value="<?= ($infos['trabalho3_imagem']) ?>" type="hidden" name="trabalho3_imagem_anterior">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Título:</p>
-                      <input value="<?= ($infos['trabalho3_titulo']) ?>" type="text" name="trabalho3_titulo" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                      <div class="form-group">
-                        <p>Subtítulo:</p>
-                        <input value="<?= ($infos['trabalho3_subtitulo']) ?>" type="text" name="trabalho3_subtitulo" class="form-control">
-                      </div>
-                  </div>
-                  <div class="col-md-8">
-                      <div class="form-group">
-                        <p>Texto:</p>
-                        <textarea rows="5" type="text" name="trabalho3_texto" class="form-control"><?= ($infos['trabalho3_texto']) ?></textarea>
-                      </div>
-                  </div>
-                </div>
-              </div>
+                  <!-- /.row -->
 
             </div> 
           </div>
@@ -380,3 +362,36 @@ $infos = listaMeusite($conexao);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- MODAL ALTERAR -->
+<div class="modal fade" id="modal-altera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-success">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Alterar Empresa</h4>
+        </div>
+        <div class="modal-body">
+          <form action="altera-empresa.php" id="form-altera" method="POST">
+          <input type="hidden" name="id" class="altera-id"/>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group mt-1">
+                      <label>Nome:</label>
+                      <input type="text" required name="nome" class="form-control altera-nome">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" form="form-altera" class="btn btn-success" value="Submit">Alterar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+</div>

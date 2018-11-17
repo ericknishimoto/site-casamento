@@ -3,6 +3,7 @@ require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
+$mensagens = listaMensagens($conexao);
 
 if (($infos['trabalho1_imagem']) == "") {
   $imagemTrabalho1 = "noimage.jpg";
@@ -81,10 +82,10 @@ if ($valor == 0) {
           Menu
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">           
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Mensagens</a>
+              <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Lista</a>
@@ -101,10 +102,11 @@ if ($valor == 0) {
     <header class="masthead animated fadeIn slow">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-heading"><?= $infos['titulo_banner'] ?></div>
-          <div class="intro-lead-in text-uppercase mt-5">"<?= $mensagem ?>"</div>
-          <div class="intro-lead-in">- <?=  date('d.m.Y', strtotime($infos['data_casamento'])) ?> -</div>
-          <a class="seta-inicio js-scroll-trigger" href="#section01"><i class="fas fa-angle-down animated pulse infinite"></i></a>
+          <div class="intro-welcome animated fadeIn delay-1s">Sejam bem vindos!</div>
+          <div class="intro-heading animated fadeIn delay-1s"><?= $infos['titulo_banner'] ?></div>
+          <div class="intro-lead text-uppercase mt-5 animated fadeIn delay-1s"><?= $mensagem ?></div>
+          <div class="intro-lead-in animated fadeIn delay-1s">– <?=  date('d.m.Y', strtotime($infos['data_casamento'])) ?> –</div>
+          <a class="seta-inicio js-scroll-trigger animated fadeIn delay-1s" href="#section01"><i class="fas fa-angle-down animated pulse infinite"></i></a>
         </div>
       </div>
   </header>
@@ -125,67 +127,55 @@ if ($valor == 0) {
         </div>
         <div class="row text-center">
           <div class="col-md-12">
-            <p class="text-muted"><?= ($infos['section01_texto']) ?></p>
+            <p class="text-muted mb-5"><?= ($infos['section01_texto']) ?></p>
+            <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Mensagens -->
-    <section class="bg-light" id="portfolio">
+    <section class="bg-light" id="mensagens">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Deixe sua mensagem de carinho para nós</h2>
-            <h3 class="section-subheading text-muted">Palavras são carinhos doados. Obrigado por nos dar o seu carinho. Iremos lembrar para sempre deste momento tão esperado.</h3>
+            <h2 class="section-heading" style="color:white;"><?= ($infos['mensagens_titulo']) ?></h2>
+            <h3 class="section-subheading" style="color:white;"><?= ($infos['mensagens_subtitulo']) ?></h3>
           </div>
         </div>
+
+        <div class="row d-flex justify-content-center">
+
+        <?php
+        foreach ($mensagens as $mensagem) {
+          
+          if ( $mensagem['confirmacao'] == 1) {
+        ?>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <p class="card__texto text-center">
+                <?= ($mensagem['mensagem']) ?>
+                </p>
+                <p class="card__autor text-center"><?= ($mensagem['nome']) ?></p>
+                <p class="card__data text-center"><?= date('d/m/Y', strtotime($mensagem['data'])) ?></p>
+              </div>
+            </div>
+        <?php 
+          }
+        }
+        ?>
+
+        </div>
+
         <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid imageTrabalho" src="upload/<?= $imagemTrabalho1 ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4><?= ($infos['trabalho1_titulo']) ?></h4>
-              <p class="text-muted"><?= ($infos['trabalho1_subtitulo']) ?></p>
+            <div class="col-md-12 text-center botao-mensagem">
+              <button type="button" class="btn" data-toggle="modal" data-target="#modal-nova-mensagem">
+                <span class="text-muted">Enviar Mensagem</span>
+              </button>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid imageTrabalho" src="upload/<?= $imagemTrabalho2 ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4><?= ($infos['trabalho2_titulo']) ?></h4>
-              <p class="text-muted"><?= ($infos['trabalho2_subtitulo']) ?></p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid imageTrabalho" src="upload/<?= $imagemTrabalho3 ?>" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4><?= ($infos['trabalho3_titulo']) ?></h4>
-              <p class="text-muted"><?= ($infos['trabalho3_subtitulo']) ?></p>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
+
+      </div>  
     </section>
 
     <!-- Sobre -->
@@ -265,84 +255,45 @@ if ($valor == 0) {
     <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- MODAL NOVO -->
+   <div class="modal fade" id="modal-nova-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase"><?= ($infos['trabalho1_titulo']) ?></h2>
-                  <p class="item-intro text-muted"><?= ($infos['trabalho1_subtitulo']) ?></p>
-                  <img class="img-fluid imageModalTrabalho d-block mx-auto" src="upload/<?= $imagemTrabalho1 ?>" alt="">
-                  <p><?= ($infos['trabalho1_texto']) ?></p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <div class="col-lg-12">
+                  <div class="modal-body">
+                  <form action="adiciona-mensagem.php" id="form" method="POST">
+                      <div class="row">
+                        <div class="col-xs-12 p-4">
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase"><?= ($infos['trabalho2_titulo']) ?></h2>
-                  <p class="item-intro text-muted"><?= ($infos['trabalho2_subtitulo']) ?></p>
-                  <img class="img-fluid imageModalTrabalho d-block mx-auto" src="upload/<?= $imagemTrabalho2 ?>" alt="">
-                  <p><?= ($infos['trabalho2_texto']) ?></p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                          <div class="row">
+                            <div class="col-12">
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase"><?= ($infos['trabalho3_titulo']) ?></h2>
-                  <p class="item-intro text-muted"><?= ($infos['trabalho3_subtitulo']) ?></p>
-                  <img class="img-fluid imageModalTrabalho d-block mx-auto" src="upload/<?= $imagemTrabalho3 ?>" alt="">
-                  <p><?= ($infos['trabalho3_texto']) ?></p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
+                              <div class="form-group mt-1 text-center">
+                                  <label>Escreva sua mensagem</label>
+                              </div>
+
+                              <div class="form-group mt-1">
+                                  <label>Nome:</label>
+                                  <input type="text" required name="nome" class="form-control">
+                              </div>
+                            </div>
+
+                            <div class="col-12">
+                              <div class="form-group mt-1">
+                                  <label>Mensagem:</label>
+                                  <textarea type="text" required name="mensagem" class="form-control"></textarea>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="col-12 text-right">
+                            <button class="btn text-muted" type="submit" form="form" value="Submit">Enviar</button>
+                        </div>
+                      </div>
+                    </form>
                 </div>
               </div>
             </div>
@@ -368,12 +319,58 @@ if ($valor == 0) {
     <!-- Altera BG -->
     <script>
       let bg = document.querySelector(".masthead");
-      bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, .6)),url('upload/<?= $infos['cabecalho_imagem']?>')";
+      bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['cabecalho_imagem']?>')";
       bg.style.backgroundRepeat = "no-repeat";
       bg.style.backgroundAttachment = "fixed";
       bg.style.backgroundPosition = "center center";
       bg.style.backgroundSize = "cover";
     </script>
+    <script>
+      let bg2 = document.querySelector("#mensagens");
+      bg2.style.background= "url('img/bg-2.jpg')";
+      bg2.style.backgroundRepeat = "no-repeat";
+      bg2.style.backgroundAttachment = "fixed";
+      bg2.style.backgroundPosition = "center center";
+      bg2.style.backgroundSize = "cover";
+    </script>
+
+<?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
+  ?>
+  <script>
+    $( document ).ready(function() {
+      $("#modal-confirm").modal();
+  });
+  </script>
+
+<div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="p-4">
+                    <div class="row">
+                      <h4>Mensagem enviada!</h4>
+                      <br>
+                      <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
+                    </div>
+                  </div>
+                  <div class="col-12 text-right">
+                      <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
+    }
+  ?>
 
 
   </body>

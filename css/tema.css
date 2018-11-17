@@ -7,3 +7,59 @@
   .seta-inicio:hover {
     color:white;
   }
+
+  .seta-section {
+    font-size: 3rem;
+    color:gray;
+    transition: .5s;
+  }
+  
+  .seta-section:hover {
+    color:gray;
+  }
+
+.intro-welcome {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 4rem;
+}
+
+.intro-lead {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.card {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.671);
+}
+
+.card__texto {
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.card__autor {
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.card__data {
+  font-style: italic;
+  font-size: .9rem;
+  margin-top: -20px;
+}
+
+.botao-mensagem {
+  margin-top: 4rem;
+}
+
+span, .btn {
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: rgb(236, 236, 236);
+}

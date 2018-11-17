@@ -31,7 +31,8 @@ require_once 'banco-meusite.php';
       $section01_titulo = $_POST["section01_titulo"];
       $section01_subtitulo = $_POST["section01_subtitulo"];
       $section01_texto = $_POST["section01_texto"];
-      $section02_texto = $_POST["section02_texto"];
+      $mensagens_titulo = $_POST["mensagens_titulo"];
+      $mensagens_subtitulo = $_POST["mensagens_subtitulo"];
 
       if($_FILES['cabecalho_imagem']['name'] != "") {
         $extensao = strtolower(substr($_FILES['cabecalho_imagem']['name'], -4)); //pega a extensao do arquivo
@@ -77,7 +78,9 @@ require_once 'banco-meusite.php';
       $data_casamento,
       $section01_titulo,
       $section01_subtitulo,
-      $section01_texto
+      $section01_texto,
+      $mensagens_titulo,
+      $mensagens_subtitulo
       ))
       {
         header ("Location: meusite?alteracao=true");
