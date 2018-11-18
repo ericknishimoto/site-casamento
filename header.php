@@ -69,16 +69,6 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-<?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
-          <li class="dropdown user user-menu hidden-xs">
-            <a href="cadastro-usuarios">
-              <img src="dist/img/user.png" class="user-image" alt="User Image">
-              <span><?= $_SESSION["usuario_nome"] ?></span>
-            </a>
-          </li>
-<?php } ?>
-          <!-- Control Sidebar Toggle Button -->
           <li>
             <a href="logout">Sair</i></a>
           </li>
@@ -103,9 +93,19 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
 <?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
-        <li class="header">CONFIGURAÇÕES</li>
+        <li class="header">PRINCIPAL</li>
         <li id="regras"><a href="meusite">
           <i class="fa fa-desktop"></i> <span>Meu site</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
+        <li id="regras"><a href="mensagens">
+          <i class="fa fa-comment-o"></i> <span>Mensagens</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
+        <li id="regras"><a href="fotos">
+          <i class="fa fa-photo"></i> <span>Fotos</span>
           <span class="pull-right-container">
           </span>
         </a></li>

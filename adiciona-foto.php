@@ -24,12 +24,18 @@ require_once 'banco-meusite.php';
     
       <?php 
       
-      $id = $_GET["id"];
-      $confirmacao = false;
+      if($_FILES['nova_foto']['name'] != "") {
+        $extensao = strtolower(substr($_FILES['nova_foto']['name'], -4)); //pega a extensao do arquivo
+        $nova_foto = md5('nova_foto') . $extensao; //define o nome do arquivo
+        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+        move_uploaded_file($_FILES['nova_foto']['tmp_name'], $diretorio.$nova_foto); //efetua o upload
+      } else {
+        header ("Location: fotos?foto=0");
+      }
       
-      if(confirmaMensagem($conexao, $id, $confirmacao))
+      if(insereFoto($conexao,$nova_foto))
       {
-        header ("Location: mensagens");
+        header ("Location: fotos?foto=true");
         die();
       }else{ 
       ?>

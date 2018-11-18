@@ -24,10 +24,23 @@ require_once 'banco-meusite.php';
     
       <?php 
       
-      $id = $_GET["id"];
-      $confirmacao = false;
-      
-      if(confirmaMensagem($conexao, $id, $confirmacao))
+      $mensagens_titulo = $_POST["mensagens_titulo"];
+      $mensagens_subtitulo = $_POST["mensagens_subtitulo"];
+
+      if($_FILES['mensagens_imagem']['name'] != "") {
+        $extensao = strtolower(substr($_FILES['mensagens_imagem']['name'], -4)); //pega a extensao do arquivo
+        $mensagens_imagem = md5('mensagens_imagem') . $extensao; //define o nome do arquivo
+        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+        move_uploaded_file($_FILES['mensagens_imagem']['tmp_name'], $diretorio.$mensagens_imagem); //efetua o upload
+      } else {
+        $mensagens_imagem = $_POST['mensagens_imagem_anterior'];
+      }
+
+      if(alteraMensagens($conexao,
+      $mensagens_titulo,
+      $mensagens_subtitulo,
+      $mensagens_imagem
+      ))
       {
         header ("Location: mensagens");
         die();

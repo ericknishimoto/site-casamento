@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
 .seta-inicio {
     font-size: 3rem;
     color:rgba(255, 255, 255, 0.555);
     transition: .5s;
   }
   
-  .seta-inicio:hover {
-    color:white;
-  }
+.seta-inicio:hover {
+  color:white;
+}
 
-  .seta-section {
-    font-size: 3rem;
-    color:gray;
-    transition: .5s;
-  }
-  
-  .seta-section:hover {
-    color:gray;
-  }
+.section01 {
+  position: relative
+}
+
+.seta-section {
+  bottom: 5rem;
+  color:gray;
+  font-size: 3rem;
+  position: absolute;
+  transition: .5s;
+}
+
+.seta-section:hover {
+  color:gray;
+}
 
 .intro-welcome {
   color: white;
@@ -33,20 +41,23 @@
 
 .card {
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.671);
+  background-color: rgba(255, 255, 255, 0.836);
 }
 
 .card__texto {
+  color: rgba(0, 0, 0, 0.658);
   font-size: 1rem;
   padding: 15px;
 }
 
 .card__autor {
+  color: rgba(0, 0, 0, 0.658);
   font-style: italic;
   font-size: .9rem;
 }
 
 .card__data {
+  color: rgba(0, 0, 0, 0.658);
   font-style: italic;
   font-size: .9rem;
   margin-top: -20px;
@@ -56,10 +67,44 @@
   margin-top: 4rem;
 }
 
+.botao-mensagem>.btn {
+  background-color: rgba(255, 255, 255, 0.151);
+  border: 2px solid white;
+  color: white;
+}
+
 span, .btn {
   font-weight: 500;
 }
 
-.btn:hover {
-  background-color: rgb(236, 236, 236);
+hr {
+border-top: 1.1px solid rgba(0,0,0,.1);
+}
+
+.btn:hover{
+  background-color: rgba(128, 128, 128, 0.151);
+}
+
+.botao-mensagem>.btn:hover{
+  background-color: white;
+  color: gray;
+}
+
+div#modal-confirm {
+  padding-top: 30vh;
+}
+
+.titulo-modal {
+  color: gray;
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

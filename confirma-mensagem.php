@@ -29,7 +29,7 @@ require_once 'banco-meusite.php';
       
       if(confirmaMensagem($conexao, $id, $confirmacao))
       {
-        header ("Location: meusite.php?confirmacao=true");
+        header ("Location: mensagens");
         die();
       }else{ 
       ?>

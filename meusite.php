@@ -7,6 +7,7 @@ require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
 $mensagens = listaMensagens($conexao);
+$fotos = listaFotos($conexao);
 
 ?>
  <!-- Content Wrapper. Contains page content -->
@@ -25,60 +26,8 @@ $mensagens = listaMensagens($conexao);
 
     <!-- Main content -->
     <section class="content">
-
-<!-- //Alert de alteração confirmada -->
-<?php if(isset($_GET["confirmacao"]) && $_GET["confirmacao"]==true) {
-  ?>
-    <div class="row">
-      <div class="col-xs-8">
-      <div class="box box-success box-solid">
-            <div class="box-header with-border">
-              <h3 class="box-title">Mensagem confirmada</h3>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-              <!-- /.box-tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-            A mensagem será incluída no site principal.
-            <a href="index#mensagens" target="_blank"> Veja as alterações</a>
-            </div>
-            <!-- /.box-body -->
-          </div>
-      </div>
-    </div>
-  <?php
-  }
-?>
-
-<?php if(isset($_GET["confirmacao"]) && $_GET["confirmacao"]=='0') {
-  ?>
-    <div class="row">
-      <div class="col-xs-8">
-      <div class="box box-default box-solid">
-            <div class="box-header with-border">
-              <h3 class="box-title">Mensagem pendente</h3>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-              <!-- /.box-tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-            A mensagem será removida no site principal.
-            <a href="index#mensagens" target="_blank"> Veja as alterações</a>
-            </div>
-            <!-- /.box-body -->
-          </div>
-      </div>
-    </div>
-  <?php
-  }
-?>
-
       <form action="altera-meusite.php" method="POST" enctype="multipart/form-data">
-       
+
         <!-- Cabecalho -->
         <div class="box collapsed-box">
           <div class="box-header with-border">
@@ -95,39 +44,39 @@ $mensagens = listaMensagens($conexao);
             <div class="box-body mb-1">
               <div class="row">
 
-                <div class="col-md-3">
-                    <div class="form-group">
-                      <p>Texto logo:</p>
-                      <input value="<?= ($infos['brand']) ?>" type="text" name="brand" class="form-control">
-                    </div>
-                </div>
-
                 <div class="col-md-6">
                     <div class="form-group">
-                      <p>Título no navegador:</p>
-                      <input value="<?= ($infos['titulo']) ?>" type="text" name="titulo" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                      <p>Imagem cabeçalho:</p>
+                      <h4>Imagem do cabeçalho:</h4>
                       <img src="upload/<?= ($infos['cabecalho_imagem']) ?>" class="thumbnail img-rounded img-md"/>
                       <input value="<?= ($infos['cabecalho_imagem']) ?>" type="file" name="cabecalho_imagem" class="form-control-file">
                       <input value="<?= ($infos['cabecalho_imagem']) ?>" type="hidden" name="cabecalho_imagem_anterior">
                     </div>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="form-group">
-                      <p>Título banner</p>
+                      <h4>Texto logo:</h4>
+                      <input value="<?= ($infos['brand']) ?>" type="text" name="brand" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <h4>Título no navegador:</h4>
+                      <input value="<?= ($infos['titulo']) ?>" type="text" name="titulo" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <h4>Título principal no banner</h4>
                       <input value="<?= ($infos['titulo_banner']) ?>" type="text" name="titulo_banner" class="form-control">
                     </div>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="form-group">
-                      <p>Data do casamento:</p>
+                      <h4>Data do casamento:</h4>
                       <input value="<?= ($infos['data_casamento']) ?>" type="date" name="data_casamento" class="form-control">
                     </div>
                 </div>
@@ -140,7 +89,7 @@ $mensagens = listaMensagens($conexao);
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                    Talvez seja necessário pressionar "CTRl + F5" para atualizar as alterações.
+                    Talvez seja necessário pressionar "CTRl + F5" para ver as atualizações.
                     </div>
                   <!-- /.box-body -->
                   </div>
@@ -169,13 +118,13 @@ $mensagens = listaMensagens($conexao);
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <p>Título:</p>
+                    <h4>Título:</h4>
                     <input value="<?= ($infos['section01_titulo']) ?>" type="text" name="section01_titulo" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <p>Subtítulo:</p>
+                    <h4>Subtítulo:</h4>
                     <input value="<?= ($infos['section01_subtitulo']) ?>" type="text" name="section01_subtitulo" class="form-control">
                   </div>
                 </div>
@@ -184,7 +133,7 @@ $mensagens = listaMensagens($conexao);
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <p>Texto:</p>                    
+                    <h4>Texto:</h4>                    
                     <textarea type="text" name="section01_texto" class="form-control"><?= ($infos['section01_texto']) ?></textarea>
                       <script>
                         CKEDITOR.replace( 'section01_texto' );
@@ -198,7 +147,7 @@ $mensagens = listaMensagens($conexao);
         </div>
 
         <!-- Mensagens -->
-        <div class="box collapsed-box mensagens">
+        <div class="box collapsed-box">
           <div class="box-header with-border">
             <h3 class="box-title">Mensagens</h3>
             <!-- tools box -->
@@ -210,79 +159,40 @@ $mensagens = listaMensagens($conexao);
           </div>
           <!-- /.box-header -->
           <div class="box-body pad" style="">
+
             <div class="col-md-6">
               <div class="form-group">
-                <p>Título:</p>
+                <h4>Imagem do fundo:</h4>
+                <img src="upload/<?= ($infos['mensagens_imagem']) ?>" class="thumbnail img-rounded img-md"/>
+                <input value="<?= ($infos['mensagens_imagem']) ?>" type="file" name="mensagens_imagem" class="form-control-file">
+                <input value="<?= ($infos['mensagens_imagem']) ?>" type="hidden" name="mensagens_imagem_anterior">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <h4>Título:</h4>
                 <input value="<?= ($infos['mensagens_titulo']) ?>" type="text" name="mensagens_titulo" class="form-control">
               </div>
             </div>
+
             <div class="col-md-6">
               <div class="form-group">
-                <p>Subtítulo:</p>
+                <h4>Subtítulo:</h4>
                 <input value="<?= ($infos['mensagens_subtitulo']) ?>" type="text" name="mensagens_subtitulo" class="form-control">
               </div>
             </div>
-            <div class="box-body mb-1">
-                <div class="row">
-                    <div class="col-xs-12">
-                    <p>Aprovação de mensagens:</p>
-                          <table id="tabela" class="table table-bordered table-striped table-hover">
-                            <thead>
-                            <tr>
-                              <th>#ID</th>
-                              <th>Nome</th>
-                              <th>Mensagem</th>
-                              <th>Aprovada</th>
-                              <th class="text-center">Ações</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-            
-                            <?php
-                            foreach ($mensagens as $mensagem) {
-                            ?>
-            
-                                  <td><?= $mensagem['id'] ?></td>
-                                  <td><?= $mensagem['nome'] ?></td>
-                                  <td><?= $mensagem['mensagem'] ?></td>
-                                  <td>
-                                  <?php
-                                    if($mensagem['confirmacao'] == 1) {
-                                  ?>
-                                    Confirmado
-                                  <?php
-                                    } else {
-                                  ?>
-                                    Pendente
-                                  <?php
-                                    }
-                                  ?>
-                                  </td>
-                                  <td class="text-center">
-                                    <a href="confirma-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-success mr-1">Aceitar</a>
-                                    <a href="nega-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1">Negar</a>
-                                  </td>
-                              </tr>
-            
-                            <?php
-                            }
-                            ?>
-                            </tbody>
-                          </table>
-                  
-                    </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
 
+            <d
             </div> 
+
           </div>
         </div>
         
-        <!-- Sobre -->
-        <div class="box collapsed-box">
+        <!-- Fotos -->
+        <div id="fotos" class="box collapsed-box">
           <div class="box-header with-border">
-            <h3 class="box-title">Sobre</h3>
+            <h3 class="box-title">Fotos</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -291,29 +201,22 @@ $mensagens = listaMensagens($conexao);
             <!-- /. tools -->
           </div>
           <!-- /.box-header -->
-          <div class="box-body pad" style="">
-            <div class="box-body mb-1">
-              <div class="row">
+          <div class="box-body pad">
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                      <p>Subtítulo:</p>
-                      <input value="<?= ($infos['subtitulo_sobre']) ?>" type="text" name="subtitulo_sobre" class="form-control">
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="form-group">
-                      <p>Texto:</p>
-                      <textarea type="text" name="sobre_texto" class="form-control"><?= ($infos['sobre_texto']) ?></textarea>
-                      <script>
-                        CKEDITOR.replace( 'sobre_texto' );
-                      </script>
-                    </div>
-                </div>
-
+            <div class="col-md-6">
+              <div class="form-group">
+                <h4>Título:</h4>
+                <input value="<?= ($infos['fotos_titulo']) ?>" type="text" name="fotos_titulo" class="form-control">
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <h4>Subtítulo:</h4>
+                <input value="<?= ($infos['fotos_subtitulo']) ?>" type="text" name="fotos_subtitulo" class="form-control">
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -334,7 +237,7 @@ $mensagens = listaMensagens($conexao);
               <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                      <p>Subtítulo:</p>
+                      <h4>Subtítulo:</h4>
                       <input value="<?= ($infos['subtitulo_contato']) ?>" type="text" name="subtitulo_contato" class="form-control">
                     </div>
                 </div>
@@ -348,7 +251,6 @@ $mensagens = listaMensagens($conexao);
         <div class="row">
           <div class="center-block text-center">
             <input type="submit" class="btn btn-success margin-bottom margin" value="Alterar">
-            <a href="dashboard" class="btn btn-default margin-bottom margin">Voltar</a>
           </div>
         </div>
         

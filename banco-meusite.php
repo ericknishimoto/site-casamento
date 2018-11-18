@@ -17,6 +17,16 @@ function listaMensagens($conexao) {
     return $mensagens;
 }
 
+function listaFotos($conexao) {
+    $fotos = array();
+    $query = "select * from fotos";
+    $resultado = mysqli_query($conexao, $query);
+    while ($foto = mysqli_fetch_assoc($resultado)) {
+        array_push($fotos, $foto);
+    }
+    return $fotos;
+}
+
 function alteraMeusite ($conexao,
 $titulo,
 $brand,
@@ -27,8 +37,12 @@ $section01_titulo,
 $section01_subtitulo,
 $section01_texto,
 $mensagens_titulo,
-$mensagens_subtitulo
+$mensagens_subtitulo,
+$mensagens_imagem,
+$fotos_titulo,
+$fotos_subtitulo
 )
+
 { 
 $query = "UPDATE meusite set
 titulo = '{$titulo}',
@@ -40,7 +54,10 @@ section01_titulo = '{$section01_titulo}',
 section01_subtitulo = '{$section01_subtitulo}',
 section01_texto = '{$section01_texto}',
 mensagens_titulo = '{$mensagens_titulo}',
-mensagens_subtitulo = '{$mensagens_subtitulo}'
+mensagens_subtitulo = '{$mensagens_subtitulo}',
+mensagens_imagem = '{$mensagens_imagem}',
+fotos_titulo = '{$fotos_titulo}',
+fotos_subtitulo = '{$fotos_subtitulo}'
 ";
 
 return mysqli_query($conexao, $query);
@@ -62,6 +79,16 @@ function confirmaMensagem ($conexao,$id,$confirmacao) {
     return mysqli_query($conexao, $query);
 }
 
+function insereFoto ($conexao, $nova_foto) { 
+    $query = "INSERT INTO fotos (nome)
+    VALUES ('{$nova_foto}')"; 
+    return mysqli_query($conexao, $query);
+}
+
+function excluiFoto($conexao, $id) {
+    $query = "delete from fotos where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
 
 
 

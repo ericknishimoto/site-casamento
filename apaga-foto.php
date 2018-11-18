@@ -25,17 +25,18 @@ require_once 'banco-meusite.php';
       <?php 
       
       $id = $_GET["id"];
-      $confirmacao = false;
       
-      if(confirmaMensagem($conexao, $id, $confirmacao))
+      if(excluiFoto($conexao,$id))
       {
-        header ("Location: mensagens");
+        header ("Location: fotos?exclusao=true");
         die();
-      }else{ 
+      } elseif(mysqli_errno($conexao)==1451) {
+        header ("Location: fotos?erro=1451");
+      } else { 
       ?>
         <h1>Algo deu errado:</h1>
         <?php
-          printf("Connect failed: %s\n", mysqli_error($conexao));
+          printf("Connect failed: %s\n", mysqli_errno($conexao));
         exit();
       }
       ?>

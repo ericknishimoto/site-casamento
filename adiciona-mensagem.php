@@ -30,7 +30,7 @@ require_once 'banco-meusite.php';
       
       if(insereMensagem($conexao,$nome, $data, $mensagem))
       {
-        header ("Location: index.php?mensagem=true#mensagens");
+        header ("Location: index?mensagem=true#mensagens");
         die();
       }else{ 
       ?>

@@ -4,24 +4,7 @@ require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
 $mensagens = listaMensagens($conexao);
-
-if (($infos['trabalho1_imagem']) == "") {
-  $imagemTrabalho1 = "noimage.jpg";
-} else {
-  $imagemTrabalho1 = ($infos['trabalho1_imagem']);
-}
-
-if (($infos['trabalho2_imagem']) == "") {
-  $imagemTrabalho2 = "noimage.jpg";
-} else {
-  $imagemTrabalho2 = ($infos['trabalho2_imagem']);
-}
-if (
-  ($infos['trabalho3_imagem']) == "") {
-  $imagemTrabalho3 = "noimage.jpg";
-} else {
-  $imagemTrabalho3 = ($infos['trabalho3_imagem']);
-}
+$fotos = listaFotos($conexao);
 
 //Lógica data
 $dataAtual = new DateTime(date('d-m-Y'));
@@ -51,7 +34,7 @@ if ($valor == 0) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= ($infos['titulo']) ?> | (<?= date('d/m/Y', strtotime($infos['data_casamento'])) ?>)</title>
+    <title><?= ($infos['titulo']) ?> (<?= date('d/m/Y', strtotime($infos['data_casamento'])) ?>)</title>
     <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico"/>
 
     <!-- Bootstrap core CSS -->
@@ -112,7 +95,7 @@ if ($valor == 0) {
   </header>
 
     <!-- Section #01 -->
-    <section id="section01">
+    <section id="section01" class="section01 text-center">
       <div class="container mb-3">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -121,17 +104,17 @@ if ($valor == 0) {
           </div>
         </div>
         <div class="d-flex mb-3">
-            <hr class="my-auto flex-grow-1">
+            <hr class="my-auto flex-grow-1" style="color:gray;">
             <div class="px-4" style="color:gray;">♥</div>
-            <hr class="my-auto flex-grow-1">
+            <hr class="my-auto flex-grow-1" style="color:gray;">
         </div>
         <div class="row text-center">
           <div class="col-md-12">
             <p class="text-muted mb-5"><?= ($infos['section01_texto']) ?></p>
-            <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a>
           </div>
         </div>
       </div>
+      <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a>
     </section>
 
     <!-- Mensagens -->
@@ -169,8 +152,8 @@ if ($valor == 0) {
 
         <div class="row">
             <div class="col-md-12 text-center botao-mensagem">
-              <button type="button" class="btn" data-toggle="modal" data-target="#modal-nova-mensagem">
-                <span class="text-muted">Enviar Mensagem</span>
+              <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#modal-nova-mensagem">
+                <span>Enviar Mensagem</span>
               </button>
             </div>
           </div>
@@ -180,16 +163,141 @@ if ($valor == 0) {
 
     <!-- Sobre -->
     <section id="about">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading"><?= ($infos['fotos_titulo']) ?></h2>
+              <h3 class="section-subheading text-muted"><?= ($infos['fotos_subtitulo']) ?></h3>
+            </div>
+          </div>
+
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Sobre</h2>
-            <h3 class="section-subheading text-muted"><?= ($infos['subtitulo_sobre']) ?></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted"><?= ($infos['sobre_texto']) ?></p>
+            
+            <div class="container">
+              <div class="row">
+                <div class="row">
+
+                    <?php
+                    foreach ($fotos as $mensagem) {
+                    
+                      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                          <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                             data-image="<?= ($foto['fotos_titulo']) ?>"
+                             data-target="#image-gallery">
+                              <img class="img-thumbnail"
+                                   src="<?= ($foto['fotos_titulo']) ?>"
+                                   alt="Another alt text">
+                          </a>
+                      </div>
+                      
+                    <?php 
+                    }
+                    ?>
+                       
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+            
+            
+            
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+            
+            
+            
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                               data-target="#image-gallery">
+                                <img class="img-thumbnail"
+                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     alt="Another alt text">
+                            </a>
+                        </div>
+                    </div>
+            
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -252,10 +360,7 @@ if ($valor == 0) {
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-
-    <!-- Modal 1 -->
-    <!-- MODAL NOVO -->
+    <!-- MODAL MSG -->
    <div class="modal fade" id="modal-nova-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -271,7 +376,7 @@ if ($valor == 0) {
                             <div class="col-12">
 
                               <div class="form-group mt-1 text-center">
-                                  <label>Escreva sua mensagem</label>
+                                  <label class="titulo-modal">Escreva sua mensagem!</label>
                               </div>
 
                               <div class="form-group mt-1">
@@ -290,7 +395,8 @@ if ($valor == 0) {
                           </div>
                         </div>
                         <div class="col-12 text-right">
-                            <button class="btn text-muted" type="submit" form="form" value="Submit">Enviar</button>
+                            <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                            <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </form>
@@ -300,6 +406,29 @@ if ($valor == 0) {
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- MODAL FOTO -->
+    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="image-gallery-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                    </button>
+
+                    <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -316,6 +445,9 @@ if ($valor == 0) {
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 
+    <!-- Galeria -->
+    <script src="js/galeria.js"></script>
+
     <!-- Altera BG -->
     <script>
       let bg = document.querySelector(".masthead");
@@ -327,7 +459,7 @@ if ($valor == 0) {
     </script>
     <script>
       let bg2 = document.querySelector("#mensagens");
-      bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('img/bg-2.jpg')";
+      bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['mensagens_imagem']?>";
       bg2.style.backgroundRepeat = "no-repeat";
       bg2.style.backgroundAttachment = "fixed";
       bg2.style.backgroundPosition = "center center";
@@ -341,22 +473,17 @@ if ($valor == 0) {
       $("#modal-confirm").modal();
   });
   </script>
-
+ 
 <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="modal-body">
-                <div class="row">
-                  <div class="p-4">
-                    <div class="row">
-                      <h4>Mensagem enviada!</h4>
-                      <br>
-                      <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
-                    </div>
-                  </div>
+              <div class="modal-body"></div>
+                <div class="row m-3">
+                  <p class="titulo-modal">Mensagem enviada!</p>
+                  <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
                   <div class="col-12 text-right">
                       <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
                   </div>

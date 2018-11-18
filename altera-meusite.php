@@ -33,6 +33,8 @@ require_once 'banco-meusite.php';
       $section01_texto = $_POST["section01_texto"];
       $mensagens_titulo = $_POST["mensagens_titulo"];
       $mensagens_subtitulo = $_POST["mensagens_subtitulo"];
+      $fotos_titulo = $_POST["fotos_titulo"];
+      $fotos_subtitulo = $_POST["fotos_subtitulo"];
 
       if($_FILES['cabecalho_imagem']['name'] != "") {
         $extensao = strtolower(substr($_FILES['cabecalho_imagem']['name'], -4)); //pega a extensao do arquivo
@@ -43,31 +45,13 @@ require_once 'banco-meusite.php';
         $cabecalho_imagem = $_POST['cabecalho_imagem_anterior'];
       }
 
-      if($_FILES['trabalho1_imagem']['name'] != "") {
-        $extensao = strtolower(substr($_FILES['trabalho1_imagem']['name'], -4)); //pega a extensao do arquivo
-        $imagem1 = md5('trabalho1_imagem') . $extensao; //define o nome do arquivo
+      if($_FILES['mensagens_imagem']['name'] != "") {
+        $extensao = strtolower(substr($_FILES['mensagens_imagem']['name'], -4)); //pega a extensao do arquivo
+        $mensagens_imagem = md5('mensagens_imagem') . $extensao; //define o nome do arquivo
         $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
-        move_uploaded_file($_FILES['trabalho1_imagem']['tmp_name'], $diretorio.$imagem1); //efetua o upload
+        move_uploaded_file($_FILES['mensagens_imagem']['tmp_name'], $diretorio.$mensagens_imagem); //efetua o upload
       } else {
-        $imagem1 = $_POST['trabalho1_imagem_anterior'];
-      }
-
-      if($_FILES['trabalho2_imagem']['name'] != "") {
-        $extensao = strtolower(substr($_FILES['trabalho2_imagem']['name'], -4)); //pega a extensao do arquivo
-        $imagem2 = md5('trabalho2_imagem') . $extensao; //define o nome do arquivo
-        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
-        move_uploaded_file($_FILES['trabalho2_imagem']['tmp_name'], $diretorio.$imagem2); //efetua o upload
-      } else {
-        $imagem2 = $_POST['trabalho2_imagem_anterior'];
-      }
-
-      if($_FILES['trabalho3_imagem']['name'] != "") {
-        $extensao = strtolower(substr($_FILES['trabalho3_imagem']['name'], -4)); //pega a extensao do arquivo
-        $imagem3 = md5('trabalho3_imagem') . $extensao; //define o nome do arquivo
-        $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
-        move_uploaded_file($_FILES['trabalho3_imagem']['tmp_name'], $diretorio.$imagem3); //efetua o upload
-      } else {
-        $imagem3 = $_POST['trabalho3_imagem_anterior'];
+        $mensagens_imagem = $_POST['mensagens_imagem_anterior'];
       }
 
       if(alteraMeusite($conexao,
@@ -80,7 +64,10 @@ require_once 'banco-meusite.php';
       $section01_subtitulo,
       $section01_texto,
       $mensagens_titulo,
-      $mensagens_subtitulo
+      $mensagens_subtitulo,
+      $mensagens_imagem,
+      $fotos_titulo,
+      $fotos_subtitulo
       ))
       {
         header ("Location: meusite?alteracao=true");
