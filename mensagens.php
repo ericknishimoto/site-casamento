@@ -13,12 +13,12 @@ $mensagens = listaMensagens($conexao);
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Mensagens
+        Mensagens Recebidas
         <small>administre as mensagens recebidas</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Mensagens</li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active">Mensagens Recebidas</li>
       </ol>
     </section>
 
@@ -28,7 +28,7 @@ $mensagens = listaMensagens($conexao);
       
         <!-- Mensagens -->
         <div id="mensagens" class="box">
-          <div class="box-header with-border">
+          <div class="box-header with-border responsive">
             <h3 class="box-title">Aprovação de mensagens</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
@@ -43,7 +43,7 @@ $mensagens = listaMensagens($conexao);
             <div class="box-body">
                 <div class="row">
                     <div class="col-xs-12">
-                          <table id="tabela" class="table table-bordered table-striped table-hover">
+                          <table id="tabela" class="table table-bordered table-striped">
                             <thead>
                             <tr>
                               <th>#ID</th>

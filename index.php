@@ -29,7 +29,13 @@ if ($valor == 0) {
 
   <head>
 
-    <meta charset="utf-8">
+<!--
+Arquitetura de layout por Blackrock Digital LLC.
+Veja mais em:
+https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
+-->
+    
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -66,12 +72,15 @@ if ($valor == 0) {
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">           
+          <ul class="navbar-nav text-uppercase ml-auto">          
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#section01">Sobre</a>
+            </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Lista</a>
+              <a class="nav-link js-scroll-trigger" href="#fotos">Fotos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Local</a>
@@ -114,7 +123,7 @@ if ($valor == 0) {
           </div>
         </div>
       </div>
-      <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a>
+      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>
 
     <!-- Mensagens -->
@@ -130,11 +139,19 @@ if ($valor == 0) {
         <div class="row d-flex justify-content-center">
 
         <?php
+        
+        $counter = 0;
         foreach ($mensagens as $mensagem) {
-          
+
+          if ($counter >= 6){
+            break;
+          } 
+
+          $counter++;
+
           if ( $mensagem['confirmacao'] == 1) {
         ?>
-            <div class="col-md-4 mb-4">
+            <div class="col-lg-4 mt-2">
               <div class="card">
                 <p class="card__texto text-center">
                 <?= ($mensagem['mensagem']) ?>
@@ -161,8 +178,8 @@ if ($valor == 0) {
       </div>  
     </section>
 
-    <!-- Sobre -->
-    <section id="about">
+    <!-- Fotos -->
+    <section id="fotos">
 
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -172,178 +189,26 @@ if ($valor == 0) {
           </div>
 
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            
-            <div class="container">
-              <div class="row">
-                <div class="row">
-
-                    <?php
-                    foreach ($fotos as $mensagem) {
-                    
-                      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                          <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                             data-image="<?= ($foto['fotos_titulo']) ?>"
-                             data-target="#image-gallery">
-                              <img class="img-thumbnail"
-                                   src="<?= ($foto['fotos_titulo']) ?>"
-                                   alt="Another alt text">
-                          </a>
-                      </div>
-                      
-                    <?php 
-                    }
-                    ?>
-                       
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-            
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
-                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-            
-            
-            
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-            
-            
-            
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                               data-target="#image-gallery">
-                                <img class="img-thumbnail"
-                                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                     alt="Another alt text">
-                            </a>
-                        </div>
-                    </div>
-            
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Contato</h2>
-            <h3 class="section-subheading" style="color: white;"><?= ($infos['subtitulo_contato']) ?></h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Seu Nome *" required="required" data-validation-required-message="Please enter your name.">
-                    <p class="help-block text-danger"></p>
+        <div class="row text-center d-flex justify-content-center">
+            <?php
+            if ($fotos != null) {
+              foreach ($fotos as $foto) {
+                ?>  
+                  <div class="col-lg-4 col-xs-4 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                      data-image="upload/<?= ($foto['nome']) ?>"
+                      data-target="#image-gallery">
+                      <img class="img-thumbnail thumbnail img-rounded img-md" src="upload/<?= ($foto['nome']) ?>" alt="Another alt text">
+                    </a>
                   </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Seu Email *" required="required" data-validation-required-message="Please enter your email address.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Seu Telefone *" required="required" data-validation-required-message="Please enter your phone number.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Sua Mensagem *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar</button>
-                </div>
-              </div>
-            </form>
-          </div>
+                <?php 
+                }
+            } else {
+              ?> 
+                <h4 class="text-muted mt-5">Em breve...</h4>
+              <?php 
+            }
+            ?>
         </div>
       </div>
     </section>
@@ -353,7 +218,7 @@ if ($valor == 0) {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span class="copyright">Copyright &copy; Erick Nishimoto | Layout by<a href="https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE" target="_blank"> Blackrock Digital LLC.</a></span>
+            <span class="copyright">© 2018 Érick Nishimoto | Todos os direitos reservados | <a href="admin">Admin</a></span>
           </div>
           </div>
         </div>
@@ -388,7 +253,9 @@ if ($valor == 0) {
                             <div class="col-12">
                               <div class="form-group mt-1">
                                   <label>Mensagem:</label>
-                                  <textarea type="text" required name="mensagem" class="form-control"></textarea>
+                                  <span class="caracteres">255</span> Restantes <br>
+                                  <textarea type="text" maxlength="255" required name="mensagem" class="form-control" id="TxtObservacoes"></textarea>
+
                               </div>
                             </div>
 
@@ -466,13 +333,25 @@ if ($valor == 0) {
       bg2.style.backgroundSize = "cover";
     </script>
 
-<?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
-  ?>
-  <script>
-    $( document ).ready(function() {
-      $("#modal-confirm").modal();
-  });
-  </script>
+    <!-- Limitador de caracteres text-area -->
+    <script>
+      $(document).on("input", "#TxtObservacoes", function () {
+        var limite = 255;
+        var caracteresDigitados = $(this).val().length;
+        var caracteresRestantes = limite - caracteresDigitados;
+
+      $(".caracteres").text(caracteresRestantes);
+      });
+    </script>
+
+      <!-- Abre modal de msg enviada -->
+      <?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
+        ?>
+        <script>
+          $( document ).ready(function() {
+            $("#modal-confirm").modal();
+        });
+        </script>
  
 <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">

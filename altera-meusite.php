@@ -14,7 +14,7 @@ require_once 'banco-meusite.php';
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -70,7 +70,7 @@ require_once 'banco-meusite.php';
       $fotos_subtitulo
       ))
       {
-        header ("Location: meusite?alteracao=true");
+        header ("Location: site?alteracao=true");
         die();
       }else{ 
       ?>

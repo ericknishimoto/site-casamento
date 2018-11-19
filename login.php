@@ -8,9 +8,9 @@ include("logica-usuario.php");
 
 $usuario = buscaUsuario($conexao, $_POST["email"], $_POST["senha"]);
 if($usuario == null) {
-    header("Location: trampoadmin?login=0");
+    header("Location: admin?login=0");
 } else {
     logaUsuario($usuario["email"], $usuario["nome"], $usuario["permissao"]);
-    header("Location: trampoadmin");
+    header("Location: admin");
 }
 die();

@@ -9,6 +9,7 @@ $infos = listaMeusite($conexao);
 $fotos = listaFotos($conexao);
 
 ?>
+
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -18,13 +19,57 @@ $fotos = listaFotos($conexao);
         <small>altere os dados do seu site principal</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Meu site</li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li class="active">Galeria de Fotos</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
+
+
+<?php if(isset($_GET["status"]) && $_GET["status"]=="erro") {
+?>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="box box-danger box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Foto muito grande ou arquivo inválido!</h3>                  
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+        <p>Se a foto tiver mais que 2mb, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
+        </div>
+        <!-- /.box-body -->
+        </div>
+      </div>
+  </div>
+<?php
+  }
+?>
+
+<?php if(isset($_GET["status"]) && $_GET["status"]=="ok") {
+?>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="box box-success box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Foto enviada!</h3>                  
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+        <p>Foto enviada com sucesso, ela já esta disponível no seu <a href="index#fotos" target="_blank">site</a>.</p>
+        </div>
+        <!-- /.box-body -->
+        </div>
+      </div>
+  </div>
+<?php
+  }
+?>
+
       <form action="adiciona-foto.php" method="POST" enctype="multipart/form-data">
         
         <!-- Fotos -->
@@ -39,7 +84,7 @@ $fotos = listaFotos($conexao);
             <!-- /. tools -->
           </div>
           <!-- /.box-header -->
-          <div class="box-body pad">
+          <div class="box-body">
 
             <div class="col-md-12">
               <div class="form-group">
@@ -60,16 +105,23 @@ $fotos = listaFotos($conexao);
                 <h4>Fotos enviadas:</h4>
 
                 <?php
-                foreach ($fotos as $foto) {
-                ?>
-                <div class="col-xs-4 text-center mt-4">
-                  <p>Nº <?= $foto['id'] ?></p>
-                  <img src="upload/<?= $foto['nome'] ?>" style="width: 300px;">
-                  <div class="col-xs-12 mt-1">
-                    <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-default mr-1">Apagar</a>
-                  </div>
-                </div>
-                <?php
+                if ($fotos != null) {
+                  
+                  foreach ($fotos as $foto) {
+                    ?>
+                    <div class="col-xs-12 col-md-6 col-lg-4 text-center">
+                      <img src="upload/<?= $foto['nome'] ?>"  class="thumbnail img-rounded img-md mt-3">
+                      <div class="col-xs-12">
+                        <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger mr-1">Apagar</a>
+                      </div>
+                    </div>
+                    <?php
+                    }
+
+                } else {
+                  ?> 
+                    <h4 class="text-muted mt-4">Nenhuma foto encontrada...</h4>
+                  <?php 
                 }
                 ?>
         

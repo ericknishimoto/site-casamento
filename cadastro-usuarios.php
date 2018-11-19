@@ -18,7 +18,7 @@ $usuarios = listaUsuarios($conexao);
         <small>cadastro de usuários</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li>Cadastros</li>
         <li class="active">Usuários</li>
       </ol>
@@ -122,13 +122,6 @@ $usuarios = listaUsuarios($conexao);
   <?php
     }
   ?>
-    <div class="row">
-      <div class="col-xs-7 col-md-3">
-        <button type="button" class="btn btn-success margin-bottom" data-toggle="modal" data-target="#modal-novo">
-            <span>Novo Usuário</span>
-          </button>
-      </div>
-    </div>
 
       <div class="row">
         <div class="col-xs-12">
@@ -160,10 +153,7 @@ $usuarios = listaUsuarios($conexao);
                       <td><?= $usuario['email'] ?></td>
                       <td><?= $usuario['permissao'] ?></td>
                       <td class="text-center">
-                        <a data-url="altera-usuario.php?id=" data-id="<?= $usuario['id'] ?>" class="btn btn-default mr-1" data-toggle="modal" data-target="#modal-altera"><i class="fa fa-lock"></i></a>                                            
-                        <a data-url="exclui-usuario.php?id=" data-id="<?= $usuario['id'] ?>" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete">
-                          <i class="fa fa-trash-o"></i>
-                        </a>
+                        <a data-url="altera-usuario.php?id=" data-id="<?= $usuario['id'] ?>" class="btn btn-default mr-1" data-toggle="modal" data-target="#modal-altera"><i class="fa fa-lock"></i></a>                                                                                              
                       </td>
                   </tr>
 
@@ -185,56 +175,6 @@ $usuarios = listaUsuarios($conexao);
   </div>
   <!-- /.content-wrapper -->
 
-<!-- MODAL NOVO -->
-<div class="modal fade" id="modal-novo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header modal-success">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Novo Usuário</h4>
-        </div>
-        <div class="modal-body">
-          <form action="adiciona-usuario.php" id="form" method="POST">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="row">
-                  <div class="col-xs-12">
-                  <div class="form-group mt-1">
-                      <label>Nome:</label>
-                      <input type="text" required name="nome" class="form-control">
-                    </div>
-                    <div class="form-group mt-1">
-                      <label>Email:</label>
-                      <input type="text" required name="email" class="form-control">
-                    </div>
-                    <div class="form-group mt-1">
-                      <label>Senha:</label>
-                      <input type="password" required name="password1" class="form-control">
-                    </div>
-                    <div class="form-group mt-1">
-                      <label>Confirmar senha:</label>
-                      <input type="text" required name="password2" class="form-control">
-                    </div>
-                    <div class="form-group mt-1">
-                     <label>Permissão:</label>
-                      <select type="text" required name="permissao" class="form-control">
-                          <option value="admin">admin</option>
-                          <option value="user">user</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" form="form" class="btn btn-success" value="Submit">Cadastrar</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <!-- MODAL ALTERAR -->
 <div class="modal fade" id="modal-altera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -246,7 +186,7 @@ $usuarios = listaUsuarios($conexao);
         </div>
         <div class="modal-body">
           <form action="altera-usuario.php" id="form-altera" method="POST">
-          <input type="hidden" name="id" class="altera-id"/>
+          <input type="hidden" name="id" value="<?= $usuario['id'] ?>"/>
             <div class="row">
               <div class="col-xs-12">
                 <div class="row">
@@ -258,13 +198,6 @@ $usuarios = listaUsuarios($conexao);
                     <div class="form-group mt-1">
                       <label>Confirmar nova senha:</label>
                       <input type="password" required name="password2" class="form-control">
-                    </div>
-                    <div class="form-group mt-1">
-                     <label>Permissão:</label>
-                      <select type="text" required name="permissao" class="form-control">
-                          <option value="admin">admin</option>
-                          <option value="user">user</option>
-                      </select>
                     </div>
                   </div>
                 </div>
@@ -280,32 +213,6 @@ $usuarios = listaUsuarios($conexao);
     </div>
 </div>
 
-<!-- MODAL EXCLUIR-->
-<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header modal-danger">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Excluir Usuário</h4>
-      </div>
-      <div class="modal-body">
-        Deseja realmente exluir esta usuário?
-      </div>
-      <div class="modal-footer">
-        <a type="button" class="btn btn-danger delete">Excluir</a>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <?php
 require_once 'footer.php';
 ?>
-
-<script>
-  $(document).ready(function(){
-    let elemento = document.querySelector("#usuarios");
-      elemento.classList.add("active");
-  })
-</script>

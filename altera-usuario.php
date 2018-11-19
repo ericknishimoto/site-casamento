@@ -14,7 +14,7 @@ require_once 'banco.php';
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -27,10 +27,9 @@ require_once 'banco.php';
       $id = $_POST["id"];
       $password1 = md5($_POST["password1"]);
       $password2 = md5($_POST["password2"]);
-      $permissao = $_POST["permissao"];
       
       if ($password1 == $password2) {
-        if(alteraUsuario($conexao,$id,$password1,$permissao))
+        if(alteraUsuario($conexao, $id, $password1))
         {
           header ("Location: cadastro-usuarios.php?alteracao=true");
           die();

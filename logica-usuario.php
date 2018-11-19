@@ -8,7 +8,7 @@ function usuarioEstaLogado() {
 
 function verificaUsuario() {
   if(!usuarioEstaLogado()) {
-     header("Location: trampoadmin?falhaDeSeguranca=true");
+     header("Location: admin?falhaDeSeguranca=true");
      die();
   }
 }

@@ -48,6 +48,7 @@
         'searching'      : false,
         'lengthMenu'  : false,
         'responsive'  : true
+        
       })
     })
 </script>
