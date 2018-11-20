@@ -32,7 +32,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="dist/css/style.css">
   <link rel="stylesheet" href="dist/css/espacamento.css">
-
+  
    <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,14 +50,14 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="site" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">
-      <b>A</b>
+      <b>AM</b>
       </span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-      <b>Administração</b>
+      <b>Admin</b> | Meusite
       </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -69,6 +69,9 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
+          <li>
+            <a href="index" target="_blank">Visualizar Site</i></a>
+          </li>
           <li>
             <a href="logout">Sair</i></a>
           </li>

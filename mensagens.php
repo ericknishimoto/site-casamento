@@ -24,7 +24,30 @@ $mensagens = listaMensagens($conexao);
 
     <!-- Main content -->
     <section class="content">
-      <form action="altera-mensagens.php" method="POST" enctype="multipart/form-data">
+
+    <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Alteração realizada!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Alteração realizada com sucesso, confira no seu <a href="index#mensagens" target="_blank">site</a>.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
       
         <!-- Mensagens -->
         <div id="mensagens" class="box">
@@ -38,10 +61,8 @@ $mensagens = listaMensagens($conexao);
             <!-- /. tools -->
           </div>
           <!-- /.box-header -->
-          <div class="box-body pad">
+          <div class="box-body">
 
-            <div class="box-body">
-                <div class="row">
                     <div class="col-xs-12">
                           <table id="tabela" class="table table-bordered table-striped">
                             <thead>
@@ -95,7 +116,6 @@ $mensagens = listaMensagens($conexao);
 
           </div>
         </div>        
-      </form>
 
     </section>
     <!-- /.content -->

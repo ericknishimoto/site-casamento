@@ -109,10 +109,10 @@ $fotos = listaFotos($conexao);
                   
                   foreach ($fotos as $foto) {
                     ?>
-                    <div class="col-xs-12 col-md-6 col-lg-4 text-center">
-                      <img src="upload/<?= $foto['nome'] ?>"  class="thumbnail img-rounded img-md mt-3">
+                    <div class="col-xs-3 col-md-3 col-lg-3 text-center">
+                      <img src="upload/<?= $foto['nome'] ?>"  class="img-thumbnail thumbnail img-rounded img-md2 mt-4">
                       <div class="col-xs-12">
-                        <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger mr-1">Apagar</a>
+                        <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger fa fa-trash-o"></a>
                       </div>
                     </div>
                     <?php

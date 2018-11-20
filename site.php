@@ -206,8 +206,14 @@ $fotos = listaFotos($conexao);
               </div>
             </div>
 
-            <d
-            </div> 
+            <div class="col-md-6">
+              <div class="form-group">
+                <h4>Mostrar quantas mensagens:</h4>
+                <div class="col-md-2">
+                  <input value="<?= ($infos['mensagens_quantidade']) ?>" type="number" name="mensagens_quantidade" class="form-control">
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>

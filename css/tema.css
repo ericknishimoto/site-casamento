@@ -71,8 +71,12 @@
   margin-top: -20px;
 }
 
-.botao-mensagem {
-  margin-top: 4rem;
+.botao-enviar {
+  margin: 4rem .5rem;
+}
+
+.botao-todos {
+  margin: 4rem .5rem;
 }
 
 .botao-mensagem>.btn {
@@ -124,6 +128,12 @@ div#modal-confirm {
   object-fit: cover;
 }
 
+.img-md2 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 footer {
   background-color: rgba(211, 211, 211, 0.267);
 }
@@ -157,4 +167,21 @@ background: #707070;
 .modal-dialog {
     max-width: 600px;
     margin: 1.75rem auto;
-}}
+  }
+}
+
+@media (max-width: 500px){
+  .card__texto {
+    padding: 15px 0;
+  }
+
+  .botao-enviar {
+    margin: 0 0;
+    margin-top: 4rem;
+  }
+  
+  .botao-todos {
+    margin: 0;
+    margin-top: 2rem;
+  }
+}

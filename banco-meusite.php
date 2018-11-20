@@ -9,7 +9,7 @@ function listaMeusite($conexao) {
 
 function listaMensagens($conexao) {
     $mensagens = array();
-    $query = "select * from mensagens ORDER by id DESC";
+    $query = "select * from mensagens";
     $resultado = mysqli_query($conexao, $query);
     while ($mensagem = mysqli_fetch_assoc($resultado)) {
         array_push($mensagens, $mensagem);
@@ -39,6 +39,7 @@ $section01_texto,
 $mensagens_titulo,
 $mensagens_subtitulo,
 $mensagens_imagem,
+$mensagens_quantidade,
 $fotos_titulo,
 $fotos_subtitulo
 )
@@ -56,12 +57,25 @@ section01_texto = '{$section01_texto}',
 mensagens_titulo = '{$mensagens_titulo}',
 mensagens_subtitulo = '{$mensagens_subtitulo}',
 mensagens_imagem = '{$mensagens_imagem}',
+mensagens_quantidade = '{$mensagens_quantidade}',
 fotos_titulo = '{$fotos_titulo}',
 fotos_subtitulo = '{$fotos_subtitulo}'
 ";
 
 return mysqli_query($conexao, $query);
 }
+
+function alteraMensagensQuantidade ($conexao,
+    $mensagens_quantidade
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    mensagens_quantidade = '{$mensagens_quantidade}'
+    ";
+
+    return mysqli_query($conexao, $query);
+    }
 
 function insereMensagem ($conexao, $nome, $dataMensagem, $mensagem) { 
     $query = "INSERT INTO mensagens (nome, data, mensagem)

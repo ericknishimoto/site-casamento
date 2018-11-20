@@ -45,7 +45,7 @@ if(isset($_SESSION["usuario_logado"])) {
     
 <div class="login-box">
   <div class="login-logo">
-     <b>Administração</b>
+     <b>Admin</b> | Meusite
   </div>
 
 
@@ -115,7 +115,7 @@ if(isset($_GET["falhaDeSeguranca"])) {
   <!-- /.login-logo -->
   <div class="login-box-body">
   
- <p class="login-box-msg">Faça login para começar</p>
+ <p class="login-box-msg">Faça login para continuar</p>
 
     <form action="login.php" method="post">
       <div class="form-group has-feedback">

@@ -33,6 +33,7 @@ require_once 'banco-meusite.php';
       $section01_texto = $_POST["section01_texto"];
       $mensagens_titulo = $_POST["mensagens_titulo"];
       $mensagens_subtitulo = $_POST["mensagens_subtitulo"];
+      $mensagens_quantidade = $_POST["mensagens_quantidade"];
       $fotos_titulo = $_POST["fotos_titulo"];
       $fotos_subtitulo = $_POST["fotos_subtitulo"];
 
@@ -66,6 +67,7 @@ require_once 'banco-meusite.php';
       $mensagens_titulo,
       $mensagens_subtitulo,
       $mensagens_imagem,
+      $mensagens_quantidade,
       $fotos_titulo,
       $fotos_subtitulo
       ))

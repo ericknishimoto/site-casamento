@@ -143,13 +143,13 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         $counter = 0;
         foreach ($mensagens as $mensagem) {
 
-          if ($counter >= 6){
-            break;
-          } 
+        if ( $mensagem['confirmacao'] == 1) {
 
-          $counter++;
-
-          if ( $mensagem['confirmacao'] == 1) {
+            if ($counter >= $infos['mensagens_quantidade']){
+              break;
+            } 
+  
+            $counter++;
         ?>
             <div class="col-lg-4 mt-4">
               <div class="card d-flex justify-content-center"">
@@ -169,10 +169,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
         <div class="row">
             <div class="col-md-12 text-center botao-mensagem">
-              <button type="button" class="btn btn-lg mr-4" data-toggle="modal" data-target="#modal-nova-mensagem">
+              <button type="button" class="btn btn-lg botao-enviar" data-toggle="modal" data-target="#modal-nova-mensagem">
                 <span>Enviar Mensagem</span>
               </button>
-              <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#modal-mensagem">
+              <button type="button" class="btn btn-lg botao-todos" data-toggle="modal" data-target="#modal-mensagem">
                 <span>Ver Todas</span>
               </button>
             </div>
@@ -197,11 +197,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             if ($fotos != null) {
               foreach ($fotos as $foto) {
                 ?>  
-                  <div class="col-lg-4 col-xs-4 thumb">
+                  <div class="col-lg-3 col-xs-3 thumb">
                     <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                       data-image="upload/<?= ($foto['nome']) ?>"
                       data-target="#image-gallery">
-                      <img class="img-thumbnail thumbnail img-rounded img-md" src="upload/<?= ($foto['nome']) ?>" alt="Another alt text">
+                      <img class="img-thumbnail thumbnail img-rounded img-md2" src="upload/<?= ($foto['nome']) ?>" alt="Another alt text">
                     </a>
                   </div>
                 <?php 
@@ -221,7 +221,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span class="copyright">© 2018 Érick Nishimoto | Todos os direitos reservados | <a href="admin">Admin</a></span>
+            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</i></span>
           </div>
           </div>
         </div>
@@ -237,7 +237,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               <div class="col-lg-12">
                 <div class="modal-body">
                   <div class="row">
-                    <div class="col-xs-12 p-4">
+                    <div class="col-xs-12">
                       <div class="row">
                         <div class="col-12">
 
@@ -377,20 +377,19 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
     <!-- Altera BG -->
     <script>
-      let bg = document.querySelector(".masthead");
-      bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['cabecalho_imagem']?>')";
-      bg.style.backgroundRepeat = "no-repeat";
-      bg.style.backgroundAttachment = "fixed";
-      bg.style.backgroundPosition = "center center";
-      bg.style.backgroundSize = "cover";
-    </script>
-    <script>
-      let bg2 = document.querySelector("#mensagens");
-      bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['mensagens_imagem']?>";
-      bg2.style.backgroundRepeat = "no-repeat";
-      bg2.style.backgroundAttachment = "fixed";
-      bg2.style.backgroundPosition = "center center";
-      bg2.style.backgroundSize = "cover";
+    let bg = document.querySelector(".masthead");
+    bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['cabecalho_imagem']?>')";
+    bg.style.backgroundRepeat = "no-repeat";
+    bg.style.backgroundAttachment = "fixed";
+    bg.style.backgroundPosition = "center center";
+    bg.style.backgroundSize = "cover";
+
+    let bg2 = document.querySelector("#mensagens");
+    bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['mensagens_imagem']?>";
+    bg2.style.backgroundRepeat = "no-repeat";
+    bg2.style.backgroundAttachment = "fixed";
+    bg2.style.backgroundPosition = "center center";
+    bg2.style.backgroundSize = "cover";
     </script>
 
     <!-- Limitador de caracteres text-area -->
