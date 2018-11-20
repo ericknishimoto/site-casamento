@@ -74,13 +74,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">          
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#section01">Sobre</a>
-            </li> 
-            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#fotos">Fotos</a>
+                <a class="nav-link js-scroll-trigger" href="#presenca">Prensença</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Local</a>
@@ -197,8 +194,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>              
         
         <div class="row d-flex justify-content-center">
-          <button type="button" class="btn btn-lg botao-todos" data-toggle="modal" data-target="#modal-presenca">
-            <span>Acessar</span>
+          <button type="button" class="btn btn-lg botao-todos text-muted" data-toggle="modal" data-target="#modal-presenca">
+            Acessar
           </button>
         </div>
 
@@ -267,7 +264,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                       <div class="row">
                         <div class="col-12">
 
-                          <div class="form-group mt-1 text-center">
+                          <div class="form-group mt-4 text-center">
                               <label class="titulo-modal">Todas as mensagens</label>
                           </div>
 
