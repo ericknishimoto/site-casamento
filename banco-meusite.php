@@ -27,6 +27,16 @@ function listaFotos($conexao) {
     return $fotos;
 }
 
+function listaConvidados($conexao) {
+    $convidados = array();
+    $query = "select * from convidados";
+    $resultado = mysqli_query($conexao, $query);
+    while ($convidado = mysqli_fetch_assoc($resultado)) {
+        array_push($convidados, $convidado);
+    }
+    return $convidados;
+}
+
 function alteraMeusite ($conexao,
 $titulo,
 $brand,
@@ -101,6 +111,12 @@ function insereFoto ($conexao, $nova_foto) {
 
 function excluiFoto($conexao, $id) {
     $query = "delete from fotos where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
+
+function insereConvidado ($conexao, $nome, $confirmacao, $adultos, $criancas, $email, $telefone, $nome_adultos) { 
+    $query = "INSERT INTO convidados (nome, confirmacao, adultos, criancas, email, telefone, nome_adultos)
+    VALUES ('{$nome}','{$confirmacao}','{$adultos}','{$criancas}','{$email}','{$telefone}','{$nome_adultos}')"; 
     return mysqli_query($conexao, $query);
 }
 

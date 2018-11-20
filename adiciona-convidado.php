@@ -24,12 +24,16 @@ require_once 'banco-meusite.php';
       <?php 
       
       $nome = $_POST["nome"];
-      $data = date('y/m/d');
-      $mensagem = $_POST["mensagem"];
+      $confirmacao = $_POST["paymentMethod"];
+      $adultos = $_POST["adultos"];
+      $criancas = $_POST["criancas"];
+      $email = $_POST["email"];
+      $telefone = $_POST["telefone"];
+      $nome_adultos = $_POST["nome_adultos"];
       
-      if(insereMensagem($conexao,$nome, $data, $mensagem))
+      if(insereConvidado($conexao, $nome, $confirmacao, $adultos, $criancas, $email, $telefone, $nome_adultos))
       {
-        header ("Location: index?mensagem=true#mensagens");
+        header ("Location: index?presenca=true#presenca");
         die();
       }else{ 
       ?>

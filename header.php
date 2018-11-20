@@ -102,13 +102,18 @@
           <span class="pull-right-container">
           </span>
         </a></li>
+        <li id="regras"><a href="fotos">
+          <i class="fa fa-photo"></i> <span>Galeria de Fotos</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
         <li id="regras"><a href="mensagens">
           <i class="fa fa-comment-o"></i> <span>Mensagens Recebidas</span>
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras"><a href="fotos">
-          <i class="fa fa-photo"></i> <span>Galeria de Fotos</span>
+        <li id="regras"><a href="presenca">
+          <i class="fa fa-list"></i> <span>Lista de Presença</span>
           <span class="pull-right-container">
           </span>
         </a></li>

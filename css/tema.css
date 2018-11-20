@@ -15,7 +15,7 @@
 }
 
 .presenca {
-  background-color: rgba(211, 211, 211, 0.137);
+  background-color: rgba(211, 211, 211, 0.219);
 }
 
 .seta-section {
@@ -94,7 +94,7 @@ span, .btn {
 }
 
 hr {
-border-top: 1.1px solid rgba(0,0,0,.1);
+border-top: 1.5px solid rgba(0,0,0,.1);
 }
 
 .btn:hover{

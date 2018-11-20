@@ -40,7 +40,7 @@ $fotos = listaFotos($conexao);
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <p>Alteração realizada com sucesso, confira no seu <a href="index#fotos" target="_blank">site</a>.</p>
+            <p>Alteração realizada com sucesso, confira no seu <a href="index" target="_blank">site</a>.</p>
             </div>
             <!-- /.box-body -->
           </div>
@@ -112,7 +112,7 @@ $fotos = listaFotos($conexao);
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                    Talvez seja necessário pressionar "CTRl + F5" para ver as atualizações.
+                    <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
                     </div>
                   <!-- /.box-body -->
                   </div>
@@ -249,37 +249,10 @@ $fotos = listaFotos($conexao);
           </div>
         </div>
 
-        <!-- Contato -->
-        <div class="box">
-          <div class="box-header with-border">
-            <h3 class="box-title">Contato</h3>
-            <!-- tools box -->
-            <div class="pull-right box-tools">
-              <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
-                <i class="fa fa-minus"></i></button>
-            </div>
-            <!-- /. tools -->
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body pad" style="">
-            <div class="box-body mb-1">
-              <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                      <h4>Subtítulo:</h4>
-                      <input value="<?= ($infos['subtitulo_contato']) ?>" type="text" name="subtitulo_contato" class="form-control">
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
         <!-- /.row -->
         <div class="row">
           <div class="center-block text-center">
-            <input type="submit" class="btn btn-success margin-bottom margin" value="Alterar">
+            <input type="submit" class="btn btn-success btn-lg margin-bottom margin" value="Alterar">
           </div>
         </div>
         
