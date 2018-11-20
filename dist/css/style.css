@@ -76,3 +76,14 @@
 div#cke_section01_texto {
     padding: 2px;
 }
+
+.table > tbody > tr > td {
+    min-width: 100px;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > :nth-child(1) {
+    min-width: 0px;
+    text-align: center;
+    vertical-align: middle;
+}

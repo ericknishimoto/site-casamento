@@ -76,8 +76,8 @@ $mensagens = listaMensagens($conexao);
                                   ?>
                                   </td>
                                   <td class="text-center">
-                                    <a href="confirma-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-success mr-1">Aceitar</a>
-                                    <a href="nega-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1">Negar</a>
+                                    <a href="confirma-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                                    <a href="nega-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
                                   </td>
                               </tr>
             

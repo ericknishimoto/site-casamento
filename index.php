@@ -151,12 +151,12 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
           if ( $mensagem['confirmacao'] == 1) {
         ?>
-            <div class="col-lg-4 mt-2">
-              <div class="card">
+            <div class="col-lg-4 mt-4">
+              <div class="card d-flex justify-content-center"">
                 <p class="card__texto text-center">
                 <?= ($mensagem['mensagem']) ?>
                 </p>
-                <p class="card__autor text-center"><?= ($mensagem['nome']) ?></p>
+                <p class="card__autor text-center">- <?= ($mensagem['nome']) ?> -</p>
                 <p class="card__data text-center"><?= date('d/m/Y', strtotime($mensagem['data'])) ?></p>
               </div>
             </div>
@@ -169,8 +169,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
         <div class="row">
             <div class="col-md-12 text-center botao-mensagem">
-              <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#modal-nova-mensagem">
+              <button type="button" class="btn btn-lg mr-4" data-toggle="modal" data-target="#modal-nova-mensagem">
                 <span>Enviar Mensagem</span>
+              </button>
+              <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#modal-mensagem">
+                <span>Ver Todas</span>
               </button>
             </div>
           </div>
@@ -225,7 +228,63 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       </div>
     </footer>
 
-    <!-- MODAL MSG -->
+  <!-- MODAL TODAS MENSAGENS -->
+  <div class="modal fade" id="modal-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12 p-4">
+                      <div class="row">
+                        <div class="col-12">
+
+                          <div class="form-group mt-1 text-center">
+                              <label class="titulo-modal">Todas as mensagens</label>
+                          </div>
+
+                          <div class="container">
+                            <?php
+                            foreach ($mensagens as $mensagem) {
+
+                            if ( $mensagem['confirmacao'] == 1) {
+                            ?>
+                              <div class="d-flex mb-1">
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                                <div class="px-4" style="color:gray;">♥</div>
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                              </div>
+                              <div class="col-lg-12">
+                                  <p class="card__texto text-center">
+                                  <?= ($mensagem['mensagem']) ?>
+                                  </p>
+                                  <p class="card__autor-m text-center">- <?= ($mensagem['nome']) ?> -</p>
+                                  <p class="card__data text-center"><?= date('d/m/Y', strtotime($mensagem['data'])) ?></p>
+                              </div>
+                            <?php 
+                              }
+                            }
+                            ?>
+                          </div>
+
+                      </div>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL NOVA MSG -->
    <div class="modal fade" id="modal-nova-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -253,9 +312,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                             <div class="col-12">
                               <div class="form-group mt-1">
                                   <label>Mensagem:</label>
-                                  <span class="caracteres">255</span> Restantes <br>
-                                  <textarea type="text" maxlength="255" required name="mensagem" class="form-control" id="TxtObservacoes"></textarea>
-
+                                  <textarea type="text" rows="4" maxlength="200" required name="mensagem" class="form-control" id="TxtObservacoes"></textarea>
+                                  <div class="text-right">
+                                    <p class="contador-caracteres">Caracteres <span class="contador-caracteres caracteres">200</span> Restantes<br></p>
+                                  </div>
                               </div>
                             </div>
 
@@ -336,7 +396,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <!-- Limitador de caracteres text-area -->
     <script>
       $(document).on("input", "#TxtObservacoes", function () {
-        var limite = 255;
+        var limite = 200;
         var caracteresDigitados = $(this).val().length;
         var caracteresRestantes = limite - caracteresDigitados;
 
@@ -352,32 +412,31 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             $("#modal-confirm").modal();
         });
         </script>
- 
-<div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="modal-body"></div>
-                <div class="row m-3">
-                  <p class="titulo-modal">Mensagem enviada!</p>
-                  <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
-                  <div class="col-12 text-right">
-                      <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+
+        <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="modal-body"></div>
+                        <div class="row m-3">
+                          <p class="titulo-modal">Mensagem enviada!</p>
+                          <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
+                          <div class="col-12 text-right">
+                              <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php
-    }
-  ?>
-
+        <?php
+          }
+      ?>
 
   </body>
 

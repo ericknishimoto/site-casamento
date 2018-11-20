@@ -40,13 +40,14 @@
 }
 
 .card {
-  padding: 15px;
   background-color: rgba(255, 255, 255, 0.836);
+  min-height: 300px;
+  padding: 15px;
 }
 
 .card__texto {
   color: rgba(0, 0, 0, 0.658);
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 15px;
 }
 
@@ -54,6 +55,13 @@
   color: rgba(0, 0, 0, 0.658);
   font-style: italic;
   font-size: .9rem;
+}
+
+.card__autor-m {
+  color: rgba(0, 0, 0, 0.658);
+  font-style: italic;
+  font-size: .9rem;
+  margin-top: -1.5rem;
 }
 
 .card__data {
@@ -138,3 +146,15 @@ footer {
 .blog .carousel-indicators .active {
 background: #707070;
 }
+
+.contador-caracteres {
+  color: gray;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+@media (min-width: 700px){
+.modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+}}
