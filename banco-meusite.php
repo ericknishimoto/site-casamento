@@ -9,7 +9,7 @@ function listaMeusite($conexao) {
 
 function listaMensagens($conexao) {
     $mensagens = array();
-    $query = "select * from mensagens";
+    $query = "select * from mensagens order by data desc";
     $resultado = mysqli_query($conexao, $query);
     while ($mensagem = mysqli_fetch_assoc($resultado)) {
         array_push($mensagens, $mensagem);

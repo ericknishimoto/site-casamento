@@ -181,6 +181,32 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       </div>  
     </section>
 
+     <!-- CONFIRMACAO DE PRESENCA -->
+     <section id="presenca" class="presenca text-center">
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Confirmação de Prensença</h2>
+            <h3 class="section-subheading text-muted">Faça parte da nossa história de amor, confirme sua presença.</h3>
+          </div>
+        </div>
+        <div class="d-flex">
+            <hr class="my-auto flex-grow-1" style="color:gray;">
+            <div class="px-4" style="color:gray;">♥</div>
+            <hr class="my-auto flex-grow-1" style="color:gray;">
+        </div>              
+        
+        <div class="row d-flex justify-content-center">
+          <button type="button" class="btn btn-lg botao-todos" data-toggle="modal" data-target="#modal-presenca">
+            <span>Acessar</span>
+          </button>
+        </div>
+
+        </form>
+      </div>
+      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
+    </section>
+
     <!-- Fotos -->
     <section id="fotos">
 
@@ -321,12 +347,88 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                           </div>
                         </div>
-                        <div class="col-12 text-right">
+                        <div class="col-12 text-center">
                             <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- MODAL CONFIRMACAO PRESENCA -->
+  
+   <div class="modal fade" id="modal-presenca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="modal-body">
+                  <div class="row>
+
+                      <div class="row">
+                        <form action="adiciona-mensagem.php" id="form" method="POST">
+                          <div class="col-12">
+
+                            <div class="form-group mt-1 text-center">
+                                <label class="titulo-modal mt-4">Confirmação de Presença</label>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                              <label for="firstName">Nome do convidado</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                              <div class="d-block my-3">
+                                <label>Você irá ao evento?</label>
+                                <div class="custom-control custom-radio">
+                                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                                  <label class="custom-control-label" for="credit">Sim</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                                <label class="custom-control-label" for="debit">Não</label>
+                              </div>
+                            </div>
+          
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <label for="cc-name">Quantos Adultos?</label>
+                                  <input type="number" class="form-control" id="cc-name" placeholder="" required="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <label for="cc-number">Quantas Crianças?</label>
+                                  <input type="number" class="form-control" id="cc-number" placeholder="" required="">
+                                  <small class="text-muted">Menores de 5 anos.</small>
+                                </div>
+                              </div>
+                  
+                              <div class="mb-3">
+                                <label for="email">Email</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                              </div>
+                
+                              <div class="mb-3">
+                                <label for="email">Telefone</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                              </div>
+
+                              <div class="col-12 text-center mt-4">
+                                <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                                <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                              </div>
+
+                            </div> 
+
+                          </div>
+                        </form>
+                      </div>
+
+                  </div>
                 </div>
               </div>
             </div>

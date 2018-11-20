@@ -637,3 +637,9 @@ ul.social-buttons li a {
   max-height: 200px;
   min-height: 200px;
 }
+
+section#presenca {
+  padding: 100px 0;
+  min-height: 0;
+  max-height: 450px;
+}
