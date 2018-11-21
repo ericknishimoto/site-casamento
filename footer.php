@@ -45,7 +45,7 @@
   $(function () {
       $('#tabela').DataTable({
         'paging'      : false,
-        'searching'      : false,
+        'searching'      : true,
         'lengthMenu'  : false,
         'responsive'  : true
         
