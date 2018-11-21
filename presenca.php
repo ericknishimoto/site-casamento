@@ -51,6 +51,7 @@ $convidados = listaConvidados($conexao);
                               <th>Nº Adultos</th>
                               <th>Nome Adultos</th>
                               <th>Nº Crianças</th>
+                              <th>Ações</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -78,6 +79,10 @@ $convidados = listaConvidados($conexao);
                                   <td><?= $convidado['adultos'] ?></td>
                                   <td><?= $convidado['nome_adultos'] ?></td>
                                   <td><?= $convidado['criancas'] ?></td>
+                                  <td class="text-center">
+                                    <a href="confirma-presenca.php?id=<?= $convidado['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                                    <a href="nega-presenca.php?id=<?= $convidado['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                                  </td>
                               </tr>
             
                             <?php
@@ -90,10 +95,7 @@ $convidados = listaConvidados($conexao);
                     <!-- /.col -->
                   </div>
                   <!-- /.row -->
-            </div> 
-
-          </div>
-        </div>        
+            </div>    
 
     </section>
     <!-- /.content -->

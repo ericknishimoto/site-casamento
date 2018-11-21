@@ -19,7 +19,7 @@ $fotos = listaFotos($conexao);
         <small>altere os dados do seu site principal</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li class="active">Alterar Site</li>
       </ol>
     </section>

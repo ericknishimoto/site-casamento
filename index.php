@@ -559,7 +559,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                     <div class="col-lg-12">
                       <div class="modal-body"></div>
                         <div class="row m-3">
-                          <p class="titulo-modal">Confirmação enviada!</p>
+                          <p class="titulo-modal">Confirmação cadastrada!</p>
                           <p class="text-muted">Qualquer dúvida entre em contato com os noivos.</p>
                           <div class="col-12 text-right">
                               <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>

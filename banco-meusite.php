@@ -103,6 +103,16 @@ function confirmaMensagem ($conexao,$id,$confirmacao) {
     return mysqli_query($conexao, $query);
 }
 
+function confirmaPresenca ($conexao,$id,$confirmacao) { 
+    $query = "UPDATE convidados set
+    confirmacao = '{$confirmacao}'
+    
+    where id = '{$id}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
 function insereFoto ($conexao, $nova_foto) { 
     $query = "INSERT INTO fotos (nome)
     VALUES ('{$nova_foto}')"; 

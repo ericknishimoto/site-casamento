@@ -112,10 +112,7 @@ $mensagens = listaMensagens($conexao);
                     <!-- /.col -->
                   </div>
                   <!-- /.row -->
-            </div> 
-
-          </div>
-        </div>        
+            </div>       
 
     </section>
     <!-- /.content -->
