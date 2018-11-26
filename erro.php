@@ -33,8 +33,8 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-heading text-uppercase">
-           <span>Houve algum problema!</span>
+          <div class="text-uppercase">
+           <h2>Houve algum problema!</h2>
           </div>
           <div class="intro-lead-in">Tente novamente dentro de alguns minutos ou fale com o administrador.</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index">Tentar novamente</a>
