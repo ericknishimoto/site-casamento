@@ -403,7 +403,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                             <div class="col-md-6 mb-3">
                               <label>Quantas Crianças?</label>
                               <input type="number" class="form-control" placeholder="0">
-                              <small name="criancas" class="text-muted">Menores de 5 anos.</small>
+                              <small name="criancas" class="text-muted">Menores de 10 anos.</small>
                             </div>
                           </div>
               
