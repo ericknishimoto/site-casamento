@@ -77,7 +77,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#presenca">Prensença</a>
+                <a class="nav-link js-scroll-trigger" href="#presenca">Presença</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Local</a>
