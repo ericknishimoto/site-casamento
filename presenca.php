@@ -1,9 +1,9 @@
 <?php
-require_once 'logica-usuario.php';
+require_once ('logica-usuario.php');
 verificaUsuario(); verificaAdmin();
-require_once 'header.php';
-require_once 'conecta.php';
-require_once 'banco-meusite.php';
+require_once ('header.php');
+require_once ('conecta.php');
+require_once ('banco-meusite.php');
 
 $convidados = listaConvidados($conexao);
 
@@ -59,11 +59,11 @@ $convidados = listaConvidados($conexao);
                             <?php
                             foreach ($convidados as $convidado) {
                             ?>
-                                  <td><?= $convidado['id'] ?></td>
-                                  <td><?= $convidado['nome'] ?></td>
+                                  <td><?= $convidado->id ?></td>
+                                  <td><?= $convidado->nome ?></td>
                                   <td>
                                   <?php
-                                    if($convidado['confirmacao'] == 1) {
+                                    if($convidado->confirmacao == 1) {
                                   ?>
                                     <p style="color: green;">Confirmado</p>
                                   <?php
@@ -74,14 +74,14 @@ $convidados = listaConvidados($conexao);
                                     }
                                   ?>
                                   </td>
-                                  <td><?= $convidado['telefone'] ?></td>
-                                  <td><?= $convidado['email'] ?></td>
-                                  <td><?= $convidado['adultos'] ?></td>
-                                  <td><?= $convidado['nome_adultos'] ?></td>
-                                  <td><?= $convidado['criancas'] ?></td>
+                                  <td><?= $convidado->telefone ?></td>
+                                  <td><?= $convidado->email ?></td>
+                                  <td><?= $convidado->adultos ?></td>
+                                  <td><?= $convidado->nome_adultos ?></td>
+                                  <td><?= $convidado->criancas ?></td>
                                   <td class="text-center">
-                                    <a href="confirma-presenca.php?id=<?= $convidado['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                                    <a href="nega-presenca.php?id=<?= $convidado['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                                    <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                                    <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
                                   </td>
                               </tr>
             
@@ -103,5 +103,5 @@ $convidados = listaConvidados($conexao);
   <!-- /.content-wrapper -->
 
 <?php
-require_once 'footer.php';
+require_once ('footer.php');
 ?>

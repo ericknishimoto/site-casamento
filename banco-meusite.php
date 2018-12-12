@@ -1,5 +1,7 @@
 <?php
 
+require_once('class/Convidado.php');
+
 function listaMeusite($conexao) {
     $infos = array();
     $query = "select * from meusite";
@@ -25,16 +27,6 @@ function listaFotos($conexao) {
         array_push($fotos, $foto);
     }
     return $fotos;
-}
-
-function listaConvidados($conexao) {
-    $convidados = array();
-    $query = "select * from convidados";
-    $resultado = mysqli_query($conexao, $query);
-    while ($convidado = mysqli_fetch_assoc($resultado)) {
-        array_push($convidados, $convidado);
-    }
-    return $convidados;
 }
 
 function alteraMeusite ($conexao,
@@ -124,10 +116,34 @@ function excluiFoto($conexao, $id) {
     return mysqli_query($conexao, $query);
 }
 
-function insereConvidado ($conexao, $nome, $confirmacao, $adultos, $criancas, $email, $telefone, $nome_adultos) { 
+function insereConvidado ($conexao, Convidado $convidado) { 
     $query = "INSERT INTO convidados (nome, confirmacao, adultos, criancas, email, telefone, nome_adultos)
-    VALUES ('{$nome}','{$confirmacao}','{$adultos}','{$criancas}','{$email}','{$telefone}','{$nome_adultos}')"; 
+    VALUES ('{$convidado->$nome}','{$convidado->$confirmacao}',
+        '{$convidado->$adultos}','{$convidado->$criancas}',
+            '{$convidado->$email}','{$convidado->$telefone}','{$convidado->$nome_adultos}')"; 
     return mysqli_query($conexao, $query);
+}
+
+function listaConvidados($conexao) {
+    $convidados = array();
+    $query = "select * from convidados";
+    $resultado = mysqli_query($conexao, $query);
+    while ($convidado_array = mysqli_fetch_assoc($resultado)) {
+        
+        $convidado = new Convidado();
+
+        $convidado->id = $convidado_array['id'];
+        $convidado->nome = $convidado_array['nome'];
+        $convidado->confirmacao = $convidado_array['confirmacao'];
+        $convidado->adultos = $convidado_array['adultos'];
+        $convidado->criancas = $convidado_array['criancas'];
+        $convidado->email = $convidado_array['email'];
+        $convidado->telefone = $convidado_array['telefone'];
+        $convidado->nome_adultos = $convidado_array['nome_adultos'];
+
+        array_push($convidados, $convidado);
+    }
+    return $convidados;
 }
 
 
