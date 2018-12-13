@@ -116,6 +116,8 @@ function excluiFoto($conexao, $id) {
     return mysqli_query($conexao, $query);
 }
 
+// CONVIDADOS
+
 function insereConvidado ($conexao, Convidado $convidado) { 
     $query = "INSERT INTO convidados (nome, confirmacao, adultos, criancas, email, telefone, nome_adultos)
     VALUES ('{$convidado->$nome}','{$convidado->$confirmacao}',
@@ -146,5 +148,11 @@ function listaConvidados($conexao) {
     return $convidados;
 }
 
+function listaPresenca($conexao, $id) {
+    $infos = array();
+    $query = "select * from convidados where id = {$id} ";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}
 
 

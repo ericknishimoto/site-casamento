@@ -82,6 +82,7 @@ $convidados = listaConvidados($conexao);
                                   <td class="text-center">
                                     <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                                     <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                                    <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
                                   </td>
                               </tr>
             
