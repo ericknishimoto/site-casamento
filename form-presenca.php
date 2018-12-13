@@ -48,7 +48,7 @@ $infos = listaPresenca($conexao, $id);
 <?php
   }
 ?>
-      <form action="#.php" method="POST" enctype="multipart/form-data">
+      <form action="altera-presenca.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
 
         <!-- Convidado -->
         <div id="fotos" class="box">
@@ -80,8 +80,8 @@ $infos = listaPresenca($conexao, $id);
                 </div>
                 <div class="col-md-6">
                   <h4>Quantas Crianças?</h4>
-                  <input type="number" class="form-control" placeholder="0" value="<?= $infos["criancas"] ?>" >
-                  <small name="criancas" class="text-muted">Menores de 10 anos.</small>
+                  <input name="criancas" type="number" class="form-control" placeholder="0" value="<?= $infos["criancas"] ?>" >
+                  <small class="text-muted">Menores de 10 anos.</small>
                 </div>
               </div>
 

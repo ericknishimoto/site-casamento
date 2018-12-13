@@ -212,12 +212,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <!-- Fotos -->
     <section id="fotos">
 
-        <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading"><?= ($infos['fotos_titulo']) ?></h2>
               <h3 class="section-subheading text-muted"><?= ($infos['fotos_subtitulo']) ?></h3>
             </div>
-          </div>
+
 
       <div class="container">
         <div class="row text-center d-flex justify-content-center">

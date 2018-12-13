@@ -155,4 +155,18 @@ function listaPresenca($conexao, $id) {
     return mysqli_fetch_assoc($resultado);
 }
 
+function alteraPresenca ($conexao, Convidado $convidado) { 
+
+$query = "UPDATE convidados set
+nome = '{$convidado->nome}',
+telefone = '{$convidado->telefone}',
+email = '{$convidado->email}',
+adultos = '{$convidado->adultos}',
+nome_adultos = '{$convidado->nome_adultos}',
+criancas = '{$convidado->criancas}'
+where id = '{$convidado->id}'";
+
+return mysqli_query($conexao, $query);
+}
+
 

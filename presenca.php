@@ -24,6 +24,30 @@ $convidados = listaConvidados($conexao);
 
     <!-- Main content -->
     <section class="content">
+
+    <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Alteração realizada!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Alteração realizada com sucesso!</a>.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
       
         <!-- Presenças -->
         <div id="convidados" class="box">

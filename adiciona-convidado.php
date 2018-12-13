@@ -2,7 +2,6 @@
 require_once ('logica-usuario.php');
 require_once ('conecta.php');
 require_once ('banco-meusite.php');
-require_once ('banco-meusite.php');
 require_once ('class/Convidado.php');
 
 $convidado = new Convidado();

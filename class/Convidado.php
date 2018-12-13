@@ -10,5 +10,4 @@ class Convidado {
     public $email;
     public $telefone;
     public $nome_adultos;
-
 }
