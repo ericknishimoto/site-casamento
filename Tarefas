@@ -1,0 +1,12 @@
+- Tela alterar presenca;
+- Criar lista de presentes;
+    > Cadastro;
+    > View;
+    > Alteracao;
+    > Validacao de compra;
+- Consertar responsividade;
+- Criar section local;
+    > Cadastro de local;
+- Refatorar CSS;
+- Atualizar para POO;
+- Atualizar para MVC;
