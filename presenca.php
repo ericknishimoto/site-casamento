@@ -39,7 +39,7 @@ $convidados = listaConvidados($conexao);
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <p>Alteração realizada com sucesso!</a>.</p>
+          <p>Alteração realizada com sucesso!</a>.</p>
             </div>
             <!-- /.box-body -->
           </div>

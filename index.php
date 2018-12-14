@@ -485,14 +485,14 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['cabecalho_imagem']?>')";
     bg.style.backgroundRepeat = "no-repeat";
     bg.style.backgroundAttachment = "fixed";
-    bg.style.backgroundPosition = "center center";
+    bg.style.backgroundPosition = "center";
     bg.style.backgroundSize = "cover";
 
     let bg2 = document.querySelector("#mensagens");
     bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['mensagens_imagem']?>";
     bg2.style.backgroundRepeat = "no-repeat";
     bg2.style.backgroundAttachment = "fixed";
-    bg2.style.backgroundPosition = "center center";
+    bg2.style.backgroundPosition = "center";
     bg2.style.backgroundSize = "cover";
     </script>
 

@@ -140,16 +140,15 @@ img::-moz-selection {
     padding: 12px 0;
   }
 
+  header.masthead {
+    min-height: 100vh;
+  }
 }
 
 header.masthead {
   text-align: center;
   color: white;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-  min-height: 100vh;
+
 }
 
 header.masthead .intro-text {
@@ -641,4 +640,14 @@ section#presenca {
   padding: 100px 0;
   min-height: 0;
   max-height: 450px;
+}
+
+@media (max-width: 500px) {
+
+  #mensagens, .masthead {
+  background-repeat : no-repeat;
+  background-attachment : inherit!important;
+  background-position : center;
+  background-size : cover;
+  }
 }
