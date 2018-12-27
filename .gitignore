@@ -1,12 +1,12 @@
 *.DS_Store
 *.log
 *.zip
+*conecta.php
 .idea
 .sass-cache/
 /nbproject/
 /nbproject/private/
 /node_modules/
-conecta.php
 ad.js
 TODO
 test.html
