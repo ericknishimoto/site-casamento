@@ -220,7 +220,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>
         
         <div class="row mb-5">
-        <div class="col-lg-8 text-left">
+        <div class="col-lg-1 text-center"></div>
+          <div class="col-lg-7 text-left">
             <h4 class="section-heading" style="color:white;">Afrikan House Garden</h4>
             <p class="section-heading" style="color:white;">09 de Fevereiro de 2019 às 17:30</p>
             <p class="section-heading" style="color:white;">
@@ -228,9 +229,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             R. Benedito Pereira Rodrigues, 2073 - Lagoa, Itapecerica da Serra - SP, 06858-000  
             </p>
           </div>
-          <div class="col-lg-4 text-center">
+          <div class="col-lg-3 text-center">
             <img class="img-thumbnail thumbnail img-rounded img-md3" src="img/img.png" alt="Another alt text">
           </div>
+          <div class="col-lg-1 text-center"></div>
         </div>    
 
         <!-- MAPA GOOGLE -->
