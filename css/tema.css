@@ -138,6 +138,12 @@ div#modal-confirm {
   object-fit: cover;
 }
 
+.img-md3 {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
 footer {
   background-color: rgba(211, 211, 211, 0.267);
 }

@@ -80,7 +80,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                 <a class="nav-link js-scroll-trigger" href="#presenca">Presença</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Local</a>
+              <a class="nav-link js-scroll-trigger" href="#local">Local</a>
             </li>
           </ul>
         </div>
@@ -203,6 +203,38 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             Confirme sua presença
           </button>
         </div>
+
+        </form>
+      </div>
+      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
+    </section>
+
+    <!-- LOCAL -->
+    <section class="bg-light" id="local">
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="color:white;">Local do Evento</h2>
+            <h3 class="section-subheading" style="color:white;">Contamos com a presença de todos vocês neste momento tão especial.</h3>
+          </div>
+        </div>
+        
+        <div class="row mb-5">
+        <div class="col-lg-8 text-left">
+            <h4 class="section-heading" style="color:white;">Afrikan House Garden</h4>
+            <p class="section-heading" style="color:white;">09 de Fevereiro de 2019 às 17:30</p>
+            <p class="section-heading" style="color:white;">
+            Aguardamos por você no espaço Afrikan House Garden em Itapecerica da Serra para Cerimônia que ocorrerá ao Ar Livre e Recepção no Salão 
+            R. Benedito Pereira Rodrigues, 2073 - Lagoa, Itapecerica da Serra - SP, 06858-000  
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img class="img-thumbnail thumbnail img-rounded img-md3" src="img/img.png" alt="Another alt text">
+          </div>
+        </div>    
+
+        <!-- MAPA GOOGLE -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.322774193079!2d-46.64824608561993!3d-23.556848284685152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b3fe0a98e3%3A0x109ddd531016c9c0!2sR.+Rui+Barbosa%2C+156+-+Bela+Vista%2C+S%C3%A3o+Paulo+-+SP%2C+01326-010!5e0!3m2!1spt-BR!2sbr!4v1545923302280" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px" allowfullscreen></iframe>       
 
         </form>
       </div>
@@ -494,6 +526,13 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg2.style.backgroundAttachment = "fixed";
     bg2.style.backgroundPosition = "center";
     bg2.style.backgroundSize = "cover";
+
+    let bg3 = document.querySelector("#local");
+    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .6)),url('img/bg-3.jpg')";
+    bg3.style.backgroundRepeat = "no-repeat";
+    bg3.style.backgroundAttachment = "fixed";
+    bg3.style.backgroundPosition = "center";
+    bg3.style.backgroundSize = "cover";
     </script>
 
     <!-- Limitador de caracteres text-area -->
