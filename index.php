@@ -222,7 +222,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         <div class="row mb-5">
         <div class="col-lg-1 text-center"></div>
           <div class="col-lg-7 text-left">
-            <h4 class="section-heading" style="color:white;">Afrikan House Garden</h4>
+            <h4 class="section-heading" style="color:white;"><b>Afrikan House Garden</b></h4>
             <p class="section-heading" style="color:white;">09 de Fevereiro de 2019 às 17:30</p>
             <p class="section-heading" style="color:white;">
             Aguardamos por você no espaço Afrikan House Garden em Itapecerica da Serra para Cerimônia que ocorrerá ao Ar Livre e Recepção no Salão 
