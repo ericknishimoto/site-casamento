@@ -1,7 +1,7 @@
 *.DS_Store
 *.log
 *.zip
-*conecta.php
+conecta.php
 .idea
 .sass-cache/
 /nbproject/
