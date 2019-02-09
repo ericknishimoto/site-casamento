@@ -195,4 +195,8 @@ background: #707070;
     margin: 0;
     margin-top: 2rem;
   }
+
+  .img-md3 {
+  display: none;
+  }
 }
