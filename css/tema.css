@@ -200,3 +200,7 @@ background: #707070;
   display: none;
   }
 }
+
+.margin-right-zero {
+  margin-right: 0 !important;
+}

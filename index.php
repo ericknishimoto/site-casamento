@@ -65,17 +65,17 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
+      <div class="container" style="margin-right: 1rem;">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><?= ($infos['brand']) ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">          
+          <ul class="navbar-nav text-uppercase ml-auto">    
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
-            </li>
+            </li>      
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#presenca">Presença</a>
             </li>
