@@ -117,7 +117,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                   <a target="_blank" href="<?= ($presente->link) ?>" class="link">
                     <div class="card-presentes d-flex justify-content-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
-                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center"><?= $presente->titulo ?></p>                    
+                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center"><?= $presente->titulo ?></p>                    
                       <p class="card__autor text-center">Valor médio:</p>
                       <p class="card__preco text-center">R$ <?= $presente->valor ?></p>
                       <a target="_blank" href="<?= $presente->link ?>" class="btn botao-comprar">Comprar</a>
@@ -132,7 +132,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                   <a target="_blank" href="<?= $presente->link ?>" class="link">
                     <div class="card-comprado d-flex justify-content-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
-                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center"><?= $presente->titulo ?></p>                    
+                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center"><?= $presente->titulo ?></p>                    
                       <p class="card__autor text-center">Valor médio:</p>
                       <p class="card__preco text-center">R$ <?= $presente->valor ?></p>
                       <div class="btn btn-comprado">Comprado ✓</div>
