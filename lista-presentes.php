@@ -2,6 +2,8 @@
 require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
+error_reporting(E_ERROR | E_PARSE);
+
 $infos = listaMeusite($conexao);
 $presentes = listaPresentes($conexao);
 ?>
