@@ -25,102 +25,98 @@ $convidados = listaConvidados($conexao);
     <!-- Main content -->
     <section class="content">
 
-    <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
-?>
-    <div class="row">
-      <div class="col-xs-8">
-      <div class="box box-success box-solid">
+      <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
+  ?>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="box box-success box-solid">
             <div class="box-header with-border">
               <h3 class="box-title">Alteração realizada!</h3>
               <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
-              <!-- /.box-tools -->
+                <!-- /.box-tools -->
             </div>
-            <!-- /.box-header -->
+              <!-- /.box-header -->
             <div class="box-body">
-          <p>Alteração realizada com sucesso!</a>.</p>
+              <p>Alteração realizada com sucesso!</a>.</p>
             </div>
-            <!-- /.box-body -->
+              <!-- /.box-body -->
           </div>
+        </div>
       </div>
-    </div>
-<?php
-  }
-?>
-      
-        <!-- Presenças -->
-        <div id="convidados" class="box">
-          <div class="box-header with-border responsive">
-            <h3 class="box-title">Lista de confirmações</h3>
-            <!-- tools box -->
-            <div class="pull-right box-tools">
-              <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
-                <i class="fa fa-minus"></i></button>
-            </div>
-            <!-- /. tools -->
+  <?php
+    }
+  ?>
+      <!-- Presenças -->
+      <div id="convidados" class="box">
+        <div class="box-header with-border responsive">
+          <h3 class="box-title">Lista de confirmações</h3>
+          <!-- tools box -->
+          <div class="pull-right box-tools">
+            <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+              <i class="fa fa-minus"></i></button>
           </div>
-          <!-- /.box-header -->
-          <div class="box-body">
+          <!-- /. tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="col-xs-12">
+            <table id="tabela" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>#ID</th>
+                <th>Nome</th>
+                <th>Confirmação</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Nº Adultos</th>
+                <th>Nome Adultos</th>
+                <th>Nº Crianças</th>
+                <th>Ações</th>
+              </tr>
+              </thead>
+              <tbody>
 
-                    <div class="col-xs-12">
-                          <table id="tabela" class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                              <th>#ID</th>
-                              <th>Nome</th>
-                              <th>Confirmação</th>
-                              <th>Telefone</th>
-                              <th>Email</th>
-                              <th>Nº Adultos</th>
-                              <th>Nome Adultos</th>
-                              <th>Nº Crianças</th>
-                              <th>Ações</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-            
-                            <?php
-                            foreach ($convidados as $convidado) {
-                            ?>
-                                  <td><?= $convidado->id ?></td>
-                                  <td><?= $convidado->nome ?></td>
-                                  <td>
-                                  <?php
-                                    if($convidado->confirmacao == 1) {
-                                  ?>
-                                    <p style="color: green;">Confirmado</p>
-                                  <?php
-                                    } else {
-                                  ?>
-                                    <p style="color: red;">Não irá</p>
-                                  <?php
-                                    }
-                                  ?>
-                                  </td>
-                                  <td><?= $convidado->telefone ?></td>
-                                  <td><?= $convidado->email ?></td>
-                                  <td><?= $convidado->adultos ?></td>
-                                  <td><?= $convidado->nome_adultos ?></td>
-                                  <td><?= $convidado->criancas ?></td>
-                                  <td class="text-center">
-                                    <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                                    <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
-                                    <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
-                                  </td>
-                              </tr>
-            
-                            <?php
-                            }
-                            ?>
-                            </tbody>
-                          </table>
-                  
-                    </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
-            </div>    
+              <?php
+              foreach ($convidados as $convidado) {
+              ?>
+                    <td><?= $convidado->id ?></td>
+                    <td><?= $convidado->nome ?></td>
+                    <td>
+                    <?php
+                      if($convidado->confirmacao == 1) {
+                    ?>
+                      <p style="color: green;">Confirmado</p>
+                    <?php
+                      } else {
+                    ?>
+                      <p style="color: red;">Não irá</p>
+                    <?php
+                      }
+                    ?>
+                    </td>
+                    <td><?= $convidado->telefone ?></td>
+                    <td><?= $convidado->email ?></td>
+                    <td><?= $convidado->adultos ?></td>
+                    <td><?= $convidado->nome_adultos ?></td>
+                    <td><?= $convidado->criancas ?></td>
+                    <td class="text-center">
+                      <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                      <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                      <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
+                    </td>
+                </tr>
+
+              <?php
+              }
+              ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>    
 
     </section>
     <!-- /.content -->

@@ -3,26 +3,7 @@ require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
-$mensagens = listaMensagens($conexao);
-$fotos = listaFotos($conexao);
-
-//Lógica data
-$dataAtual = new DateTime(date('d-m-Y'));
-$dataCasamento = new DateTime($infos['data_casamento']);
-$intervalo = $dataAtual->diff($dataCasamento);
-$valor = $intervalo->format('%r%a%');
-$mensagem;
-
-if ($valor == 0) {
-  $mensagem = "É hoje!!!";
-} elseif ($valor == 1) {
-  $mensagem = "É amanhã!!!";
-} elseif ($valor > 0) {
-  $mensagem = "Faltam " . $valor . " dias";
-} else {
-  $mensagem = "Já se passaram " . $valor*-1 . " dias...";
-}
-
+$presentes = listaPresentes($conexao);
 ?>
 
 <html lang="en">
@@ -125,53 +106,48 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <section class="lista">
       <div class="container mb-4">
         <div class="row d-flex justify-content-center">
+          <?php
+            if ($presentes != null) {
+              foreach ($presentes as $presente) {
 
-          <div class="col-lg-3 col-md-4 mt-4">
-            <a target="_blank" href="https://www.magazineluiza.com.br/smart-tv-4k-led-75-lg-75uk6520-wi-fi-hdr-inteligencia-artificial-conversor-digital-4-hdmi/p/193419200/et/elit/?partner_id=4657&utm_source=google&utm_medium=pla&utm_campaign=PLA_marketplace&seller_id=magazineluiza&product_group_id=304686411572&ad_group_id=59464795802&aw_viq=pla&gclid=Cj0KCQiAkfriBRD1ARIsAASKsQLkXDqDqZp0JK6qC_CC42cqLRjEykohuDY2Jb5ypBMQESMScEnZdtcaAlXdEALw_wcB"class="link">
-              <div class="card-presentes d-flex justify-content-center">
-                <img class="card-img-top img-md3" src="img/tv.jpg" alt="Card image cap">
-                <p class="card__titulo text-center">
-                    Smart TV 4K LED 75” LG 75UK6520 Wi-Fi HDR</p>
-               
-                <p class="card__autor text-center">Valor médio:</p>
-                <p class="card__preco text-center">R$9.000,00</p>
-                <a target="_blank" href="https://www.magazineluiza.com.br/smart-tv-4k-led-75-lg-75uk6520-wi-fi-hdr-inteligencia-artificial-conversor-digital-4-hdmi/p/193419200/et/elit/?partner_id=4657&utm_source=google&utm_medium=pla&utm_campaign=PLA_marketplace&seller_id=magazineluiza&product_group_id=304686411572&ad_group_id=59464795802&aw_viq=pla&gclid=Cj0KCQiAkfriBRD1ARIsAASKsQLkXDqDqZp0JK6qC_CC42cqLRjEykohuDY2Jb5ypBMQESMScEnZdtcaAlXdEALw_wcB"class="btn botao-comprar">Comprar</a>
-              </div>
-           </a>
-          </div>
+                if ($presente->confirmacao != 1) {
+                ?>
 
-          <div class="col-lg-3 col-md-4 mt-4">
-              <div class="card-comprado d-flex justify-content-center">
-                <img class="card-img-top img-md3" src="img/cooktop.jpg" alt="Card image cap">
-                <p class="card__titulo text-center">
-                    Cooktop em Vidro Temperado Com 5 Queimadores Tramontina</p>
-                <p class="card__autor text-center">Valor médio:</p>
-                <p class="card__preco text-center">R$3.500,00</p>
-                <div class="btn btn-comprado">Comprado ✓</div>
-              </div>
-          </div>
+                 <div class="col-lg-3 col-md-4 mt-4">
+                  <a target="_blank" href="<?= ($presente->link) ?>" class="link">
+                    <div class="card-presentes d-flex justify-content-center">
+                      <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
+                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center"><?= $presente->titulo ?></p>                    
+                      <p class="card__autor text-center">Valor médio:</p>
+                      <p class="card__preco text-center">R$ <?= $presente->valor ?></p>
+                      <a target="_blank" href="<?= $presente->link ?>" class="btn botao-comprar">Comprar</a>
+                    </div>
+                  </a>
+                </div>
 
-          <div class="col-lg-3 col-md-4 mt-4">
-              <div class="card-comprado d-flex justify-content-center">
-                <img class="card-img-top img-md3" src="img/cooktop.jpg" alt="Card image cap">
-                <p class="card__titulo text-center">
-                    Cooktop em Vidro Temperado Com 5 Queimadores Tramontina</p>
-                <p class="card__autor text-center">Valor médio:</p>
-                <p class="card__preco text-center">R$3.500,00</p>
-                <div class="btn btn-comprado">Comprado ✓</div>
-              </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 mt-4">
-              <div class="card-comprado d-flex justify-content-center">
-                <img class="card-img-top img-md3" src="img/cooktop.jpg" alt="Card image cap">
-                <p class="card__titulo text-center">
-                    Cooktop em Vidro Temperado Com 5 Queimadores Tramontina</p>
-                <p class="card__autor text-center">Valor médio:</p>
-                <p class="card__preco text-center">R$3.500,00</p>
-                <div class="btn btn-comprado">Comprado ✓</div>
-              </div>
-          </div>
+                <?php 
+                } else {
+                ?> 
+                  <div class="col-lg-3 col-md-4 mt-4">
+                  <a target="_blank" href="<?= $presente->link ?>" class="link">
+                    <div class="card-comprado d-flex justify-content-center">
+                      <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
+                      <p class="card__titulo d-flex card__titulo justify-content-center align-items-center"><?= $presente->titulo ?></p>                    
+                      <p class="card__autor text-center">Valor médio:</p>
+                      <p class="card__preco text-center">R$ <?= $presente->valor ?></p>
+                      <div class="btn btn-comprado">Comprado ✓</div>
+                    </div>
+                  </a>
+                </div>
+                <?php 
+                }
+              }
+            } else {
+              ?> 
+                <h4 class="text-muted mt-5">Em breve...</h4>
+              <?php 
+            }
+            ?>
 
         </div>
       </div>

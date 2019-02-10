@@ -117,6 +117,11 @@
           <span class="pull-right-container">
           </span>
         </a></li>
+        <li id="regras"><a href="presentes">
+          <i class="fa fa-list"></i> <span>Lista de Presentes</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
         <li id="regras"><a href="cadastro-usuarios">
           <i class="fa fa-users"></i> <span>Usuário</span>
           <span class="pull-right-container">

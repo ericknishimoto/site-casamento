@@ -16,6 +16,13 @@
     object-fit: cover;
 }
 
+.img-md2 {
+    width: 100%;
+    min-width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
 /* MODAL */
 
 .modal-danger {

@@ -1,6 +1,7 @@
 <?php
 
 require_once('class/Convidado.php');
+require_once('class/Presente.php');
 
 function listaMeusite($conexao) {
     $infos = array();
@@ -169,4 +170,46 @@ where id = '{$convidado->id}'";
 return mysqli_query($conexao, $query);
 }
 
+// PRESENTES
 
+function inserePresente ($conexao, Presente $presente) { 
+    $query = "INSERT INTO lista_presentes (titulo, valor, link, imagem)
+    VALUES ('{$presente->titulo}','{$presente->valor}',
+        '{$presente->link}','{$presente->imagem}')"; 
+    return mysqli_query($conexao, $query);
+}
+
+function listaPresentes($conexao) {
+    $presentes = array();
+    $query = "select * from lista_presentes";
+    $resultado = mysqli_query($conexao, $query);
+    while ($presente_array = mysqli_fetch_assoc($resultado)) {
+        
+        $presente = new Presente();
+
+        $presente->id = $presente_array['id'];
+        $presente->titulo = $presente_array['titulo'];
+        $presente->valor = $presente_array['valor'];
+        $presente->link = $presente_array['link'];
+        $presente->confirmacao = $presente_array['confirmacao'];
+        $presente->imagem = $presente_array['imagem'];
+
+        array_push($presentes, $presente);
+    }
+    return $presentes;
+}
+
+function confirmaPresente ($conexao,$id,$confirmacao) { 
+    $query = "UPDATE lista_presentes set
+    confirmacao = '{$confirmacao}'
+    
+    where id = '{$id}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function excluiPresente($conexao, $id) {
+    $query = "delete from lista_presentes where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
