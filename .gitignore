@@ -1,7 +1,6 @@
 *.DS_Store
 *.log
 *.zip
-conecta.php
 .idea
 .sass-cache/
 /nbproject/
@@ -10,3 +9,4 @@ conecta.php
 ad.js
 TODO
 test.html
+conecta.php
