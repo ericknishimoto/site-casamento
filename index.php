@@ -82,6 +82,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#local">Local</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="lista-presentes.php">Lista de Presentes</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -530,7 +533,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg2.style.backgroundSize = "cover";
 
     let bg3 = document.querySelector("#local");
-    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .6)),url('img/bg-3.jpg')";
+    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url('img/bg-3.jpg')";
     bg3.style.backgroundRepeat = "no-repeat";
     bg3.style.backgroundAttachment = "fixed";
     bg3.style.backgroundPosition = "center";

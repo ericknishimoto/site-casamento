@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+.lista {
+  padding: 2rem;
+}
+
+.presenca {
+  padding-top: 150px;
+  padding-bottom: 10px;
+  background-color: rgba(211, 211, 211, 0.219);
+}
+
+.intro-welcome {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 4rem;
+}
+
+.intro-lead {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.card-presentes {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: .25rem;
+  background-color: rgba(255, 255, 255, 0.836);
+  min-height: 300px;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.card-presentes:hover {
+  border-color: lightgray;
+  box-shadow: 0 0 10px lightgray;
+}
+
+.card-comprado {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: .25rem;
+  background-color: rgba(255, 255, 255, 0.836);
+  min-height: 300px;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.card__titulo {
+  color: rgba(0, 0, 0, 0.658);
+  font-size: 0.9rem;
+  padding-top: 15px;
+  font-weight: bold;
+  height: 90px;
+}
+
+.card__texto {
+  color: rgba(0, 0, 0, 0.658);
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+.card__autor {
+  color: rgba(0, 0, 0, 0.658);
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.card__autor-m {
+  color: rgba(0, 0, 0, 0.658);
+  font-style: italic;
+  font-size: .9rem;
+  margin-top: -1.5rem;
+}
+
+.card__data {
+  color: rgba(0, 0, 0, 0.658);
+  font-style: italic;
+  font-size: .9rem;
+  margin-top: -20px;
+}
+
+.card__preco {
+  color: rgba(0, 0, 0, 0.658);
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: -20px;
+}
+
+.img-md3 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.botao-categoria {
+  margin: 1rem .5rem;
+}
+
+.botao-comprar {
+  margin: 1rem .5rem;
+  background-color: transparent;
+  border: 1px solid gray;
+  color: black;
+}
+
+span, .btn {
+  font-weight: 500;
+}
+
+hr {
+border-top: 1.5px solid rgba(0,0,0,.1);
+}
+
+.link:hover{
+  background-color:white;
+  color: white;
+}
+
+.botao-comprar:hover{
+  background-color:black !important;
+  color: white;
+}
+
+.btn:hover{
+  background-color: rgba(128, 128, 128, 0.151);
+}
+
+.btn-comprado{
+  margin: 1rem .5rem;
+  background-color: transparent;
+  border: 1px solid gray;
+  background-color:white;
+  color: gray;
+  border: 1px solid white;
+  cursor: initial !important;
+}
+
+.btn-comprado:hover{
+  background-color:white;
+  color: gray;
+}
+
+
+footer {
+  background-color: rgba(211, 211, 211, 0.267);
+}
+
+
+@media (min-width: 700px){
+.modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+  }
+}
+
+@media (max-width: 500px){
+  .card__texto {
+    padding: 15px 0;
+  }
+
+  .botao-enviar {
+    margin: 0 0;
+    margin-top: 2rem;
+    margin-right: 10px;
+  }
+  
+  .botao-categoria {
+    margin: .5rem;
+  }
+
+  .img-md3 {
+  display: none;
+  }
+}
