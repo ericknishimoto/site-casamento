@@ -65,7 +65,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container" style="margin-right: 1rem;">
+      <div class="container" style="max-width: 1300px;">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><?= ($infos['brand']) ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
