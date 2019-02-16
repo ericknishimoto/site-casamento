@@ -246,12 +246,39 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>
 
+ <!-- LISTA DE PRESENTES -->
+ <section id="presenca" class="presenca text-center">
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Lista de Presentes</h2>
+            <h3 class="section-subheading text-muted">Ajude os noivos a montar a casa nova. Presenteie!</h3>
+          </div>
+        </div>
+        <div class="d-flex">
+            <hr class="my-auto flex-grow-1" style="color:gray;">
+            <div class="px-4" style="color:gray;">♥</div>
+            <hr class="my-auto flex-grow-1" style="color:gray;">
+        </div>              
+        
+        <div class="row d-flex justify-content-center">
+          <a href="lista-presentes.php" class="btn btn-lg botao-todos text-muted link">
+            Ver lista
+          </a>
+        </div>
+
+        </form>
+      </div>
+      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
+    </section>
+
+
     <!-- Fotos -->
     <section id="fotos">
 
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading"><?= ($infos['fotos_titulo']) ?></h2>
-              <h3 class="section-subheading text-muted"><?= ($infos['fotos_subtitulo']) ?></h3>
+              <h2 class="section-heading" style="color:white;"><?= ($infos['fotos_titulo']) ?></h2>
+              <h3 class="section-subheading" style="color:white;"><?= ($infos['fotos_subtitulo']) ?></h3>
             </div>
 
 
@@ -280,12 +307,15 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+ <!-- Footer -->
+ <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</i></span>
+          <div class="col-md-11">
+            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
+          </div>
+          <div class="col-md-1">
+            <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
           </div>
           </div>
         </div>
@@ -526,7 +556,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg.style.backgroundSize = "cover";
 
     let bg2 = document.querySelector("#mensagens");
-    bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['mensagens_imagem']?>";
+    bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .2)),url('upload/<?= $infos['mensagens_imagem']?>";
     bg2.style.backgroundRepeat = "no-repeat";
     bg2.style.backgroundAttachment = "fixed";
     bg2.style.backgroundPosition = "center";
@@ -538,6 +568,13 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg3.style.backgroundAttachment = "fixed";
     bg3.style.backgroundPosition = "center";
     bg3.style.backgroundSize = "cover";
+
+    let bg4 = document.querySelector("#fotos");
+    bg4.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/bg-4.jpg')";
+    bg4.style.backgroundRepeat = "no-repeat";
+    bg4.style.backgroundAttachment = "fixed";
+    bg4.style.backgroundPosition = "center";
+    bg4.style.backgroundSize = "cover";
     </script>
 
     <!-- Limitador de caracteres text-area -->
@@ -549,6 +586,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
       $(".caracteres").text(caracteresRestantes);
       });
+      window.history.replaceState('', '', '/');
     </script>
 
       <!-- Abre modal de msg enviada -->

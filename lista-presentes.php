@@ -129,7 +129,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                 } else {
                 ?> 
                   <div class="col-lg-3 col-md-4 mt-4">
-                  <a target="_blank" href="<?= $presente->link ?>" class="link">
+                  <a target="_blank" class="link">
                     <div class="card-comprado d-flex justify-content-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
                       <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center"><?= $presente->titulo ?></p>                    
@@ -158,8 +158,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</i></span>
+          <div class="col-md-11">
+            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
+          </div>
+          <div class="col-md-1">
+            <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
           </div>
           </div>
         </div>

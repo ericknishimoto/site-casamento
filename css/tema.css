@@ -200,3 +200,11 @@ background: #707070;
   display: none;
   }
 }
+
+.link {
+  background-color: #DDDDDD !important;
+}
+
+.link:hover {
+  background-color: rgba(128, 128, 128, 0.151)!important;
+}
