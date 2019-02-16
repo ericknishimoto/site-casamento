@@ -586,7 +586,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
       $(".caracteres").text(caracteresRestantes);
       });
-      window.history.replaceState('', '', '/');
+    </script>
+
+    <!-- Replace URL -->
+    <script>
+    window.history.replaceState('', '', '/');
     </script>
 
       <!-- Abre modal de msg enviada -->
