@@ -231,21 +231,21 @@ header.masthead {
   #mensagens {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: left !important;
+    background-position: center !important;
     background-size: contain !important;
   }
   
   #local {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: left !important;
+    background-position: center !important;
     background-size: contain !important;
   }
   
   #fotos {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: left !important;
+    background-position: center !important;
     background-size: contain !important;
   }
 }
