@@ -560,21 +560,21 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg2.style.backgroundRepeat = "no-repeat";
     bg2.style.backgroundAttachment = "fixed";
     bg2.style.backgroundPosition = "center";
-    bg2.style.backgroundSize = "fill";
+    bg2.style.backgroundSize = "contain";
 
     let bg3 = document.querySelector("#local");
     bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url('img/bg-3.jpg')";
     bg3.style.backgroundRepeat = "no-repeat";
     bg3.style.backgroundAttachment = "fixed";
     bg3.style.backgroundPosition = "center";
-    bg3.style.backgroundSize = "fill";
+    bg3.style.backgroundSize = "contain";
 
     let bg4 = document.querySelector("#fotos");
     bg4.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/bg-4.jpg')";
     bg4.style.backgroundRepeat = "no-repeat";
     bg4.style.backgroundAttachment = "fixed";
     bg4.style.backgroundPosition = "center";
-    bg4.style.backgroundSize = "fill";
+    bg4.style.backgroundSize = "contain";
     </script>
 
     <!-- Limitador de caracteres text-area -->
