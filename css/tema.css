@@ -180,13 +180,6 @@ background: #707070;
   }
 }
 
-header.masthead {
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-size: cover !important;
-}
-
 #mensagens {
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;

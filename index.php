@@ -550,7 +550,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <script>
     let bg = document.querySelector(".masthead");
     bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('upload/<?= $infos['cabecalho_imagem']?>')";
-   
+    bg.style.backgroundRepeat = "no-repeat";
+    bg.style.backgroundAttachment = "fixed";
+    bg.style.backgroundPosition = "center";
+    bg.style.backgroundSize = "cover";
 
     let bg2 = document.querySelector("#mensagens");
     bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .2)),url('upload/<?= $infos['mensagens_imagem']?>";
@@ -558,7 +561,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
     let bg3 = document.querySelector("#local");
     bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url('img/bg-3.jpg')";
-    
+   
 
     let bg4 = document.querySelector("#fotos");
     bg4.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/bg-4.jpg')";
@@ -577,9 +580,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     </script>
 
     <!-- Replace URL -->
-    <!-- <script>
+    <script>
     window.history.replaceState('', '', '/');
-    </script> -->
+    </script>
 
       <!-- Abre modal de msg enviada -->
       <?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
