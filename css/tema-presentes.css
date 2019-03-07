@@ -106,8 +106,18 @@
 
 .img-md3 {
   width: 100%;
-  height: 150px;
   object-fit: cover;
+}
+
+.imagem-produto {
+  max-width: 150px;
+  min-width: 150px;
+}
+
+
+.card-presentes.d-flex.justify-content-center {
+  min-height: 450px;
+  max-height: 450px;
 }
 
 .botao-categoria {

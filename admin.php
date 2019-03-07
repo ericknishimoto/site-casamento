@@ -154,9 +154,4 @@ if(isset($_GET["falhaDeSeguranca"])) {
     });
 </script>
 
-<!-- Replace URL -->
-<script>
-window.history.replaceState('', '', '/');
-</script>
-
 </body></html>
