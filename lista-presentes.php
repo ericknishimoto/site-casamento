@@ -196,11 +196,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       });
     </script>
 
-    <!-- Replace URL -->
-    <script>
-    window.history.replaceState('', '', '/');
-    </script>
-
   </body>
 
 </html>
