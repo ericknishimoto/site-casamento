@@ -225,21 +225,21 @@ background: #707070;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important;
-    background-size: contain !important;
+    background-size: cover !important;
   }
   
   #local {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important;
-    background-size: contain !important;
+    background-size: cover !important;
   }
   
   #fotos {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position: center !important;
-    background-size: contain !important;
+    background-size: cover !important;
   }
 }
 
