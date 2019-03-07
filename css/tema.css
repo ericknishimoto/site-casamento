@@ -221,26 +221,6 @@ background: #707070;
   display: none;
   }
 
-  #mensagens {
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-size: contain !important;
-  }
-  
-  #local {
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-size: contain !important;
-  }
-  
-  #fotos {
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
-    background-size: contain !important;
-  }
 }
 
 .link {
