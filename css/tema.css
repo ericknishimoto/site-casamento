@@ -223,20 +223,23 @@ background: #707070;
 
   #mensagens {
     background-repeat: no-repeat !important;
+    background-attachment: none !important;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: contain !important;
   }
   
   #local {
     background-repeat: no-repeat !important;
+    background-attachment: none !important;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: contain !important;
   }
   
   #fotos {
     background-repeat: no-repeat !important;
+    background-attachment: none !important;
     background-position: center !important;
-    background-size: cover !important;
+    background-size: contain !important;
   }
 }
 
