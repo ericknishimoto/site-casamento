@@ -224,21 +224,21 @@ background: #707070;
   #mensagens {
     background-repeat: no-repeat !important;
     background-attachment: scroll !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: cover !important;
   }
   
   #local {
     background-repeat: no-repeat !important;
     background-attachment: scroll !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: cover !important;
   }
   
   #fotos {
     background-repeat: no-repeat !important;
     background-attachment: scroll !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: cover !important;
   }
 }
