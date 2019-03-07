@@ -203,21 +203,21 @@ background: #707070;
   #mensagens {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: contain !important;
   }
   
   #local {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: contain !important;
   }
   
   #fotos {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-position: center !important;
+    background-position: left !important;
     background-size: contain !important;
   }
 }
@@ -230,7 +230,7 @@ background: #707070;
   background-color: rgba(128, 128, 128, 0.151)!important;
 }
 
-.masthead {
+header.masthead {
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   background-position: center !important;
