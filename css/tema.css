@@ -199,6 +199,27 @@ background: #707070;
   .img-md3 {
   display: none;
   }
+
+  #mensagens {
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: contain !important;
+  }
+  
+  #local {
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: contain !important;
+  }
+  
+  #fotos {
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: contain !important;
+  }
 }
 
 .link {
@@ -207,4 +228,32 @@ background: #707070;
 
 .link:hover {
   background-color: rgba(128, 128, 128, 0.151)!important;
+}
+
+.masthead {
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+#mensagens {
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+#local {
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+#fotos {
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
