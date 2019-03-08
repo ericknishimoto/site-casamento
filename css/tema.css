@@ -201,6 +201,13 @@ background: #707070;
   background-size: cover !important;
 }
 
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: .2rem;
+  pointer-events: none;
+}
+
 @media (max-width: 500px){
   .card__texto {
     padding: 15px 0;
