@@ -4,6 +4,7 @@ require_once 'banco-meusite.php';
 
 $infos = listaMeusite($conexao);
 $presentes = listaPresentes($conexao);
+$categorias = listaCategorias($conexao);
 ?>
 
 <html lang="en">
@@ -87,15 +88,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>              
         
         <div class="row d-flex justify-content-center">
-          <button type="button" class="btn botao-categoria text-muted">
-            Eletrodomésticos
-          </button>
-          <button type="button" class="btn botao-categoria text-muted">
-            Cama, mesa e banho
-          </button>
-          <button type="button" class="btn botao-categoria text-muted">
-            Decoração
-          </button>
+          <?php foreach($categorias as $categoria) :?>
+            <button type="button" class="btn botao-categoria text-muted">
+            <?=$categoria['nome']?>
+            </button>    
+          <?php endforeach ?>  
         </div>
 
       </div>
