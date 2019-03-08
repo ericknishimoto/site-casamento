@@ -213,3 +213,9 @@ function excluiPresente($conexao, $id) {
     $query = "delete from lista_presentes where id = {$id}";
     return mysqli_query($conexao, $query);
 }
+
+function insereCategoria ($conexao, $categoria) { 
+    $query = "INSERT INTO categorias (nome)
+    VALUES ('{$categoria}')"; 
+    return mysqli_query($conexao, $query);
+}

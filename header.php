@@ -117,16 +117,16 @@
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras" class=" treeview menu-open">
+        <li id="regras" class=" treeview">
           <a href="presentes">
-            <i class="fa fa-list"></i> <span>Lista de Presentes</span>
+            <i class="fa fa-gift""></i> <span>Presentes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu" style="">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="presentes"><i class="fa fa-list"></i> Lista de Presentes</a></li>
+            <li><a href="categorias"><i class="fa fa-bookmark-o"></i> Categorias</a></li>
           </ul>
         </li>
         <li id="regras"><a href="cadastro-usuarios">
