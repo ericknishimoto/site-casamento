@@ -249,7 +249,7 @@ $categorias = listaCategorias($conexao);
                         <?php
                           if($presente->confirmacao == 1) {
                         ?>
-                          <p style="color: gray;">Comprado =)</p>
+                          <p style="color: gray;">Adquirido</p>
                         <?php
                           } else {
                         ?>
