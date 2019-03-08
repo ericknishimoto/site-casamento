@@ -133,7 +133,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                       <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center"><?= $presente->titulo ?></p>                    
                       <p class="card__autor text-center">Valor médio:</p>
                       <p class="card__preco text-center">R$ <?= $presente->valor ?></p>
-                      <div class="btn btn-comprado">Comprado ✓</div>
+                      <div class="btn btn-comprado">Adquirido ✓</div>
                     </div>
                   </a>
                 </div>
