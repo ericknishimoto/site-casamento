@@ -173,15 +173,16 @@ return mysqli_query($conexao, $query);
 // PRESENTES
 
 function inserePresente ($conexao, Presente $presente) { 
-    $query = "INSERT INTO lista_presentes (titulo, valor, link, imagem)
+    $query = "INSERT INTO lista_presentes (titulo, valor, link, Codcategoria, imagem)
     VALUES ('{$presente->titulo}','{$presente->valor}',
-        '{$presente->link}','{$presente->imagem}')"; 
+        '{$presente->link}', '{$presente->categoria}','{$presente->imagem}')"; 
     return mysqli_query($conexao, $query);
 }
 
 function listaPresentes($conexao) {
     $presentes = array();
-    $query = "select * from lista_presentes";
+    $query = "select *,lp.id as id, c.nome as categoria from lista_presentes as lp join categorias as c
+    on lp.codCategoria = c.id";
     $resultado = mysqli_query($conexao, $query);
     while ($presente_array = mysqli_fetch_assoc($resultado)) {
         
@@ -191,6 +192,7 @@ function listaPresentes($conexao) {
         $presente->titulo = $presente_array['titulo'];
         $presente->valor = $presente_array['valor'];
         $presente->link = $presente_array['link'];
+        $presente->categoria = $presente_array['categoria'];
         $presente->confirmacao = $presente_array['confirmacao'];
         $presente->imagem = $presente_array['imagem'];
 
@@ -217,5 +219,20 @@ function excluiPresente($conexao, $id) {
 function insereCategoria ($conexao, $categoria) { 
     $query = "INSERT INTO categorias (nome)
     VALUES ('{$categoria}')"; 
+    return mysqli_query($conexao, $query);
+}
+
+function listaCategorias($conexao) {
+    $categorias = array();
+    $query = "select * from categorias";
+    $resultado = mysqli_query($conexao, $query);
+    while ($categoria = mysqli_fetch_assoc($resultado)) {
+        array_push($categorias, $categoria);
+    }
+    return $categorias;
+}
+
+function excluiCategoria($conexao, $id) {
+    $query = "delete from categorias where id = {$id}";
     return mysqli_query($conexao, $query);
 }

@@ -5,7 +5,7 @@ require_once 'header.php';
 require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
-$presentes = listaPresentes($conexao);
+$categorias = listaCategorias($conexao);
 
 ?>
  <!-- Content Wrapper. Contains page content -->
@@ -63,6 +63,54 @@ $presentes = listaPresentes($conexao);
             <!-- /.box-header -->
             <div class="box-body">
             <p>Categoria cadastrada com sucesso.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
+
+<?php if(isset($_GET["exclusao"]) && $_GET["exclusao"]==true) {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Categoria excluída!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Categoria excluída com sucesso.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
+
+<?php if(isset($_GET["erro"]) && $_GET["erro"]=="1451") {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-danger box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Categoria em uso!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Existem produtos cadastrados com esta categoria, remova-os para poder prosseguir.</p>
             </div>
             <!-- /.box-body -->
           </div>
@@ -131,39 +179,19 @@ $presentes = listaPresentes($conexao);
                   <tr>
                     <th>#ID</th>
                     <th>Titulo</th>
-                    <th>Valor Médio</th>
-                    <th>Link</th>
-                    <th>Status</th>
                     <th>Ações</th>
                   </tr>
                   </thead>
                   <tbody>
 
                   <?php
-                  foreach ($presentes as $presente) {
+                  foreach ($categorias as $categoria) {
                   ?>
-                        <td><?= $presente->id ?></td>
-                        <td><?= $presente->titulo ?></td>
-                        <td>R$ <?= $presente->valor ?></td>
-                        <td><a href="<?= $presente->link ?>" target="_blank">Abrir link</a></td>
-                        <td>
-                        <?php
-                          if($presente->confirmacao == 1) {
-                        ?>
-                          <p style="color: gray;">Comprado =)</p>
-                        <?php
-                          } else {
-                        ?>
-                          <p style="color: green;">Disponível</p>
-                        <?php
-                          }
-                        ?>
+                        <td><?= $categoria['id'] ?></td>
+                        <td><?= $categoria['nome'] ?></td>
                         </td>
                         <td class="text-center">
-                          <a href="confirma-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                          <a href="nega-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
-                          <a href="form-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
-                          <a href="exclui-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>       
+                          <a href="exclui-categoria.php?id=<?= $categoria['id'] ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>       
                         </td>
                     </tr>
 

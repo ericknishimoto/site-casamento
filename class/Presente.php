@@ -7,4 +7,5 @@ class Presente {
     public $valor;
     public $link;
     public $imagem;
+    public $categoria;
 }

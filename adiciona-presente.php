@@ -9,6 +9,7 @@ $presente = new Presente();
 $presente->titulo = $_POST["titulo"];
 $presente->valor = $_POST["valor"];
 $presente->link = $_POST["link"];
+$presente->categoria = $_POST["codCategoria"];
 
 if ( isset( $_FILES[ 'produto_imagem' ][ 'name' ] ) && $_FILES[ 'produto_imagem' ][ 'error' ] == 0 ) {
   echo 'Você enviou o produto_imagem: <strong>' . $_FILES[ 'produto_imagem' ][ 'name' ] . '</strong><br />';

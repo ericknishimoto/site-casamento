@@ -6,7 +6,7 @@ require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
 $presentes = listaPresentes($conexao);
-
+$categorias = listaCategorias($conexao);
 ?>
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -23,6 +23,30 @@ $presentes = listaPresentes($conexao);
     </section>
     <!-- Main content -->
     <section class="content">
+
+<?php if(isset($_GET["exclusao"]) && $_GET["exclusao"]==true) {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Presente excluído!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Presente excluído com sucesso.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
 
 <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
 ?>
@@ -141,11 +165,24 @@ $presentes = listaPresentes($conexao);
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="form-group">
                   <h4>Preço médio:</h4>
                   <input type="text" name="valor" class="form-control">
                 </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <h4>Categoria:</h4>
+                <select name="codCategoria" class="form-control">
+                  <?php foreach($categorias as $categoria) :?>
+                  <option value="<?=$categoria['id']?>">
+                    <?=$categoria['nome']?>
+                   </option>
+                   <?php endforeach ?>
+                </select>
+              </div>
             </div>
 
             <div class="col-md-6">
@@ -193,6 +230,7 @@ $presentes = listaPresentes($conexao);
                     <th>Titulo</th>
                     <th>Valor Médio</th>
                     <th>Link</th>
+                    <th>Categoria</th>
                     <th>Status</th>
                     <th>Ações</th>
                   </tr>
@@ -206,6 +244,7 @@ $presentes = listaPresentes($conexao);
                         <td><?= $presente->titulo ?></td>
                         <td>R$ <?= $presente->valor ?></td>
                         <td><a href="<?= $presente->link ?>" target="_blank">Abrir link</a></td>
+                        <td><?= $presente->categoria ?></td>
                         <td>
                         <?php
                           if($presente->confirmacao == 1) {
