@@ -201,28 +201,6 @@ background: #707070;
   background-size: cover !important;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
-  outline: 0;
-}
-
-.modal-open .modal {
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: .7rem;
-  pointer-events: none;
-}
-
 @media (max-width: 500px){
   .card__texto {
     padding: 15px 0;
