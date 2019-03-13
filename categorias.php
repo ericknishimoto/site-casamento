@@ -177,8 +177,7 @@ $categorias = listaCategorias($conexao);
                 <table id="tabela" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>#ID</th>
-                    <th>Titulo</th>
+                    <th>Nome</th>
                     <th>Ações</th>
                   </tr>
                   </thead>
@@ -187,7 +186,6 @@ $categorias = listaCategorias($conexao);
                   <?php
                   foreach ($categorias as $categoria) {
                   ?>
-                        <td><?= $categoria['id'] ?></td>
                         <td><?= $categoria['nome'] ?></td>
                         </td>
                         <td class="text-center">

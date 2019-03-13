@@ -45,7 +45,7 @@ if(isset($_SESSION["usuario_logado"])) {
     
 <div class="login-box">
   <div class="login-logo">
-     <b>Admin</b> | Meusite
+     <b>Admin</b> | Casamento
   </div>
 
 

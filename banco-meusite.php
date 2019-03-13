@@ -173,7 +173,7 @@ return mysqli_query($conexao, $query);
 // PRESENTES
 
 function inserePresente ($conexao, Presente $presente) { 
-    $query = "INSERT INTO lista_presentes (titulo, valor, link, Codcategoria, imagem)
+    $query = "INSERT INTO lista_presentes (titulo, valor, link, codCategoria, imagem)
     VALUES ('{$presente->titulo}','{$presente->valor}',
         '{$presente->link}', '{$presente->categoria}','{$presente->imagem}')"; 
     return mysqli_query($conexao, $query);
@@ -182,7 +182,7 @@ function inserePresente ($conexao, Presente $presente) {
 function listaPresentes($conexao) {
     $presentes = array();
     $query = "select *,lp.id as id, c.nome as categoria from lista_presentes as lp join categorias as c
-    on lp.codCategoria = c.id";
+    on lp.codCategoria = c.id order by titulo asc";
     $resultado = mysqli_query($conexao, $query);
     while ($presente_array = mysqli_fetch_assoc($resultado)) {
         
@@ -201,6 +201,28 @@ function listaPresentes($conexao) {
     return $presentes;
 }
 
+function listaPresente($conexao, $id) {
+    $presentes = array();
+    $query = "select *,lp.id as id, c.nome as categoria from lista_presentes as lp join categorias as c
+    on lp.codCategoria = c.id and lp.id = '{$id}'";
+    $resultado = mysqli_query($conexao, $query);
+    while ($presente_array = mysqli_fetch_assoc($resultado)) {
+        
+        $presente = new Presente();
+
+        $presente->id = $presente_array['id'];
+        $presente->titulo = $presente_array['titulo'];
+        $presente->valor = $presente_array['valor'];
+        $presente->link = $presente_array['link'];
+        $presente->categoria = $presente_array['categoria'];
+        $presente->confirmacao = $presente_array['confirmacao'];
+        $presente->imagem = $presente_array['imagem'];
+
+        array_push($presentes, $presente);
+    }
+    return $presente;
+}
+
 function confirmaPresente ($conexao,$id,$confirmacao) { 
     $query = "UPDATE lista_presentes set
     confirmacao = '{$confirmacao}'
@@ -216,6 +238,19 @@ function excluiPresente($conexao, $id) {
     return mysqli_query($conexao, $query);
 }
 
+function alteraPresente ($conexao, Presente $presente) { 
+
+    $query = "UPDATE lista_presentes set
+    titulo = '{$presente->titulo}',
+    valor = '{$presente->valor}',
+    codCategoria = '{$presente->categoria}',
+    link = '{$presente->link}'    
+    where id = '{$presente->id}'
+    ";
+    
+    return mysqli_query($conexao, $query);
+    }
+
 function insereCategoria ($conexao, $categoria) { 
     $query = "INSERT INTO categorias (nome)
     VALUES ('{$categoria}')"; 
@@ -224,7 +259,7 @@ function insereCategoria ($conexao, $categoria) {
 
 function listaCategorias($conexao) {
     $categorias = array();
-    $query = "select * from categorias";
+    $query = "select * from categorias order by nome asc ";
     $resultado = mysqli_query($conexao, $query);
     while ($categoria = mysqli_fetch_assoc($resultado)) {
         array_push($categorias, $categoria);

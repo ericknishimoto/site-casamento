@@ -83,7 +83,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               <a class="nav-link js-scroll-trigger" href="#local">Local</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="lista-presentes.php">Lista de Presentes</a>
+              <a class="nav-link js-scroll-trigger" href="lista-presentes">Lista de Presentes</a>
             </li>
           </ul>
         </div>

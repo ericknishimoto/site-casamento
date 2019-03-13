@@ -140,18 +140,18 @@ $categorias = listaCategorias($conexao);
             <!-- /.box-tools -->
           </div>
           <!-- /.box-header -->
-        <div class="box-body">
-          <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
-        </div>
+          <div class="box-body">
+            <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
+          </div>
         <!-- /.box-body -->
-      </div>
+        </div>
       </div>
       <!-- Formulário -->
       <div class="box-body pad" style="">
         <div class="box-body">
           <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group text-center">
                   <h4>Imagem do produto:</h4>
                   <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md2"/>
                   <input type='file' id="imgInp" type="file" name="produto_imagem" class="form-control-file">
@@ -273,12 +273,11 @@ $categorias = listaCategorias($conexao);
                 </table>
               </div>
             </div>
- 
         </div>
-      </div>
 
     </section>
     <!-- /.content -->
+
   </div>
   <!-- /.content-wrapper -->
 

@@ -146,7 +146,7 @@ border-top: 1.5px solid rgba(0,0,0,.1);
 }
 
 .botao-comprar:hover{
-  background-color:black !important;
+  background-color:gray !important;
   color: white;
 }
 
