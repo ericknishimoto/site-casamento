@@ -244,7 +244,8 @@ function alteraPresente ($conexao, Presente $presente) {
     titulo = '{$presente->titulo}',
     valor = '{$presente->valor}',
     codCategoria = '{$presente->categoria}',
-    link = '{$presente->link}'    
+    link = '{$presente->link}',   
+    imagem = '{$presente->imagem}'
     where id = '{$presente->id}'
     ";
     

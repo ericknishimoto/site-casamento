@@ -51,7 +51,7 @@ $categorias = listaCategorias($conexao);
 ?>
       <form action="altera-presente.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
 
-        <!-- Convidado -->
+        <!-- Presente -->
         <div id="fotos" class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Alterar presente</h3>
@@ -67,36 +67,53 @@ $categorias = listaCategorias($conexao);
 
             <div class="col-md-12 mb-3">
 
-              <div class="row">
-                <div class="col-md-12 mb-3">
-                  <h4>Nome do produto</h4>
-                  <input name="titulo" type="text" class="form-control" placeholder="Nome completo" value="<?= $presente->titulo ?>" required>
-                </div>
-              </div>
+            <div class="row">
 
-              <div class="row">
                 <div class="col-md-6">
-                  <h4>Preço Médio</h4>
-                  <input name="valor" type="number" class="form-control" value="<?= $presente->valor ?>" required placeholder="0" >
+                  <div class="form-group">
+                    <h4>Imagem do presente:</h4>
+                    <div class="form-group text-center">
+                      <img src="upload/<?= $presente->imagem ?>" id="blah" class="thumbnail img-rounded img-md"/>
+                      <input value="<?= $presente->imagem ?>" type="file" name="presente_imagem" id="imgInp" class="form-control-file">
+                      <input value="<?= $presente->imagem ?>" type="hidden" name="presente_imagem_anterior">
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <h4>Categoria</h4>
-                  <select name="categoria" class="form-control">
-                  <?php foreach($categorias as $categoria) :?>
-                  <option value="<?=$categoria['id']?>">
-                    <?=$categoria['nome']?>
-                   </option>
-                   <?php endforeach ?>
-                </select>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-12">
-                  <h4>Link</h4>
-                  <input name="link" type="text" class="form-control" value="<?= $presente->link ?>" required placeholder="0" >
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <h4>Nome do produto</h4>
+                    <input name="titulo" type="text" class="form-control" placeholder="Nome completo" value="<?= $presente->titulo ?>" required>
+                  </div>
                 </div>
-            </div> 
+ 
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <h4>Preço Médio</h4>
+                    <input name="valor" type="number" class="form-control" value="<?= $presente->valor ?>" required placeholder="0" >
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <h4>Categoria</h4>
+                    <select name="categoria" class="form-control">
+                    <?php foreach($categorias as $categoria) :?>
+                    <option value="<?=$categoria['id']?>">
+                      <?=$categoria['nome']?>
+                    </option>
+                    <?php endforeach ?>
+                  </select>
+                  </div>
+                </div>
+         
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <h4>Link</h4>
+                    <input name="link" type="text" class="form-control" value="<?= $presente->link ?>" required placeholder="0" >
+                  </div>
+                </div>
+
 
           </div>
         </div>
@@ -114,6 +131,28 @@ $categorias = listaCategorias($conexao);
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Preview image upload -->
+<script>
+  function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#blah').attr('src', e.target.result);
+  }
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#imgInp").change(function() {
+readURL(this);
+});
+</script>
 
 <?php
 require_once 'footer.php';

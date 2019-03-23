@@ -13,6 +13,15 @@ $presente->valor = $_POST["valor"];
 $presente->categoria = $_POST["categoria"];
 $presente->link = $_POST["link"];
 
+if($_FILES['presente_imagem']['name'] != "") {
+  $extensao = strtolower(substr($_FILES['presente_imagem']['name'], -4)); //pega a extensao do arquivo
+  $presente->imagem = md5('presente_imagem') . $extensao; //define o nome do arquivo
+  $diretorio = "upload/"; //define o diretorio para onde enviaremos o arquivo
+  move_uploaded_file($_FILES['presente_imagem']['tmp_name'], $diretorio.$presente->imagem); //efetua o upload
+} else {
+  $presente->imagem = $_POST['presente_imagem_anterior'];
+}
+
 if(alteraPresente($conexao, $presente)) {
   header ("Location: presentes?alteracao=true");
   die();
