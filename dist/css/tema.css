@@ -1,0 +1,6 @@
+.img-cover {
+    max-height: 250px;
+    display: inline;
+    min-height: 250px;
+    object-fit: cover;
+}

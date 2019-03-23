@@ -32,6 +32,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="dist/css/style.css">
   <link rel="stylesheet" href="dist/css/espacamento.css">
+  <link rel="stylesheet" href="dist/css/tema.css">
   
    <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico">
 
