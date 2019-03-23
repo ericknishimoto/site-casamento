@@ -72,7 +72,7 @@ require_once 'banco-meusite.php';
       $fotos_subtitulo
       ))
       {
-        header ("Location: site?alteracao=true");
+        header ("Location: meusite?alteracao=true");
         die();
       }else{ 
       ?>

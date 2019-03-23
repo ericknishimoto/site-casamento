@@ -98,6 +98,11 @@
 <?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
         <li class="header">PRINCIPAL</li>
         <li id="regras"><a href="site">
+          <i class="fa fa-home"></i> <span>Home</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
+        <li id="regras"><a href="meusite">
           <i class="fa fa-desktop"></i> <span>Alterar Site</span>
           <span class="pull-right-container">
           </span>
@@ -125,8 +130,8 @@
             </span>
           </a>
           <ul class="treeview-menu" style="">
-            <li><a href="presentes"><i class="fa fa-list"></i> Lista de Presentes</a></li>
-            <li><a href="categorias"><i class="fa fa-bookmark-o"></i> Categorias</a></li>
+            <li><a href="presentes"><i class="fa fa-circle-o"></i> Lista de Presentes</a></li>
+            <li><a href="categorias"><i class="fa fa-circle-o"></i> Categorias</a></li>
           </ul>
         </li>
         <li id="regras"><a href="cadastro-usuarios">
