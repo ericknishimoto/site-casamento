@@ -81,6 +81,7 @@
 
 .botao-todos {
   margin: 4rem .5rem;
+  background-color: #DDDDDD !important;
 }
 
 .botao-mensagem>.btn {
