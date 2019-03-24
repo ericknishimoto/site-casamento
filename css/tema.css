@@ -81,22 +81,18 @@
 
 .botao-todos {
   margin: 4rem .5rem;
-  background-color: #E4E4E4 !important;
+  background-color: #DDD !important;
 }
 
 .botao-mensagem>.btn {
-  background-color: #E4E4E4 !important;
+  background-color: #DDD !important;
   border: 2px solid white;
   color: white;
 }
 
-.btn {
-  background-color: #E4E4E4 !important;
-}
-
 span, .btn {
   font-weight: 500;
-  background-color: #E4E4E4 !important;
+  background-color: #DDD !important;
 }
 
 hr {
