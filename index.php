@@ -72,7 +72,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">    
+          <ul class="navbar-nav text-uppercase ml-auto">   
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="lista-presentes">Presentes</a>
+            </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
             </li>      
@@ -81,9 +84,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#local">Local</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="lista-presentes">Lista de Presentes</a>
             </li>
           </ul>
         </div>
@@ -265,6 +265,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <a href="lista-presentes.php" class="btn btn-lg botao-todos text-muted link">
             Ver lista
           </a>
+          <button type="button" class="btn btn-lg botao-todos text-muted" data-toggle="modal" data-target="#modal-transferencia">
+            Transferir valor
+          </button>
         </div>
 
         </form>
@@ -309,18 +312,102 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
  <!-- Footer -->
  <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-11">
-            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
-          </div>
-          <div class="col-md-1">
-            <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11">
+        <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
+      </div>
+      <div class="col-md-1">
+        <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ********************************** MODAL TRANSFERENCIA ********************************** -->
+
+<div class="modal fade" id="modal-transferencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="modal-body">
+                  <form action="adiciona-transferencia.php" id="form" method="POST">
+                      <div class="row">
+                        <div class="col-xs-12 p-4">
+
+                          <div class="row">
+                            <div class="col-12">
+
+                              <div class="form-group mt-1 text-center">
+                                  <label class="titulo-modal">Transferir Valor</label>
+                              </div>
+
+                              <div class="row text-center">
+                                <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
+                              </div>
+
+                              <div class="form-group mt-1 mb-2 row text-center">
+                                <div class="col-md-6 text-center">
+                                  <span class="h3 text-muted"><b>Itaú</b></span><br>
+                                  <span class="h4 text-muted">Agência: 0123</span><br>
+                                  <span class="h4 text-muted">C/C: 81234-5</span>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                  <img src="img/pig.png" style="max-height: 100px;">
+                                </div>
+                              </div>
+
+                              <div class="row text-center">
+                                  <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
+                                </div>
+                              
+                            </div>
+
+                            <div class="col-12">
+                              <div class="form-group mt-1">
+                                <label>Nome:</label>
+                                <input type="text" name="nome" class="form-control">
+                                <div class="text-right">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-6">
+                              <div class="form-group mt-1">
+                                <label>Valor:</label>
+                                <input type="number" name="valor" class="form-control">
+                                  <div class="text-right">
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group mt-1">
+                                  <label>Data:</label>
+                                  <input type="date" name="data" class="form-control">
+                                    <div class="text-right">
+                                    </div>
+                                </div>
+                              </div>
+
+                          </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                            <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
 
   <!-- MODAL TODAS MENSAGENS -->
   <div class="modal fade" id="modal-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
