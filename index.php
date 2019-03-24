@@ -265,7 +265,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <a href="lista-presentes.php" class="btn btn-lg botao-todos text-muted link">
             Ver lista
           </a>
-          <button type="button" class="btn btn-lg botao-todos text-muted" data-toggle="modal" data-target="#modal-transferencia">
+          <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-transferencia">
             Transferir valor
           </button>
         </div>
