@@ -400,7 +400,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
@@ -508,7 +508,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
@@ -582,7 +582,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           </div>
 
                           <div class="col-12 text-center mt-4">
-                            <button class="btn text-muted mr-2" type="submit" form="form-convidado" value="Submit">Enviar</button>
+                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form-convidado" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                           </div>
 
