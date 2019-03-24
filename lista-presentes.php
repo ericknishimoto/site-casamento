@@ -47,20 +47,20 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/"><?= ($infos['brand']) ?></a>
+      <div class="container" style="max-width: 1300px;">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><?= ($infos['brand']) ?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">     
+          <ul class="navbar-nav text-uppercase ml-auto">   
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/">Home</a>
-            </li>     
+              <a class="nav-link js-scroll-trigger" href="index">Home</a>
+            </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
-            </li>
+            </li>      
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#presenca">Presença</a>
             </li>
@@ -106,6 +106,24 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     <section class="lista">
       <div class="container mb-4">
         <div class="row d-flex justify-content-center">
+        
+          <!-- INI CARD TRANSFERENCIA -->
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="card-presentes d-flex justify-content-center text-center">
+            <a href="" class="link text-center" data-toggle="modal" data-target="#modal-transferencia">
+              <img class="card-img-top img-md3" src="img/pig.png" alt="Card image cap">
+              <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center">Transferir Valor</p>                    
+              <p class="card__autor text-center">Transfira diretamente</p>
+            <p class="card__preco text-center">para a gente =)</p>
+              <span class="badge badge-presente mb-2">Valor</span>
+              </a>
+              <button type="button" class="btn botao-comprar" data-toggle="modal" data-target="#modal-transferencia">
+              Transferir Valor
+              </button>
+            </div>
+          </div>
+          <!-- FIM CARD TRANSFERENCIA -->
+
           <?php
             if ($presentes != null) {
               foreach ($presentes as $presente) {
@@ -113,7 +131,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                 if ($presente->confirmacao != 1) {
                 ?>
 
-                 <div class="col-lg-3 col-md-4 mt-4">
+                <div class="col-lg-3 col-md-4 mt-4">
                   <a target="_blank" href="<?= ($presente->link) ?>" class="link">
                     <div class="card-presentes d-flex justify-content-center text-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
@@ -155,20 +173,107 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-11">
-            <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
-          </div>
-          <div class="col-md-1">
-            <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
-          </div>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <span class="copyright"><?= ($infos['titulo']) ?>© - Todos os direitos reservados | Criado por <a href="www.ericknishimoto.com.br">Érick Nishimoto</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ********************************** MODAL TRANSFERENCIA ********************************** -->
+<div class="modal fade" id="modal-transferencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="modal-body">
+                  <form action="adiciona-transferencia.php" id="form" method="POST">
+                      <div class="row">
+                        <div class="col-xs-12 p-4">
+
+                          <div class="row">
+                            <div class="col-12">
+
+                              <div class="form-group mt-1 text-center">
+                                  <label class="titulo-modal">Transferir Valor</label>
+                              </div>
+
+                              <div class="row text-center">
+                                <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
+                              </div>
+
+                              <div class="form-group row text-center">
+                                <div class="col-md-12 text-center mt-1 mb-1">
+                                  <span class="h3 text-muted"><b>Itaú</b></span><br>
+                                  <span class="h4 text-muted">Agência: 0123</span><br>
+                                  <span class="h4 text-muted">C/C: 81234-5</span>
+                                </div>
+                                <!-- <div class="col-md-6 text-center">
+                                  <img src="img/pig.png" style="max-height: 100px;">
+                                </div> -->
+                              </div>
+
+                              <div class="row text-center">
+                                <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
+                              </div>
+                            </div>
+
+                            <!-- DIVISÓRIA -->
+                            <div class="col-12 mt-1 mb-1">
+                              <div class="d-flex mb-1">
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                                <div class="px-4" style="color:gray;">♥</div>
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                              </div>
+                            </div>
+
+                            <div class="col-12">
+                              <div class="form-group mt-1">
+                                <label>Nome:</label>
+                                <input type="text" name="nome" class="form-control">
+                                <div class="text-right">
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form-group mt-1">
+                              <label>Valor:</label>
+                              <input type="number" name="valor" class="form-control">
+                                <div class="text-right">
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="form-group mt-1">
+                                <label>Data:</label>
+                                <input type="date" name="data" class="form-control">
+                                  <div class="text-right">
+                                  </div>
+                              </div>
+                            </div>
+
+                        </div>
+                      </div>
+                      <div class="col-12 text-center">
+                          <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                          <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
