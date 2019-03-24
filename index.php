@@ -314,12 +314,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
  <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-11">
-        <span class="copyright">© 2018 Todos os direitos reservados | Criado por Érick Nishimoto</span>
-      </div>
-      <div class="col-md-1">
-        <span class="copyright"><a href="admin" style="text-decoration: none;"><img src="img/key.png"></a></span>
-      </div>
+      <div class="col-md-12">
+        <span class="copyright"><?= ($infos['titulo']) ?>© - Todos os direitos reservados | Criado por <a href="www.ericknishimoto.com.br">Érick Nishimoto</a></span>
       </div>
     </div>
   </div>
@@ -349,21 +345,29 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                                 <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
                               </div>
 
-                              <div class="form-group mt-1 mb-2 row text-center">
-                                <div class="col-md-6 text-center">
+                              <div class="form-group row text-center">
+                                <div class="col-md-12 text-center mt-1 mb-1">
                                   <span class="h3 text-muted"><b>Itaú</b></span><br>
                                   <span class="h4 text-muted">Agência: 0123</span><br>
                                   <span class="h4 text-muted">C/C: 81234-5</span>
                                 </div>
-                                <div class="col-md-6 text-center">
+                                <!-- <div class="col-md-6 text-center">
                                   <img src="img/pig.png" style="max-height: 100px;">
-                                </div>
+                                </div> -->
                               </div>
 
                               <div class="row text-center">
-                                  <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
-                                </div>
-                              
+                                <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
+                              </div>
+                            </div>
+
+                            <!-- DIVISÓRIA -->
+                            <div class="col-12 mt-1 mb-1">
+                              <div class="d-flex mb-1">
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                                <div class="px-4" style="color:gray;">♥</div>
+                                <hr class="my-auto flex-grow-1" style="color:gray;">
+                              </div>
                             </div>
 
                             <div class="col-12">
@@ -437,6 +441,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                                 <div class="px-4" style="color:gray;">♥</div>
                                 <hr class="my-auto flex-grow-1" style="color:gray;">
                               </div>
+                              
                               <div class="col-lg-12">
                                   <p class="card__texto text-center">
                                   <?= ($mensagem['mensagem']) ?>
