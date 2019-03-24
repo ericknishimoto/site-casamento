@@ -202,7 +202,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>              
         
         <div class="row d-flex justify-content-center">
-          <button type="button" class="btn btn-lg botao-todos text-muted" data-toggle="modal" data-target="#modal-presenca">
+          <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-presenca">
             Confirme sua presença
           </button>
         </div>
@@ -401,7 +401,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         </div>
                         <div class="col-12 text-center">
                             <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
-                            <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </form>
@@ -458,7 +458,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                       </div>
                     </div>
                     <div class="col-12 text-center mt-4">
-                        <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                     </div>
                   </div>
                 </div>
@@ -509,7 +509,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         </div>
                         <div class="col-12 text-center">
                             <button class="btn text-muted mr-2" type="submit" form="form" value="Submit">Enviar</button>
-                            <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </form>
@@ -583,7 +583,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                           <div class="col-12 text-center mt-4">
                             <button class="btn text-muted mr-2" type="submit" form="form-convidado" value="Submit">Enviar</button>
-                            <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                           </div>
 
                         </div> 
@@ -696,7 +696,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           <p class="titulo-modal">Mensagem enviada!</p>
                           <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
                           <div class="col-12 text-right">
-                              <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                              <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                           </div>
                         </div>
                       </div>
@@ -730,7 +730,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           <p class="titulo-modal">Confirmação cadastrada!</p>
                           <p class="text-muted">Qualquer dúvida entre em contato com os noivos.</p>
                           <div class="col-12 text-right">
-                              <button type="button" class="btn text-muted" data-dismiss="modal">Fechar</button>
+                              <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                           </div>
                         </div>
                       </div>
