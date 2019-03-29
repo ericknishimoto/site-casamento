@@ -87,7 +87,7 @@ $infos = listaPresenca($conexao, $id);
                 <h4>Categoria</h4>
                 <select name="categoria" class="form-control">
                   <option value="<?= $infos["categoria"] ?>" disabled selected >
-                  <?= $infos["categoria"] ?>
+                  * <?= $infos["categoria"] ?>
                    </option>
                    <option value="Noivo">Noivo</option>
                    <option value="Noiva">Noiva</option>
