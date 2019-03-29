@@ -11,7 +11,12 @@ $convidado->id = $_GET["id"];
 $convidado->nome = $_POST["nome"];
 $convidado->telefone = $_POST["telefone"];
 $convidado->email = $_POST["email"];
-$convidado->categoria = $_POST["categoria"];
+
+if ($_POST["categoria"] == "") {
+  $convidado->categoria = $_POST["categoriaAntiga"];
+} else {
+  $convidado->categoria = $_POST["categoria"];
+}
 
 if(alteraPresenca($conexao, $convidado)) {
   header ("Location: presenca?alteracao=true");
