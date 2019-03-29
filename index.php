@@ -526,44 +526,53 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         <div class="modal-content">
           <div class="container">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-md-12">
                 <div class="modal-body">
                   <div class="row">
+                    <div class="col-md-12">
                     <form action="adiciona-convidado.php" id="form-convidado" method="POST">
-                      <div class="col-12">
-
+            
                         <div class="form-group mt-1 text-center">
                           <label class="titulo-modal mt-4">Confirmação de Presença</label>
                         </div>
 
                         <div class="col-md-12 mb-3">
 
+                          <p class="text-muted text-center">
+                            Atenção: Crianças acima de 10 anos não precisam fazer este cadastro.
+                          </p>
+
                           <label>Nome do convidado <span class="text-muted">(*)</span></label>
                           <input name="nome" type="text" class="form-control" placeholder="Nome completo" required>
+                          
                           <div class="my-3">
                             <label>Você irá ao evento? <span class="text-muted">(*)</span></label>
                             <div class="custom-control custom-radio">
-                              <input value="1" id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required>
+                              <input value="1" id="credit" name="confirmacao" type="radio" class="custom-control-input" checked="" required>
                               <label class="custom-control-label" for="credit">Sim</label>
                             </div>
                             <div class="custom-control custom-radio">
-                              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                              <input id="debit" name="confirmacao" type="radio" class="custom-control-input" required>
                               <label class="custom-control-label" for="debit">Não</label>
                             </div>
                           </div>
-      
-                          <div class="row">
-                            <div class="col-md-6 mb-3">
-                              <label>Quantos Adultos? <span class="text-muted">(*)</span></label>
-                              <input name="adultos" type="number" class="form-control" required placeholder="0">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                              <label>Quantas Crianças?</label>
-                              <input type="number" class="form-control" placeholder="0">
-                              <small name="criancas" class="text-muted">Menores de 10 anos.</small>
-                            </div>
+
+                          <div class="my-3">
+                              <label>Você foi convidado por quem? <span class="text-muted">(*)</span></label>
+                              <div class="custom-control custom-radio">
+                                <input value="Noiva" id="noiva" name="categoria" type="radio" class="custom-control-input"  checked="" required>
+                                <label class="custom-control-label" for="noiva">Noiva</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input value="Noivo" id="noivo"name="categoria" type="radio" class="custom-control-input" required>
+                                <label class="custom-control-label" for="noivo">Noivo</label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input value="Família/Padrinhos" id="familia" name="categoria" type="radio" class="custom-control-input" required>
+                                <label class="custom-control-label" for="familia">Família/Padrinhos</label>
+                              </div>
                           </div>
-              
+      
                           <div class="mb-3">
                             <label for="email">Email</label>
                             <input name="email" type="email" class="form-control" placeholder="seu@email.com.br">
@@ -574,19 +583,13 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                             <input name="telefone" type="text" class="form-control" required placeholder="11 9999-9999">
                           </div>
 
-                          <div class="mb-3">
-                            <label>Nome dos Adultos</label>
-                            <textarea name="nome_adultos" type="text" rows="4" maxlength="200" class="form-control" placeholder="Nome completo, Nome completo, Nome completo..."></textarea>
-                            <span class="text-muted">(*) Campos obrigatórios</span>
-                          </div>
-
                           <div class="col-12 text-center mt-4">
                             <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form-convidado" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                           </div>
 
                         </div> 
-                      </div>
+
                     </form>
                   </div>
                 </div>
@@ -596,6 +599,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>
       </div>
     </div>
+  </div>
 
     <!-- MODAL FOTO -->
     <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -669,34 +673,33 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       $(".caracteres").text(caracteresRestantes);
       });
     </script>
-
-    <!-- Replace URL -->
+<!-- 
+ Replace URL 
     <script>
     window.history.replaceState('', '', '/');
-    </script>
+    </script> -->
 
-      <!-- Abre modal de msg enviada -->
-      <?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
-        ?>
-        <script>
-          $( document ).ready(function() {
-            $("#modal-confirm").modal();
-        });
-        </script>
+    <!-- Abre modal de msg enviada -->
+    <?php if(isset($_GET["mensagem"]) && $_GET["mensagem"]==true) {
+      ?>
+      <script>
+        $( document ).ready(function() {
+          $("#modal-confirm").modal();
+      });
+      </script>
 
-        <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="modal-body"></div>
-                        <div class="row m-3">
-                          <p class="titulo-modal">Mensagem enviada!</p>
-                          <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
-                          <div class="col-12 text-right">
-                              <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
-                          </div>
+      <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="modal-body"></div>
+                      <div class="row m-3">
+                        <p class="titulo-modal">Mensagem enviada!</p>
+                        <p class="text-muted">Aguarde a confirmação dos noivos, para que ela apareça no site.</p>
+                        <div class="col-12 text-right">
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </div>
@@ -705,32 +708,32 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               </div>
             </div>
           </div>
-        <?php
-          }
+        </div>
+      <?php
+        }
+    ?>
+
+    <!-- Abre modal de presenca enviada -->
+    <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true) {
       ?>
+      <script>
+        $( document ).ready(function() {
+          $("#modal-confirm").modal();
+      });
+      </script>
 
-      <!-- Abre modal de presenca enviada -->
-      <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true) {
-        ?>
-        <script>
-          $( document ).ready(function() {
-            $("#modal-confirm").modal();
-        });
-        </script>
-
-        <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="modal-body"></div>
-                        <div class="row m-3">
-                          <p class="titulo-modal">Confirmação cadastrada!</p>
-                          <p class="text-muted">Qualquer dúvida entre em contato com os noivos.</p>
-                          <div class="col-12 text-right">
-                              <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
-                          </div>
+      <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="modal-body"></div>
+                      <div class="row m-3">
+                        <p class="titulo-modal">Confirmação cadastrada!</p>
+                        <p class="text-muted">Qualquer dúvida entre em contato com os noivos.</p>
+                        <div class="col-12 text-right">
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
                     </div>
@@ -739,9 +742,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               </div>
             </div>
           </div>
-        <?php
-          }
-      ?>
+        </div>
+      <?php
+        }
+    ?>
 
   </body>
 

@@ -73,18 +73,6 @@ $infos = listaPresenca($conexao, $id);
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-6">
-                  <h4>Quantos Adultos? <span class="text-muted">(*)</span></h4>
-                  <input name="adultos" type="number" class="form-control" value="<?= $infos["adultos"] ?>" required placeholder="0" >
-                </div>
-                <div class="col-md-6">
-                  <h4>Quantas Crianças?</h4>
-                  <input name="criancas" type="number" class="form-control" placeholder="0" value="<?= $infos["criancas"] ?>" >
-                  <small class="text-muted">Menores de 10 anos.</small>
-                </div>
-              </div>
-
               <div class="mb-3">
                 <h4 for="email">Email</h4>
                 <input name="email" type="email" class="form-control" value="<?= $infos["email"] ?>" placeholder="seu@email.com.br">
@@ -96,10 +84,15 @@ $infos = listaPresenca($conexao, $id);
               </div>
 
               <div class="mb-3">
-                <h4>Nome dos Adultos</h4>
-                <textarea name="nome_adultos" type="text" rows="4" maxlength="200" class="form-control"
-                placeholder="Nome completo, Nome completo, Nome completo..."><?= $infos["nome_adultos"] ?></textarea>
-                <span class="text-muted">(*) Campos obrigatórios</span>
+                <h4>Categoria</h4>
+                <select name="categoria" class="form-control">
+                  <option value="<?= $infos["categoria"] ?>" disabled selected >
+                  <?= $infos["categoria"] ?>
+                   </option>
+                   <option value="Noivo">Noivo</option>
+                   <option value="Noiva">Noiva</option>
+                   <option value="Família/Padrinhos">Família/Padrinhos</option>
+                </select>
               </div>
           </div> 
 

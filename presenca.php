@@ -70,9 +70,7 @@ $convidados = listaConvidados($conexao);
                 <th>Confirmação</th>
                 <th>Telefone</th>
                 <th>Email</th>
-                <th>Nº Adultos</th>
-                <th>Nome Adultos</th>
-                <th>Nº Crianças</th>
+                <th>Categoria</th>
                 <th>Ações</th>
               </tr>
               </thead>
@@ -97,10 +95,8 @@ $convidados = listaConvidados($conexao);
                     ?>
                     </td>
                     <td><?= $convidado->telefone ?></td>
-                    <td><?= $convidado->email ?></td>
-                    <td><?= $convidado->adultos ?></td>
-                    <td><?= $convidado->nome_adultos ?></td>
-                    <td><?= $convidado->criancas ?></td>
+                    <td><?= $convidado->email ?></td>                    
+                    <td><?= $convidado->categoria ?></td>
                     <td class="text-center">
                       <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                       <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>

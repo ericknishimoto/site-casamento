@@ -6,13 +6,11 @@ require_once ('class/Convidado.php');
 
 $convidado = new Convidado();
 
-$convidado->$nome = $_POST["nome"];
-$convidado->$confirmacao = $_POST["paymentMethod"];
-$convidado->$adultos = $_POST["adultos"];
-$convidado->$criancas = $_POST["criancas"];
-$convidado->$email = $_POST["email"];
-$convidado->$telefone = $_POST["telefone"];
-$convidado->$nome_adultos = $_POST["nome_adultos"];
+$convidado->nome = $_POST["nome"];
+$convidado->confirmacao = $_POST["confirmacao"];
+$convidado->email = $_POST["email"];
+$convidado->telefone = $_POST["telefone"];
+$convidado->categoria = $_POST["categoria"];
 
 if(insereConvidado($conexao, $convidado))
 {

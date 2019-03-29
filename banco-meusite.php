@@ -120,10 +120,9 @@ function excluiFoto($conexao, $id) {
 // CONVIDADOS
 
 function insereConvidado ($conexao, Convidado $convidado) { 
-    $query = "INSERT INTO convidados (nome, confirmacao, adultos, criancas, email, telefone, nome_adultos)
-    VALUES ('{$convidado->$nome}','{$convidado->$confirmacao}',
-        '{$convidado->$adultos}','{$convidado->$criancas}',
-            '{$convidado->$email}','{$convidado->$telefone}','{$convidado->$nome_adultos}')"; 
+    $query = "INSERT INTO convidados (nome, confirmacao, email, telefone, categoria)
+    VALUES ('{$convidado->nome}','{$convidado->confirmacao}',
+            '{$convidado->email}','{$convidado->telefone}','{$convidado->categoria}')"; 
     return mysqli_query($conexao, $query);
 }
 
@@ -138,11 +137,9 @@ function listaConvidados($conexao) {
         $convidado->id = $convidado_array['id'];
         $convidado->nome = $convidado_array['nome'];
         $convidado->confirmacao = $convidado_array['confirmacao'];
-        $convidado->adultos = $convidado_array['adultos'];
-        $convidado->criancas = $convidado_array['criancas'];
         $convidado->email = $convidado_array['email'];
         $convidado->telefone = $convidado_array['telefone'];
-        $convidado->nome_adultos = $convidado_array['nome_adultos'];
+        $convidado->categoria = $convidado_array['categoria'];
 
         array_push($convidados, $convidado);
     }
@@ -162,9 +159,7 @@ $query = "UPDATE convidados set
 nome = '{$convidado->nome}',
 telefone = '{$convidado->telefone}',
 email = '{$convidado->email}',
-adultos = '{$convidado->adultos}',
-nome_adultos = '{$convidado->nome_adultos}',
-criancas = '{$convidado->criancas}'
+categoria = '{$convidado->categoria}'
 where id = '{$convidado->id}'";
 
 return mysqli_query($conexao, $query);
