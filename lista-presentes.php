@@ -88,11 +88,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>              
         
         <div class="row d-flex justify-content-center">
-        <button type="button" class="btn botao-categoria text-muted">
+        <button type="button" id="categoria" class="btn botao-categoria text-muted mostrarTodos">
             Todos
-            </button>    
+        </button>    
           <?php foreach($categorias as $categoria) :?>
-            <button type="button" class="btn botao-categoria text-muted">
+            <button type="button" id="categoria" class="btn botao-categoria text-muted">
             <?=$categoria['nome']?>
             </button>    
           <?php endforeach ?>  
@@ -131,7 +131,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                 if ($presente->confirmacao != 1) {
                 ?>
 
-                <div class="col-lg-3 col-md-4 mt-4">
+                <div class="col-lg-3 col-md-4 mt-4" id="presente">
                   <a target="_blank" href="<?= ($presente->link) ?>" class="link">
                     <div class="card-presentes d-flex justify-content-center text-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
@@ -147,7 +147,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                 <?php 
                 } else {
                 ?> 
-                  <div class="col-lg-3 col-md-4 mt-4">
+                  <div class="col-lg-3 col-md-4 mt-4 presente">
                   <a target="_blank" class="link">
                     <div class="card-comprado d-flex justify-content-center">
                       <img class="card-img-top img-md3" src="upload/<?= $presente->imagem ?>" alt="Card image cap">
@@ -299,6 +299,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       $(".caracteres").text(caracteresRestantes);
       });
     </script>
+
+<script src="js/adicionaFiltro.js"></script>
+<script src="js/filtraPresentes.js"></script>
 
   </body>
 
