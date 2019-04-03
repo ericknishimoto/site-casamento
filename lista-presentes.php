@@ -115,7 +115,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               <p class="card__titulo d-flex card__titulo justify-content-center align-items-center text-center">Transferir Valor</p>                    
               <p class="card__autor text-center">Transfira diretamente</p>
             <p class="card__preco text-center">para a gente =)</p>
-              <span class="badge badge-presente mb-2">Valor</span>
+              <span class="badge badge-presente mb-2">Transferência</span>
               </a>
               <button type="button" class="btn botao-comprar" data-toggle="modal" data-target="#modal-transferencia">
               Transferir Valor
