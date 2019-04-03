@@ -198,7 +198,7 @@ function listaPresentes($conexao) {
 
 function listaPresente($conexao, $id) {
     $presentes = array();
-    $query = "select *,lp.id as id, c.nome as categoria from lista_presentes as lp join categorias as c
+    $query = "select *,lp.id as id, c.nome as categoria, c.id as categoriaId from lista_presentes as lp join categorias as c
     on lp.codCategoria = c.id and lp.id = '{$id}'";
     $resultado = mysqli_query($conexao, $query);
     while ($presente_array = mysqli_fetch_assoc($resultado)) {
@@ -210,6 +210,7 @@ function listaPresente($conexao, $id) {
         $presente->valor = $presente_array['valor'];
         $presente->link = $presente_array['link'];
         $presente->categoria = $presente_array['categoria'];
+        $presente->categoriaId = $presente_array['categoriaId'];
         $presente->confirmacao = $presente_array['confirmacao'];
         $presente->imagem = $presente_array['imagem'];
 

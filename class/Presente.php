@@ -8,4 +8,5 @@ class Presente {
     public $link;
     public $imagem;
     public $categoria;
+    public $categoriaId;
 }

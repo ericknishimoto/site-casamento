@@ -98,7 +98,7 @@ $categorias = listaCategorias($conexao);
                   <div class="form-group">
                     <h4>Categoria</h4>
                     <select name="categoria" class="form-control">
-                    <option value="<?= $presente->categoria ?>" selected>
+                    <option value="<?= $presente->categoriaId ?>" selected>
                       <?= $presente->categoria ?>
                    </option>
                     <?php foreach($categorias as $categoria) :?>
