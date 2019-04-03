@@ -92,7 +92,7 @@ $infos = listaPresenca($conexao, $id);
                    <option value="Noivo">Noivo</option>
                    <option value="Noiva">Noiva</option>
                    <option value="Família/Padrinhos">Família/Padrinhos</option>
-                   <input type="hidden" name="acategoriaAntiga" value="<?= $infos["categoria"] ?>">
+                   <input type="hidden" name="categoriaAntiga" value="<?= $infos["categoria"] ?>">
                 </select>
               </div>
           </div> 

@@ -98,10 +98,18 @@ $categorias = listaCategorias($conexao);
                   <div class="form-group">
                     <h4>Categoria</h4>
                     <select name="categoria" class="form-control">
+                    <option value="<?= $presente->categoria ?>" selected>
+                      <?= $presente->categoria ?>
+                   </option>
                     <?php foreach($categorias as $categoria) :?>
-                    <option value="<?=$categoria['id']?>">
-                      <?=$categoria['nome']?>
-                    </option>
+                    <?php if ( $categoria['nome'] != $presente->categoria) {
+                      ?>
+                      <option value="<?=$categoria['id']?>">
+                        <?=$categoria['nome']?>
+                      </option>
+                    <?php 
+                    } ?>
+
                     <?php endforeach ?>
                   </select>
                   </div>
