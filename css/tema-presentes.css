@@ -134,7 +134,6 @@
 }
 
 .botao-categoria:active {
-  margin: 1rem .5rem;
   background-color: #BBB !important;
 }
 
