@@ -268,3 +268,41 @@ function excluiCategoria($conexao, $id) {
     $query = "delete from categorias where id = {$id}";
     return mysqli_query($conexao, $query);
 }
+
+function contaConvidadosNoivo($conexao) {
+    $infos = array();
+    $query = "SELECT COUNT(categoria) as soma FROM convidados where categoria = 'noivo' and confirmacao = 1";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}
+
+function contaConvidadosNoiva($conexao) {
+    $infos = array();
+    $query = "SELECT COUNT(categoria) as soma FROM convidados where categoria = 'noiva' and confirmacao = 1";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}
+
+function contaConvidadosFamilia($conexao) {
+    $infos = array();
+    $query = "SELECT COUNT(categoria) as soma FROM convidados where categoria = 'Família/Padrinhos' and confirmacao = 1";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}
+
+function alteraTotal ($conexao, $total, $noiva, $noivo, $familia) { 
+    $query = "UPDATE `config_convidados` set
+    total = '{$total}',
+    noiva = '{$noiva}',
+    noivo = '{$noivo}',
+    familia = '{$familia}'
+    WHERE id =1"; 
+    return mysqli_query($conexao, $query);
+}
+
+function listaTotal($conexao) {
+    $infos = array();
+    $query = "select * from config_convidados where id = 1";
+    $resultado = mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+}

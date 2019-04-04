@@ -6,6 +6,15 @@ require_once ('conecta.php');
 require_once ('banco-meusite.php');
 
 $convidados = listaConvidados($conexao);
+$total = listaTotal($conexao);
+
+$totalNoiva = $total['noiva'];
+$totalNoivo = $total['noivo'];
+$totalFamilia= $total['familia'];
+
+$totalGeral = $total['total'];
+$totalUtilizado = $totalNoiva + $totalNoivo + $totalFamilia;
+$totalRestante = $totalGeral - $totalUtilizado;
 
 ?>
  <!-- Content Wrapper. Contains page content -->
@@ -25,13 +34,13 @@ $convidados = listaConvidados($conexao);
     <!-- Main content -->
     <section class="content">
 
-      <?php if(isset($_GET["alteracao"]) && $_GET["alteracao"]==true) {
+      <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true && ($totalUtilizado == $totalGeral)) {
   ?>
       <div class="row">
         <div class="col-xs-8">
           <div class="box box-success box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Alteração realizada!</h3>
+              <h3 class="box-title">Total atualizado!</h3>
               <div class="box-tools pull-right">
                   <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
@@ -39,7 +48,7 @@ $convidados = listaConvidados($conexao);
             </div>
               <!-- /.box-header -->
             <div class="box-body">
-              <p>Alteração realizada com sucesso!</a>.</p>
+              <p>Total atualizado com sucesso.</p>
             </div>
               <!-- /.box-body -->
           </div>
@@ -48,6 +57,111 @@ $convidados = listaConvidados($conexao);
   <?php
     }
   ?>
+
+<?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true && ($totalUtilizado < $totalGeral)) {
+  ?>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="box box-warning box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Total atualizado!</h3>
+              <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+                <!-- /.box-tools -->
+            </div>
+              <!-- /.box-header -->
+            <div class="box-body">
+              <p>Existem <b><?= $totalRestante ?> convites</b> não relacionados.</p>
+            </div>
+              <!-- /.box-body -->
+          </div>
+        </div>
+      </div>
+  <?php
+    }
+  ?>
+
+<?php if($totalUtilizado > $totalGeral) {
+  ?>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="box box-danger box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">ATENÇÃO!!!</h3>
+              <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+                <!-- /.box-tools -->
+            </div>
+              <!-- /.box-header -->
+            <div class="box-body">
+              <p>A soma dos convites <b>ultrapassam o total informado</b>. Corrija os valores divergentes.</p>
+            </div>
+              <!-- /.box-body -->
+          </div>
+        </div>
+      </div>
+  <?php
+    }
+  ?>
+
+<form action="altera-total-convidados.php" method="POST" enctype="multipart/form-data">
+    <!-- Cabecalho -->
+    <div class="box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Adionar total de convidados</h3>
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+          <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+            <i class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+      </div>
+
+      <!-- Formulário -->
+      <div class="box-body pad" style="">
+        <div class="box-body">
+          <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                  <h4>Total de convidados:</h4>
+                  <input type="number" value="<?= $total['total']?>" name="total" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                  <h4>Total para Noiva:</h4>
+                  <input type="number" value="<?= $total['noiva']?>" name="noiva" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                  <h4>Total para Noivo:</h4>
+                  <input type="number" value="<?= $total['noivo']?>" name="noivo" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                  <h4>Total para Família/Padrinhos:</h4>
+                  <input type="number" value="<?= $total['familia']?>" name="familia" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="center-block text-center mt-2">
+                  <input type="submit" class="btn btn-success btn-lg margin-bottom margin" value="Atualizar">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
       <!-- Presenças -->
       <div id="convidados" class="box">
         <div class="box-header with-border responsive">
@@ -96,7 +210,16 @@ $convidados = listaConvidados($conexao);
                     </td>
                     <td><?= $convidado->telefone ?></td>
                     <td><?= $convidado->email ?></td>                    
-                    <td><?= $convidado->categoria ?></td>
+                    <td>
+                      <?php if($convidado->categoria == '') {
+                      ?> <p style="color: red;">Verificar</p>
+                      <?php  
+                      }else{
+                      ?>  <?= $convidado->categoria ?>
+                      <?php 
+                      }
+                      ?>
+                    </td>
                     <td class="text-center">
                       <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                       <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
