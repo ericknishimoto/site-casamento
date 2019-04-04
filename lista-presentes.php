@@ -90,6 +90,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         <div class="row d-flex justify-content-center">
         <button type="button" id="categoria" class="btn botao-categoria text-muted mostrarTodos">
             Todos
+            
         </button>    
           <?php foreach($categorias as $categoria) :?>
             <button type="button" id="categoria" class="btn botao-categoria text-muted">
