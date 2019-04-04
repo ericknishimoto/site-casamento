@@ -133,7 +133,7 @@
   background-color: #DDD !important;
 }
 
-.botao-categoria:active {
+.botao-categoria:hover {
   background-color: #BBB !important;
 }
 
