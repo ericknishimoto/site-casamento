@@ -130,7 +130,12 @@
 
 .botao-categoria {
   margin: 1rem .5rem;
-  background-color: #CCC !important;
+  background-color: #DDD !important;
+}
+
+.botao-categoria:active {
+  margin: 1rem .5rem;
+  background-color: #BBB !important;
 }
 
 .botao-comprar {
