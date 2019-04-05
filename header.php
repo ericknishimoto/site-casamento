@@ -108,21 +108,6 @@
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras" class=" treeview">
-          <a href="presentes">
-            <i class="fa fa-desktop""></i> <span>Alterar Site</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu" style="">
-            <li><a href="presentes"><i class="fa fa-circle-o"></i> Banner</a></li>
-            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Bem vindo</a></li>
-            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Mensagens</a></li>
-            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Fotos</a></li>
-            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Local do Evento</a></li>
-          </ul>
-        </li>
         <li id="regras"><a href="fotos">
           <i class="fa fa-photo"></i> <span>Galeria de Fotos</span>
           <span class="pull-right-container">
