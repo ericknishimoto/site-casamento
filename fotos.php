@@ -198,3 +198,10 @@ $("#imgInp").change(function() {
 readURL(this);
 });
 </script>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liUpFotos');
+var item = menu[0];
+item.classList.add("active");
+</script>

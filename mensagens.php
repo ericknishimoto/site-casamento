@@ -122,3 +122,10 @@ $mensagens = listaMensagens($conexao);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liMensagens');
+var item = menu[0];
+item.classList.add("active");
+</script>

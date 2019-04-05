@@ -245,3 +245,10 @@ $totalRestante = $totalGeral - $totalUtilizado;
 <?php
 require_once ('footer.php');
 ?>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liPresenca');
+var item = menu[0];
+item.classList.add("active");
+</script>

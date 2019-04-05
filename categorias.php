@@ -234,3 +234,14 @@ readURL(this);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liPresentes');
+var item = menu[0];
+item.classList.add("active");
+
+var submenu = document.querySelectorAll('#liCadCat');
+var item = submenu[0];
+item.classList.add("active");
+</script>

@@ -216,3 +216,10 @@ $usuarios = listaUsuarios($conexao);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liUser');
+var item = menu[0];
+item.classList.add("active");
+</script>

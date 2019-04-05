@@ -125,34 +125,34 @@
             <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Fotos</a></li>
           </ul>
         </li>
-        <li id="regras"><a href="fotos">
+        <li id="liUpFotos"><a href="fotos">
           <i class="fa fa-photo"></i> <span>Upload de Fotos</span>
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras"><a href="mensagens">
+        <li id="liMensagens"><a href="mensagens">
           <i class="fa fa-comments"></i> <span>Mensagens Recebidas</span>
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras"><a href="presenca">
+        <li id="liPresenca"><a href="presenca">
           <i class="fa fa-list"></i> <span>Lista de Presença</span>
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras" class=" treeview">
+        <li id="liPresentes" class="treeview">
           <a href="presentes">
-            <i class="fa fa-gift""></i> <span>Presentes</span>
+            <i class="fa fa-gift""></i> <span>Lista de Presentes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu" style="">
-            <li><a href="presentes"><i class="fa fa-circle-o"></i> Lista de Presentes</a></li>
-            <li><a href="categorias"><i class="fa fa-circle-o"></i> Categorias</a></li>
+            <li id="liCadProd"><a href="presentes"><i class="fa fa-circle-o"></i> Cadastro de produtos</a></li>
+            <li id="liCadCat"><a href="categorias"><i class="fa fa-circle-o"></i> Cadastro de categorias</a></li>
           </ul>
         </li>
-        <li id="regras"><a href="cadastro-usuarios">
+        <li id="liUser"><a href="cadastro-usuarios">
           <i class="fa fa-users"></i> <span>Usuário</span>
           <span class="pull-right-container">
           </span>

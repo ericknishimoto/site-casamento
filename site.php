@@ -416,7 +416,6 @@ require_once 'footer.php';
   }
 </script>
 
-
 <!-- Active Menu -->
 <script>
 var menu = document.querySelectorAll('#liPainel');
