@@ -12,7 +12,7 @@ function filtraPresentes(categoria){
 
         var presente = presentes[i];
         var rotuloCategoria = presente.querySelector(".badge-presente");
-        var categoriaTexto = rotuloCategoria.textContent;
+        var categoriaTexto = rotuloCategoria.textContent.trim();
 
         if ( categoriaTexto != categoria  && categoria != todos){
             presente.classList.add("invisivel");
