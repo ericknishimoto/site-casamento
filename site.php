@@ -415,3 +415,11 @@ require_once 'footer.php';
       + Math.round(series.percent) + '%</div>'
   }
 </script>
+
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liPainel');
+var item = menu[0];
+item.classList.add("active");
+</script>

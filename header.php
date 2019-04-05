@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administração</title>
+  <title>MeuS2 | Painel de Administração</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -54,11 +54,11 @@
     <a href="site" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">
-      <b>AM</b>
+      S2
       </span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-      <b>Admin</b> | Casamento
+      <b>MeuS2</b> | Admin
       </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -98,16 +98,31 @@
       <ul class="sidebar-menu" data-widget="tree">
 <?php if ($_SESSION["usuario_permissao"] == "admin"){?> 
         <li class="header">PRINCIPAL</li>
-        <li id="regras"><a href="site">
-          <i class="fa fa-home"></i> <span>Home</span>
+        <li id="liPainel"><a href="site">
+          <i class="fa fa-dashboard"></i> <span>Painel</span>
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="regras"><a href="meusite">
-          <i class="fa fa-desktop"></i> <span>Alterar Site</span>
+        <li id="liConfigIni"><a href="meusite">
+          <i class="fa fa-cogs"></i> <span>Configurações Iniciais</span>
           <span class="pull-right-container">
           </span>
         </a></li>
+        <li id="regras" class=" treeview">
+          <a href="presentes">
+            <i class="fa fa-desktop""></i> <span>Alterar Site</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="">
+            <li><a href="presentes"><i class="fa fa-circle-o"></i> Banner</a></li>
+            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Bem vindo</a></li>
+            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Mensagens</a></li>
+            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Fotos</a></li>
+            <li><a href="categorias"><i class="fa fa-circle-o"></i> Seção Local do Evento</a></li>
+          </ul>
+        </li>
         <li id="regras"><a href="fotos">
           <i class="fa fa-photo"></i> <span>Galeria de Fotos</span>
           <span class="pull-right-container">

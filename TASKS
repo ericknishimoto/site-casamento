@@ -1,0 +1,32 @@
+- Painel
+- Configurações Iniciais
+	- Cores
+	- Fontes
+	- Logo
+	- Data
+- Personalizar
+    - Banner Principal
+        - Imagem de fundo
+        - Textos
+    - Seção de Boas Vindas
+        - Textos
+    - Seção de Mensagens
+        - Imagem de fundo
+        - Textos
+    - Seção de Confirmação de Presença
+        - Textos
+    - Seção de Local
+        - Imagem de fundo
+        - Textos
+        - Mapa
+    - Seção de Lista de Presentes
+        - Textos
+    - Seção de Fotos
+        - Imagem de fundo
+        - Textos
+- Mensagens Recebidas
+- Lista de Convidados
+- Lista de Presentes
+    - Cadastro de produtos
+    - Cadastro de categorias
+- Usuários
