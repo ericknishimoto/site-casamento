@@ -71,7 +71,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li>
-            <a href="index" target="_blank">Visualizar Site</i></a>
+          <a href="index" target="_blank">Visualizar Site &nbsp <i class="fa fa-share"></i></a>
           </li>
           <li>
             <a href="logout">Sair</i></a>
@@ -108,13 +108,30 @@
           <span class="pull-right-container">
           </span>
         </a></li>
+        <li id="liPerso" class=" treeview">
+          <a href="presentes">
+            <i class="fa fa-paint-brush"></i> <span>Personalizar Página</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Banner Principal</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Boas Vindas</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Mensagens</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Confirm. de Presença</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Local</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Lista de Presentes</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Fotos</a></li>
+          </ul>
+        </li>
         <li id="regras"><a href="fotos">
-          <i class="fa fa-photo"></i> <span>Galeria de Fotos</span>
+          <i class="fa fa-photo"></i> <span>Upload de Fotos</span>
           <span class="pull-right-container">
           </span>
         </a></li>
         <li id="regras"><a href="mensagens">
-          <i class="fa fa-comment-o"></i> <span>Mensagens Recebidas</span>
+          <i class="fa fa-comments"></i> <span>Mensagens Recebidas</span>
           <span class="pull-right-container">
           </span>
         </a></li>

@@ -1,29 +1,26 @@
 - Painel
 - Configurações Iniciais
-	- Cores
-	- Fontes
-	- Logo
-	- Data
 - Personalizar
     - Banner Principal
-        - Imagem de fundo
-        - Textos
+        * Imagem de fundo
+        * Textos
     - Seção de Boas Vindas
-        - Textos
+        * Textos
     - Seção de Mensagens
-        - Imagem de fundo
-        - Textos
+        * Imagem de fundo
+        * Textos
     - Seção de Confirmação de Presença
-        - Textos
+        * Textos
     - Seção de Local
-        - Imagem de fundo
-        - Textos
-        - Mapa
+        * Imagem de fundo
+        * Textos
+        * Mapa
     - Seção de Lista de Presentes
-        - Textos
+        * Textos
     - Seção de Fotos
-        - Imagem de fundo
-        - Textos
+        * Imagem de fundo
+        * Textos
+- Galeria de Fotos
 - Mensagens Recebidas
 - Lista de Convidados
 - Lista de Presentes

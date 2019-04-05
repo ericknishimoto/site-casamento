@@ -46,7 +46,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="fa fa-star"></i></span>
+            <span class="info-box-icon bg-yellow"><i class="fa fa-edit"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Total de Convites</span>
@@ -96,7 +96,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
 
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-male"></i></span>
+            <span class="info-box-icon bg-aqua"><i class="fa fa-male"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Convidados Noivo</span>
@@ -119,7 +119,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- /.col -->
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-people-outline"></i></span>
+            <span class="info-box-icon bg-purple"><i class="fa fa-group"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Família/Padrinhos</span>
@@ -148,7 +148,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <i class="fa fa-bar-chart-o"></i>
+            <i class="fa fa-pie-chart"></i>
 
             <h3 class="box-title">Total de Convites Confimados</h3>
 
@@ -171,7 +171,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <i class="fa fa-bar-chart-o"></i>
+            <i class="fa fa-pie-chart"></i>
 
             <h3 class="box-title">Convites Noiva</h3>
 
@@ -194,7 +194,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <i class="fa fa-bar-chart-o"></i>
+            <i class="fa fa-pie-chart"></i>
 
             <h3 class="box-title">Convites Noivo</h3>
 
@@ -217,7 +217,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <i class="fa fa-bar-chart-o"></i>
+            <i class="fa fa-pie-chart"></i>
 
             <h3 class="box-title">Convites Familia</h3>
 
@@ -263,9 +263,9 @@ require_once 'footer.php';
      */
 
     var totalData = [
-      { label: 'Noivo', data: "<?= $confirmadoNoivo ?>", color: '#00a65a' },
+      { label: 'Noivo', data: "<?= $confirmadoNoivo ?>", color: '#00c0ef' },
       { label: 'Noiva', data: "<?= $confirmadoNoiva ?>", color: '#d81b60' },
-      { label: 'Família', data: "<?= $confirmadoFamilia ?>", color: '#00c0ef' }
+      { label: 'Família', data: "<?= $confirmadoFamilia ?>", color: '#605ca8' }
     ]
     $.plot('#total-chart', totalData, {
       series: {
@@ -301,7 +301,7 @@ require_once 'footer.php';
 
     var noivaData = [
       { label: 'Confirmado', data: "<?= $confirmadoNoiva ?>", color: '#d81b60' },
-      { label: 'Restante', data: "<?= $restanteNoiva ?>", color: '#d81b60a6' }
+      { label: 'Restantes', data: "<?= $restanteNoiva ?>", color: '#d81b60a6' }
     ]
     $.plot('#noiva-chart', noivaData, {
       series: {
@@ -336,8 +336,8 @@ require_once 'footer.php';
      */
 
     var noivoData = [
-      { label: 'Confirmado', data: "<?= $confirmadoNoivo ?>", color: '#00a65a' },
-      { label: 'Restante', data: "<?= $restanteNoivo ?>", color: '#00a65ab3' }
+      { label: 'Confirmado', data: "<?= $confirmadoNoivo ?>", color: '#00acd6' },
+      { label: 'Restantes', data: "<?= $restanteNoivo ?>", color: '#00c0efb0' }
     ]
     $.plot('#noivo-chart', noivoData, {
       series: {
@@ -372,8 +372,8 @@ require_once 'footer.php';
      */
 
     var familiaData = [
-      { label: 'Confirmado', data: "<?= $confirmadoFamilia ?>", color: '#00c0ef' },
-      { label: 'Restante', data: "<?= $restanteFamilia ?>", color: '#00c0ef8f' }
+      { label: 'Confirmado', data: "<?= $confirmadoFamilia ?>", color: '#605ca8' },
+      { label: 'Restantes', data: "<?= $restanteFamilia ?>", color: '#605ca8ad' }
     ]
     $.plot('#familia-chart', familiaData, {
       series: {
