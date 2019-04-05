@@ -589,7 +589,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             
                           <div class="mb-3">
                             <label for="email">Telefone</label> <span class="text-muted">(*)</span></label>
-                            <input name="telefone" type="text" class="form-control phone_with_ddd" required placeholder="(11)9999-9999">
+                            <input name="telefone" type="text" class="form-control phone_with_ddd" required placeholder="(11) 9999-9999">
                           </div>
 
                           <div class="col-12 text-center mt-4">
