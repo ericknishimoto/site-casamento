@@ -4,3 +4,7 @@
     min-height: 250px;
     object-fit: cover;
 }
+
+.uppercase {
+    text-transform: uppercase;
+}

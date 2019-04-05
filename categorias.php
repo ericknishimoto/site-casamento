@@ -140,7 +140,7 @@ $categorias = listaCategorias($conexao);
             <div class="col-md-12">
                 <div class="form-group">
                   <h4>Nome da Categoria:</h4>
-                  <input type="text" name="categoria" class="form-control">
+                  <input type="text" name="categoria" class="form-control uppercase">
                 </div>
             </div>
             <div class="col-md-12">
