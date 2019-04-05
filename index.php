@@ -371,7 +371,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                         <div class="col-12">
                           <div class="form-group mt-1">
-                            <label>Nome:</label>
+                            <label>Nome</label><span class="text-muted"> (*)</span>
                             <input type="text" name="nome" class="form-control">
                             <div class="text-right">
                             </div>
@@ -380,21 +380,30 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                         <div class="col-6">
                           <div class="form-group mt-1">
-                            <label>Valor:</label>
-                            <input type="number" name="valor" class="form-control">
+                            <label>Valor</label><span class="text-muted"> (*)</span>
+                            <input name="valor" class="form-control money">
                               <div class="text-right">
                               </div>
                           </div>
                         </div>
 
                         <div class="col-6">
-                            <div class="form-group mt-1">
-                              <label>Data:</label>
-                              <input type="date" name="data" class="form-control">
-                                <div class="text-right">
-                                </div>
+                          <div class="form-group mt-1">
+                            <label>Data</label><span class="text-muted"> (*)</span>
+                            <input type="date" name="data" class="form-control">
+                              <div class="text-right">
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="form-group mt-1">
+                            <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
+                            <input type="text" name="obs" class="form-control">
+                            <div class="text-right">
                             </div>
                           </div>
+                        </div>
 
                       </div>
                     </div>
@@ -489,14 +498,14 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                               </div>
 
                               <div class="form-group mt-1">
-                                  <label>Nome:</label>
+                                  <label>Nome</label><span class="text-muted"> (*)</span>
                                   <input type="text" required name="nome" class="form-control">
                               </div>
                             </div>
 
                             <div class="col-12">
                               <div class="form-group mt-1">
-                                  <label>Mensagem:</label>
+                                  <label>Mensagem</label><span class="text-muted"> (*)</span>
                                   <textarea type="text" rows="4" maxlength="200" required name="mensagem" class="form-control" id="TxtObservacoes"></textarea>
                                   <div class="text-right">
                                     <p class="contador-caracteres">Caracteres <span class="contador-caracteres caracteres">200</span> Restantes<br></p>
@@ -580,7 +589,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             
                           <div class="mb-3">
                             <label for="email">Telefone</label> <span class="text-muted">(*)</span></label>
-                            <input name="telefone" type="text" class="form-control" required placeholder="11 9999-9999">
+                            <input name="telefone" type="text" class="form-control phone_with_ddd" required placeholder="(11)9999-9999">
                           </div>
 
                           <div class="col-12 text-center mt-4">
@@ -747,6 +756,47 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         }
     ?>
 
+
+    
+<!-- MASK -->
+<script src="js/jquery.mask.js"></script>
+<script>
+$(document).ready(function(){
+  $('.date').mask('00/00/0000');
+  $('.time').mask('00:00:00');
+  $('.date_time').mask('00/00/0000 00:00:00');
+  $('.cep').mask('00000-000');
+  $('.phone').mask('0000-0000');
+  $('.phone_with_ddd').mask('(00) 0000-0000');
+  $('.phone_us').mask('(000) 000-0000');
+  $('.mixed').mask('AAA 000-S0S');
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.money2').mask("#.##0,00", {reverse: true});
+  $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+    translation: {
+      'Z': {
+        pattern: /[0-9]/, optional: true
+      }
+    }
+  });
+  $('.ip_address').mask('099.099.099.099');
+  $('.percent').mask('##0,00%', {reverse: true});
+  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('.fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/,
+          fallback: '/'
+        },
+        placeholder: "__/__/____"
+      }
+    });
+  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+});
+</script>
   </body>
 
 </html>
