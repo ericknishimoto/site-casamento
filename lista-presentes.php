@@ -178,7 +178,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <span class="copyright"><?= ($infos['titulo']) ?>© - Todos os direitos reservados | Criado por <a href="www.ericknishimoto.com.br">Érick Nishimoto</a></span>
+        <span class="copyright"><?= ($infos['titulo']) ?>© - Todos os direitos reservados | Criado por <a href="http://www.ericknishimoto.com.br" target="_blank">Érick Nishimoto</a></span>
       </div>
     </div>
   </div>
