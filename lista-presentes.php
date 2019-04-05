@@ -54,9 +54,12 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">   
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index">Home</a>
+          <ul class="navbar-nav text-uppercase ml-auto"> 
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">Início</a>
+            </li>   
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#section01">Sobre</a>
             </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/#mensagens">Mensagens</a>

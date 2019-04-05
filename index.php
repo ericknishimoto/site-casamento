@@ -73,8 +73,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </button>
         <div class="collapse navbar-collapse animated fadeIn" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">   
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="lista-presentes">Presentes</a>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#section01">Sobre</a>
             </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#mensagens">Mensagens</a>
@@ -85,6 +85,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#local">Local</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#presentes">Presentes</a>
+            </li> 
           </ul>
         </div>
       </div>
@@ -247,7 +250,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     </section>
 
  <!-- LISTA DE PRESENTES -->
- <section id="presenca" class="presenca text-center">
+ <section id="presentes" class="presentes text-center">
       <div class="container mb-3">
         <div class="row">
           <div class="col-lg-12 text-center">

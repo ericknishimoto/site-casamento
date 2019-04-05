@@ -13,7 +13,7 @@ if(isset($_SESSION["usuario_logado"])) {
 <html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administração | Log in</title>
+  <title>MeuS2 | Painel de Administração</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -45,7 +45,7 @@ if(isset($_SESSION["usuario_logado"])) {
     
 <div class="login-box">
   <div class="login-logo">
-     <b>Admin</b> | Casamento
+     <b>MeuS2</b> | Administração
   </div>
 
 
