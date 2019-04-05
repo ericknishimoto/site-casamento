@@ -90,7 +90,7 @@ $categorias = listaCategorias($conexao);
                 <div class="col-md-6">
                   <div class="form-group">
                     <h4>Preço Médio</h4>
-                    <input name="valor" type="number" class="form-control" value="<?= $presente->valor ?>" required placeholder="0" >
+                    <input name="valor" class="form-control money" value="<?= $presente->valor ?>" required placeholder="0">
                   </div>
                 </div>
 

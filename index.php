@@ -323,111 +323,111 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
 <!-- ********************************** MODAL TRANSFERENCIA ********************************** -->
 <div class="modal fade" id="modal-transferencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                  <div class="modal-body">
-                  <form action="adiciona-transferencia.php" id="form" method="POST">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="modal-body">
+              <form action="adiciona-transferencia.php" id="form-transferencia" method="POST">
+                  <div class="row">
+                    <div class="col-xs-12 p-4">
+
                       <div class="row">
-                        <div class="col-xs-12 p-4">
+                        <div class="col-12">
 
-                          <div class="row">
-                            <div class="col-12">
+                          <div class="form-group mt-1 text-center">
+                              <label class="titulo-modal">Transferir Valor</label>
+                          </div>
 
-                              <div class="form-group mt-1 text-center">
-                                  <label class="titulo-modal">Transferir Valor</label>
-                              </div>
+                          <div class="row text-center">
+                            <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
+                          </div>
 
-                              <div class="row text-center">
-                                <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
-                              </div>
-
-                              <div class="form-group row text-center">
-                                <div class="col-md-12 text-center mt-1 mb-1">
-                                  <span class="h3 text-muted"><b>Itaú</b></span><br>
-                                  <span class="h4 text-muted">Agência: 0123</span><br>
-                                  <span class="h4 text-muted">C/C: 81234-5</span>
-                                </div>
-                                <!-- <div class="col-md-6 text-center">
-                                  <img src="img/pig.png" style="max-height: 100px;">
-                                </div> -->
-                              </div>
-
-                              <div class="row text-center">
-                                <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
-                              </div>
+                          <div class="form-group row text-center">
+                            <div class="col-md-12 text-center mt-1 mb-1">
+                              <span class="h3 text-muted"><b>Itaú</b></span><br>
+                              <span class="h4 text-muted">Agência: 0123</span><br>
+                              <span class="h4 text-muted">C/C: 81234-5</span>
                             </div>
+                            <!-- <div class="col-md-6 text-center">
+                              <img src="img/pig.png" style="max-height: 100px;">
+                            </div> -->
+                          </div>
 
-                            <!-- DIVISÓRIA -->
-                            <div class="col-12 mt-1 mb-1">
-                              <div class="d-flex mb-1">
-                                <hr class="my-auto flex-grow-1" style="color:gray;">
-                                <div class="px-4" style="color:gray;">♥</div>
-                                <hr class="my-auto flex-grow-1" style="color:gray;">
-                              </div>
-                            </div>
-
-                            <div class="col-12">
-                              <div class="form-group mt-1">
-                                <label>Nome:</label>
-                                <input type="text" name="nome" class="form-control">
-                                <div class="text-right">
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="col-6">
-                              <div class="form-group mt-1">
-                                <label>Valor:</label>
-                                <input type="number" name="valor" class="form-control">
-                                  <div class="text-right">
-                                  </div>
-                              </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="form-group mt-1">
-                                  <label>Data:</label>
-                                  <input type="date" name="data" class="form-control">
-                                    <div class="text-right">
-                                    </div>
-                                </div>
-                              </div>
-
+                          <div class="row text-center">
+                            <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
                           </div>
                         </div>
-                        <div class="col-12 text-center">
-                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form" value="Submit">Enviar</button>
-                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
+
+                        <!-- DIVISÓRIA -->
+                        <div class="col-12 mt-1 mb-1">
+                          <div class="d-flex mb-1">
+                            <hr class="my-auto flex-grow-1" style="color:gray;">
+                            <div class="px-4" style="color:gray;">♥</div>
+                            <hr class="my-auto flex-grow-1" style="color:gray;">
+                          </div>
                         </div>
+
+                        <div class="col-12">
+                          <div class="form-group mt-1">
+                            <label>Nome:</label>
+                            <input type="text" name="nome" class="form-control">
+                            <div class="text-right">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-6">
+                          <div class="form-group mt-1">
+                            <label>Valor:</label>
+                            <input type="number" name="valor" class="form-control">
+                              <div class="text-right">
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group mt-1">
+                              <label>Data:</label>
+                              <input type="date" name="data" class="form-control">
+                                <div class="text-right">
+                                </div>
+                            </div>
+                          </div>
+
                       </div>
-                    </form>
-                </div>
-              </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form-transferencia" value="Submit">Enviar</button>
+                        <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
   <!-- MODAL TODAS MENSAGENS -->
   <div class="modal fade" id="modal-mensagem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="row">
-                        <div class="col-12">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="col-12">
 
-                          <div class="form-group mt-4 text-center">
-                              <label class="titulo-modal">Todas as mensagens</label>
-                          </div>
+                        <div class="form-group mt-4 text-center">
+                            <label class="titulo-modal">Todas as mensagens</label>
+                        </div>
 
                           <div class="container">
                             <?php
@@ -476,8 +476,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                  <div class="modal-body">
-                  <form action="adiciona-mensagem.php" id="form" method="POST">
+                <div class="modal-body">
+                  <form action="adiciona-mensagem.php" id="form-nova-mensagem" method="POST">
                       <div class="row">
                         <div class="col-xs-12 p-4">
 
@@ -507,11 +507,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           </div>
                         </div>
                         <div class="col-12 text-center">
-                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form" value="Submit">Enviar</button>
+                            <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form-nova-mensagem" value="Submit">Enviar</button>
                             <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
                         </div>
                       </div>
-                    </form>
+                  </form>
                 </div>
               </div>
             </div>

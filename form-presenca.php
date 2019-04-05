@@ -79,8 +79,8 @@ $infos = listaPresenca($conexao, $id);
               </div>
 
               <div class="mb-3">
-                <h4 for="email">Telefone <span class="text-muted">(*)</span></h4>
-                <input name="telefone" type="text" class="form-control" value="<?= $infos["telefone"] ?>" required placeholder="11 9999-9999">
+                <h4 for="telefone">Telefone <span class="text-muted">(*)</span></h4>
+                <input name="telefone" type="text" class="form-control phone_with_ddd" value="<?= $infos["telefone"] ?>" required placeholder="11 9999-9999">
               </div>
 
               <div class="mb-3">

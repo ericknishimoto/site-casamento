@@ -9,7 +9,7 @@ $presente = new Presente();
 
 $presente->id = $_GET["id"];
 $presente->titulo = $_POST["titulo"];
-$presente->valor = $_POST["valor"];
+$presente->valor = str_replace(",",".", $_POST["valor"]);
 $presente->categoria = $_POST["categoria"];
 $presente->link = $_POST["link"];
 
