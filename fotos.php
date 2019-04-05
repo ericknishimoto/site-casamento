@@ -86,10 +86,11 @@ $fotos = listaFotos($conexao);
           <!-- /.box-header -->
           <div class="box-body">
 
-            <div class="col-md-12">
+            <div class="col-md-6">
               <div class="form-group">
                 <h4>Inserir foto:</h4>
-                <input required type="file" name="nova_foto" class="form-control-file">
+                <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md2"/>
+                <input required id="imgInp"  type="file" name="nova_foto" class="form-control-file">
               </div>
             </div>
 
@@ -177,3 +178,24 @@ require_once 'footer.php';
       </div>
     </div>
 </div>
+
+
+<!-- Preview image upload -->
+<script>
+  function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#blah').attr('src', e.target.result);
+  }
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#imgInp").change(function() {
+readURL(this);
+});
+</script>

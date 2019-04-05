@@ -122,10 +122,10 @@ $fotos = listaFotos($conexao);
           </div>
         </div>
 
-        <!-- Seção #01 -->
+        <!-- Seção de Boas Vindas -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Seção #01</h3>
+            <h3 class="box-title">Seção de Boas Vindas</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
