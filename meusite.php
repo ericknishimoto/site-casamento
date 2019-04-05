@@ -70,8 +70,8 @@ $fotos = listaFotos($conexao);
                 <div class="col-md-6">
                     <div class="form-group">
                       <h4>Imagem do cabeçalho:</h4>
-                      <img src="upload/<?= ($infos['cabecalho_imagem']) ?>" class="thumbnail img-rounded img-md"/>
-                      <input value="<?= ($infos['cabecalho_imagem']) ?>" type="file" name="cabecalho_imagem" class="form-control-file">
+                      <img id="imgCabecalho" src="upload/<?= ($infos['cabecalho_imagem']) ?>" class="thumbnail img-rounded img-md"/>
+                      <input id="imgCabecalhoInput" value="<?= ($infos['cabecalho_imagem']) ?>" type="file" name="cabecalho_imagem" class="form-control-file">
                       <input value="<?= ($infos['cabecalho_imagem']) ?>" type="hidden" name="cabecalho_imagem_anterior">
                     </div>
                 </div>
@@ -186,8 +186,8 @@ $fotos = listaFotos($conexao);
             <div class="col-md-6">
               <div class="form-group">
                 <h4>Imagem do fundo:</h4>
-                <img src="upload/<?= ($infos['mensagens_imagem']) ?>" class="thumbnail img-rounded img-md"/>
-                <input value="<?= ($infos['mensagens_imagem']) ?>" type="file" name="mensagens_imagem" class="form-control-file">
+                <img id="imgMensagens" src="upload/<?= ($infos['mensagens_imagem']) ?>" class="thumbnail img-rounded img-md"/>
+                <input id="imgMensagensInput" value="<?= ($infos['mensagens_imagem']) ?>" type="file" name="mensagens_imagem" class="form-control-file">
                 <input value="<?= ($infos['mensagens_imagem']) ?>" type="hidden" name="mensagens_imagem_anterior">
               </div>
             </div>
@@ -266,3 +266,42 @@ $fotos = listaFotos($conexao);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- Preview image upload -->
+<script>
+  function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#imgCabecalho').attr('src', e.target.result);
+  }
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#imgCabecalhoInput").change(function() {
+readURL(this);
+});
+</script>
+
+<script>
+  function readURL(input) {
+
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('#imgMensagens').attr('src', e.target.result);
+  }
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+$("#imgMensagensInput").change(function() {
+readURL(this);
+});
+</script>

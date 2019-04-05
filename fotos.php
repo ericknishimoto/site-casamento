@@ -179,7 +179,6 @@ require_once 'footer.php';
     </div>
 </div>
 
-
 <!-- Preview image upload -->
 <script>
   function readURL(input) {
