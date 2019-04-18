@@ -30,42 +30,179 @@ function listaFotos($conexao) {
     return $fotos;
 }
 
-function alteraMeusite ($conexao,
-$titulo,
-$brand,
-$cabecalho_imagem,
-$titulo_banner,
-$data_casamento,
-$section01_titulo,
-$section01_subtitulo,
-$section01_texto,
-$mensagens_titulo,
-$mensagens_subtitulo,
-$mensagens_imagem,
-$mensagens_quantidade,
-$fotos_titulo,
-$fotos_subtitulo
+function alteraMeusite (
+    $conexao,
+    $titulo,
+    $brand,
+    $cabecalho_imagem,
+    $titulo_banner,
+    $data_casamento,
+    $section01_titulo,
+    $section01_subtitulo,
+    $section01_texto,
+    $mensagens_titulo,
+    $mensagens_subtitulo,
+    $mensagens_imagem,
+    $mensagens_quantidade,
+    $fotos_titulo,
+    $fotos_subtitulo
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    titulo = '{$titulo}',
+    brand = '{$brand}',
+    cabecalho_imagem = '{$cabecalho_imagem}',
+    titulo_banner = '{$titulo_banner}',
+    data_casamento = '{$data_casamento}',
+    section01_titulo = '{$section01_titulo}',
+    section01_subtitulo = '{$section01_subtitulo}',
+    section01_texto = '{$section01_texto}',
+    mensagens_titulo = '{$mensagens_titulo}',
+    mensagens_subtitulo = '{$mensagens_subtitulo}',
+    mensagens_imagem = '{$mensagens_imagem}',
+    mensagens_quantidade = '{$mensagens_quantidade}',
+    fotos_titulo = '{$fotos_titulo}',
+    fotos_subtitulo = '{$fotos_subtitulo}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraSecaoLocal (
+    $conexao,
+    $local_titulo,
+    $local_subtitulo,
+    $local_imagem
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    local_titulo = '{$local_titulo}',
+    local_subtitulo = '{$local_subtitulo}',
+    local_imagem = '{$local_imagem}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraLocal01 (
+        $conexao,
+        $local_local01_titulo,
+        $local_local01_subtitulo,
+        $local_local01_texto,
+        $local_local01_imagem,
+        $local_local01_mapa
+    )
+
+    { 
+        $query = "UPDATE meusite set
+        local_local01_titulo = '{$local_local01_titulo}',
+        local_local01_subtitulo = '{$local_local01_subtitulo}',
+        local_local01_texto = '{$local_local01_texto}',
+        local_local01_imagem = '{$local_local01_imagem}',
+        local_local01_mapa = '{$local_local01_mapa}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraLocal02 (
+    $conexao,
+    $local_local02_titulo,
+    $local_local02_subtitulo,
+    $local_local02_texto,
+    $local_local02_imagem,
+    $local_local02_mapa
 )
 
 { 
-$query = "UPDATE meusite set
-titulo = '{$titulo}',
-brand = '{$brand}',
-cabecalho_imagem = '{$cabecalho_imagem}',
-titulo_banner = '{$titulo_banner}',
-data_casamento = '{$data_casamento}',
-section01_titulo = '{$section01_titulo}',
-section01_subtitulo = '{$section01_subtitulo}',
-section01_texto = '{$section01_texto}',
-mensagens_titulo = '{$mensagens_titulo}',
-mensagens_subtitulo = '{$mensagens_subtitulo}',
-mensagens_imagem = '{$mensagens_imagem}',
-mensagens_quantidade = '{$mensagens_quantidade}',
-fotos_titulo = '{$fotos_titulo}',
-fotos_subtitulo = '{$fotos_subtitulo}'
+    $query = "UPDATE meusite set
+    local_local02_titulo = '{$local_local02_titulo}',
+    local_local02_subtitulo = '{$local_local02_subtitulo}',
+    local_local02_texto = '{$local_local02_texto}',
+    local_local02_imagem = '{$local_local02_imagem}',
+    local_local02_mapa = '{$local_local02_mapa}'
 ";
 
 return mysqli_query($conexao, $query);
+}
+
+function alteraSecaoMensagens (
+    $conexao,
+    $mensagens_titulo,
+    $mensagens_subtitulo,
+    $mensagens_imagem,
+    $mensagens_quantidade
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    mensagens_titulo = '{$mensagens_titulo}',
+    mensagens_subtitulo = '{$mensagens_subtitulo}',
+    mensagens_imagem = '{$mensagens_imagem}',
+    mensagens_quantidade = '{$mensagens_quantidade}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraSecaoPresenca (
+    $conexao,
+    $presenca_titulo,
+    $presenca_subtitulo,
+    $presenca_botao,
+    $presenca_aviso
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    presenca_titulo = '{$presenca_titulo}',
+    presenca_subtitulo = '{$presenca_subtitulo}',
+    presenca_botao = '{$presenca_botao}',
+    presenca_aviso = '{$presenca_aviso}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+
+function alteraBannerPrincipal (
+    $conexao,
+    $titulo,
+    $brand,
+    $cabecalho_imagem,
+    $titulo_banner,
+    $data_casamento
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    titulo = '{$titulo}',
+    brand = '{$brand}',
+    cabecalho_imagem = '{$cabecalho_imagem}',
+    titulo_banner = '{$titulo_banner}',
+    data_casamento = '{$data_casamento}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraSecaoBoasVindas (
+    $conexao,   
+    $section01_titulo,
+    $section01_subtitulo,
+    $section01_texto
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    section01_titulo = '{$section01_titulo}',
+    section01_subtitulo = '{$section01_subtitulo}',
+    section01_texto = '{$section01_texto}'
+    ";
+
+    return mysqli_query($conexao, $query);
 }
 
 function alteraMensagensQuantidade ($conexao,
@@ -163,6 +300,11 @@ categoria = '{$convidado->categoria}'
 where id = '{$convidado->id}'";
 
 return mysqli_query($conexao, $query);
+}
+
+function excluiPresenca($conexao, $id) {
+    $query = "delete from convidados where id = {$id}";
+    return mysqli_query($conexao, $query);
 }
 
 // PRESENTES

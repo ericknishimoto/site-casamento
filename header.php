@@ -116,11 +116,13 @@
             </span>
           </a>
           <ul class="treeview-menu" style="">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Banner Principal</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Boas Vindas</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Mensagens</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Confirm. de Presença</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Local</a></li>
+            <li id="liPersoBanner"><a href="personalizar-banner-principal"><i class="fa fa-circle-o"></i> Banner Principal</a></li>
+            <li id="liPersoSecaoBoasVindas"><a href="personalizar-secao-boas-vindas"><i class="fa fa-circle-o"></i> Seção de Boas Vindas</a></li>
+            <li id="liPersoSecaoMensagens"><a href="personalizar-secao-mensagens"><i class="fa fa-circle-o"></i> Seção de Mensagens</a></li>
+            <li id="liPersoSecaoPresenca"><a href="personalizar-secao-presenca"><i class="fa fa-circle-o"></i> Seção de Confirm. de Presença</a></li>
+            <li id="liPersoSecaoLocal"><a href="personalizar-secao-local"><i class="fa fa-circle-o"></i> Seção de Local</a></li>
+            <li id="liPersoSecaoLocal01"><a href="personalizar-secao-local01"> &nbsp &nbsp <i class="fa fa-map-marker"></i>Definir Local 01</a></li>
+            <li id="liPersoSecaoLocal02"><a href="personalizar-secao-local02"> &nbsp &nbsp <i class="fa fa-map-marker"></i>Definir Local 02</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Lista de Presentes</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Fotos</a></li>
           </ul>

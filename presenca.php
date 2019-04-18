@@ -34,6 +34,30 @@ $totalRestante = $totalGeral - $totalUtilizado;
     <!-- Main content -->
     <section class="content">
 
+    <?php if(isset($_GET["exclusao"]) && $_GET["exclusao"]==true) {
+?>
+    <div class="row">
+      <div class="col-xs-8">
+      <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Convidado excluído!</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <p>Convidado excluído com sucesso.</p>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+    </div>
+<?php
+  }
+?>
+
       <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true && ($totalUtilizado == $totalGeral)) {
   ?>
       <div class="row">
@@ -223,7 +247,8 @@ $totalRestante = $totalGeral - $totalUtilizado;
                     <td class="text-center">
                       <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                       <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
-                      <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
+                      <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a> 
+                      <a href="exclui-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>          
                     </td>
                 </tr>
 

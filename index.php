@@ -176,12 +176,12 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               if ($valor > 0 || $valor == 0) {
               ?>
                 <button type="button" class="btn btn-lg botao-enviar" data-toggle="modal" data-target="#modal-nova-mensagem">
-                  <span>Enviar Mensagem</span>
+                  <span>Enviar mensagem</span>
                 </button>
             <?php    
               }?>
             <button type="button" class="btn btn-lg botao-todos" data-toggle="modal" data-target="#modal-mensagem">
-              <span>Ver Todas</span>
+              <span>Ver todas</span>
             </button>
           </div>
         </div>
@@ -194,8 +194,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container mb-3">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Confirmação de Presença</h2>
-            <h3 class="section-subheading text-muted">Faça parte da nossa história de amor, confirme sua presença.</h3>
+            <h2 class="section-heading"><?= $infos['presenca_titulo'] ?></h2>
+            <h3 class="section-subheading text-muted"><?= $infos['presenca_subtitulo'] ?></h3>
           </div>
         </div>
         <div class="d-flex">
@@ -206,7 +206,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         
         <div class="row d-flex justify-content-center">
           <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-presenca">
-            Confirme sua presença
+            Confirmar presença
           </button>
         </div>
 
@@ -220,29 +220,58 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container mb-3">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading" style="color:white;">Local do Evento</h2>
-            <h3 class="section-subheading" style="color:white;">Contamos com a presença de todos vocês neste momento tão especial.</h3>
+            <h2 class="section-heading" style="color:white;"><?= $infos['local_titulo'] ?></h2>
+            <h3 class="section-subheading" style="color:white;"><?= $infos['local_subtitulo'] ?></h3>
           </div>
         </div>
         
+        <!-- LOCAL 01 -->
         <div class="row mb-5">
         <div class="col-lg-1 text-center"></div>
           <div class="col-lg-7 text-left">
-            <h4 class="section-heading" style="color:white;"><b>Afrikan House Garden</b></h4>
-            <p class="section-heading" style="color:white;">09 de Fevereiro de 2019 às 17:30</p>
+            <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local01_titulo'] ?></b></h4>
+            <p class="section-heading" style="color:white;"><?= $infos['local_local01_subtitulo'] ?></p>
             <p class="section-heading" style="color:white;">
-            Aguardamos por você no espaço Afrikan House Garden em Itapecerica da Serra para Cerimônia que ocorrerá ao Ar Livre e Recepção no Salão 
-            R. Benedito Pereira Rodrigues, 2073 - Lagoa, Itapecerica da Serra - SP, 06858-000  
+            <?= $infos['local_local01_texto'] ?>
             </p>
           </div>
           <div class="col-lg-3 text-center">
-            <img class="img-thumbnail thumbnail img-rounded img-md3" src="img/img.png" alt="Another alt text">
+            <img class="img-thumbnail thumbnail img-rounded img-md3" src="upload/<?= ($infos['local_local01_imagem']) ?>" alt="Another alt text">
           </div>
           <div class="col-lg-1 text-center"></div>
         </div>    
 
         <!-- MAPA GOOGLE -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.322774193079!2d-46.64824608561993!3d-23.556848284685152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b3fe0a98e3%3A0x109ddd531016c9c0!2sR.+Rui+Barbosa%2C+156+-+Bela+Vista%2C+S%C3%A3o+Paulo+-+SP%2C+01326-010!5e0!3m2!1spt-BR!2sbr!4v1545923302280" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px" allowfullscreen></iframe>       
+        <div class="text-center">
+          <iframe src="<?= ($infos['local_local01_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 350px; max-width: 950px" allowfullscreen></iframe>       
+        </div>
+
+        <div class="d-flex mt-5 mb-5">
+            <hr class="my-auto flex-grow-1" style="border-top: 1px solid #fff;">
+            <div class="px-4" style="color:white;">♥</div>
+            <hr class="my-auto flex-grow-1" style="border-top: 1px solid #fff;">
+        </div>        
+
+        <!-- LOCAL 02 -->
+        <div class="row mb-5">
+        <div class="col-lg-1 text-center"></div>
+          <div class="col-lg-7 text-left">
+            <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local02_titulo'] ?></b></h4>
+            <p class="section-heading" style="color:white;"><?= $infos['local_local02_subtitulo'] ?></p>
+            <p class="section-heading" style="color:white;">
+            <?= $infos['local_local02_texto'] ?>
+            </p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <img class="img-thumbnail thumbnail img-rounded img-md3" src="upload/<?= ($infos['local_local02_imagem']) ?>" alt="Another alt text">
+          </div>
+          <div class="col-lg-1 text-center"></div>
+        </div>    
+
+        <!-- MAPA GOOGLE -->
+        <div class="text-center">
+          <iframe src="<?= ($infos['local_local02_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px; max-width: 950px" allowfullscreen></iframe>       
+        </div>
 
         </form>
       </div>
@@ -551,7 +580,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-md-12 mb-3">
 
                           <p class="text-muted text-center">
-                            Atenção: Crianças acima de 10 anos não precisam fazer este cadastro.
+                           <?= $infos['presenca_aviso'] ?>
                           </p>
 
                           <label>Nome do convidado <span class="text-muted">(*)</span></label>
@@ -667,7 +696,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     
 
     let bg3 = document.querySelector("#local");
-    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url('img/bg-3.jpg')";
+    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url(upload/<?= $infos['local_imagem']?>";
    
 
     let bg4 = document.querySelector("#fotos");
