@@ -116,7 +116,7 @@ clearstatcache();
                 <div class="col-md-12">
                   <div class="form-group">
                     <h4>Cole o mapa aqui:</h4>
-                    <p>(Adicione o mapa compartilhado do Google maps <a href="img/maps.gif" target="_blank">Veja como pegar o endereço</a>)</p>
+                    <p>(Adicione o mapa compartilhado do Google maps <a href="img/maps.gif" target="_blank">veja aqui como pegar o endereço</a>)</p>
                     <textarea type="text" name="local_local02_mapa" class="form-control"><?= ($infos['local_local02_mapa']) ?></textarea>
                   </div>
                 </div>
