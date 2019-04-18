@@ -103,11 +103,6 @@
           <span class="pull-right-container">
           </span>
         </a></li>
-        <li id="liConfigIni"><a href="meusite">
-          <i class="fa fa-cogs"></i> <span>Configurações Iniciais</span>
-          <span class="pull-right-container">
-          </span>
-        </a></li>
         <li id="liPerso" class=" treeview">
           <a href="presentes">
             <i class="fa fa-paint-brush"></i> <span>Personalizar Página</span>
