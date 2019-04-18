@@ -2,6 +2,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ $1\.php
-ErrorDocument 401 http://localhost/error
-ErrorDocument 403 http://localhost/error
-ErrorDocument 500 http://localhost/error
+ErrorDocument 401 http://jades2allan.com.br/error
+ErrorDocument 403 http://jades2allan.com.br/error
+ErrorDocument 500 http://jades2allan.com.br/error
