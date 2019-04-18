@@ -26,14 +26,12 @@ require_once 'banco-meusite.php';
 
       $presenca_titulo = $_POST["presenca_titulo"];
       $presenca_subtitulo = $_POST["presenca_subtitulo"];
-      $presenca_botao = $_POST["presenca_botao"];
       $presenca_aviso = $_POST["presenca_aviso"];
 
       if(alteraSecaoPresenca(
         $conexao,
         $presenca_titulo,
         $presenca_subtitulo,
-        $presenca_botao,
         $presenca_aviso
         ))
       {

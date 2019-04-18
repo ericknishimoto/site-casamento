@@ -151,7 +151,6 @@ function alteraSecaoPresenca (
     $conexao,
     $presenca_titulo,
     $presenca_subtitulo,
-    $presenca_botao,
     $presenca_aviso
     )
 
@@ -159,7 +158,6 @@ function alteraSecaoPresenca (
     $query = "UPDATE meusite set
     presenca_titulo = '{$presenca_titulo}',
     presenca_subtitulo = '{$presenca_subtitulo}',
-    presenca_botao = '{$presenca_botao}',
     presenca_aviso = '{$presenca_aviso}'
     ";
 
