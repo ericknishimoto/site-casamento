@@ -294,7 +294,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>              
         
         <div class="row d-flex justify-content-center">
-          <a href="lista-presentes.php" class="btn btn-lg botao-todos text-muted link mr-2">
+          <a href="lista-presentes" class="btn btn-lg botao-todos text-muted link mr-2">
             Ver lista
           </a>
           <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-transferencia">
