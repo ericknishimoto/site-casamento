@@ -232,9 +232,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         <div class="row mb-5">
           <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local01_titulo'] ?></b></h4>
-            <i class="ion-location" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local01_mapa'] ?></span>
+            <i class="ion-ios-location-outline" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local01_mapa'] ?></span>
             <br>
-            <i class="ion-clock" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local01_horario'] ?></span>
+            <i class="ion-ios-clock-outline" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local01_horario'] ?></span>
             <br><br>
             <p class="section-heading" style="color:white;">
             <?= $infos['local_local01_texto'] ?>
@@ -264,9 +264,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local02_titulo'] ?></b></h4>
           
-            <i class="ion-location" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local02_mapa'] ?></span>
+            <i class="ion-ios-location-outline" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local02_mapa'] ?></span>
             <br>
-            <i class="ion-clock" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local02_horario'] ?></span>
+            <i class="ion-ios-clock-outline" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local02_horario'] ?></span>
             <br><br>
             <p class="section-heading" style="color:white;">
             <?= $infos['local_local02_texto'] ?>
