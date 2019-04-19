@@ -242,7 +242,7 @@ $categorias = listaCategorias($conexao);
                   ?>
                         <td><?= $presente->id ?></td>
                         <td><?= $presente->titulo ?></td>
-                        <td>R$ <?= str_replace(".", ",", $presente->valor) ?></td>
+                        <td>R$ <?= number_format( $presente->valor, 2, ',', '.' ) ?></td>
                         <td><a href="<?= $presente->link ?>" target="_blank">Abrir link</a></td>
                         <td><?= $presente->categoria ?></td>
                         <td>

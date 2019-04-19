@@ -86,7 +86,7 @@ $transferencias = listaTransferencias($conexao);
                                   <td><?= $transferencia['id'] ?></td>
                                   <td><?= date('d/m/Y', strtotime( $transferencia['data'])) ?></td>
                                   <td><?= $transferencia['nome'] ?></td>
-                                  <td>R$ <?= str_replace(".", ",", $transferencia['valor'] )?></td>
+                                  <td>R$ <?= number_format( $transferencia['valor'], 2, ',', '.' ) ?></td>
                                   <td><?= $transferencia['operacao'] ?></td>
                                   <td><?= $transferencia['obs'] ?></td>
                                   <td>
