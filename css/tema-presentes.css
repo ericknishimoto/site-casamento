@@ -197,14 +197,14 @@ footer {
 
 
 @media (min-width: 700px){
-.modal-dialog {
-    max-width: 600px;
-    margin: 1.75rem auto;
-  }
+  .modal-dialog {
+      max-width: 600px;
+      margin: 1.75rem auto;
+    }
 
-.bg-color-gray {
-  background-color: #DDD !important;
-}
+  .bg-color-gray {
+    background-color: #DDD !important;
+    }
 }
 
 @media (max-width: 500px){
@@ -220,6 +220,10 @@ footer {
   
   .botao-categoria {
     margin: .5rem;
+  }
+
+  .bg-color-gray {
+    background-color: #DDD !important;
   }
 
 }
