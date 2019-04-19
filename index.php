@@ -34,6 +34,16 @@ Arquitetura de layout por Blackrock Digital LLC.
 Veja mais em:
 https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138675278-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138675278-1');
+</script>
     
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
