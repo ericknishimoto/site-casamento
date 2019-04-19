@@ -98,7 +98,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container">
         <div class="intro-text">
           <div class="intro-welcome animated fadeIn delay-1s">Sejam bem vindos!</div>
-          <div class="intro-heading animated fadeIn delay-1s"><?= $infos['titulo_banner'] ?></div>
+          <div class="intro-heading animated pulseInfinite slower"><?= $infos['titulo_banner'] ?></div>
           <div class="intro-lead text-uppercase mt-5 animated fadeIn delay-1s"><?= $mensagem ?></div>
           <div class="intro-lead-in animated fadeIn delay-1s">– <?=  date('d.m.Y', strtotime($infos['data_casamento'])) ?> –</div>
           <a class="seta-inicio js-scroll-trigger animated fadeIn delay-1s" href="#section01"><i class="fas fa-angle-down animated pulse infinite"></i></a>
