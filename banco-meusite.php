@@ -331,6 +331,11 @@ function excluiPresenca($conexao, $id) {
     return mysqli_query($conexao, $query);
 }
 
+function excluiTransferencia($conexao, $id) {
+    $query = "delete from transferencia_valores where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
+
 // PRESENTES
 
 function inserePresente ($conexao, Presente $presente) { 

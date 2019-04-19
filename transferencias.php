@@ -86,7 +86,7 @@ $transferencias = listaTransferencias($conexao);
                                   <td><?= $transferencia['id'] ?></td>
                                   <td><?= date('d/m/Y', strtotime( $transferencia['data'])) ?></td>
                                   <td><?= $transferencia['nome'] ?></td>
-                                  <td><?= $transferencia['valor'] ?></td>
+                                  <td>R$ <?= str_replace(".", ",", $transferencia['valor'] )?></td>
                                   <td><?= $transferencia['operacao'] ?></td>
                                   <td><?= $transferencia['obs'] ?></td>
                                   <td>
@@ -105,6 +105,7 @@ $transferencias = listaTransferencias($conexao);
                                   <td class="text-center">
                                     <a href="confirma-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                                     <a href="nega-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                                    <a href="exclui-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>      
                                   </td>
                               </tr>
             

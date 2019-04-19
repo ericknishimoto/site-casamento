@@ -168,7 +168,7 @@ $categorias = listaCategorias($conexao);
             <div class="col-md-3">
                 <div class="form-group">
                   <h4>Preço médio:</h4>
-                  <input type="text" name="valor" class="form-control">
+                  <input name="valor" class="form-control money">
                 </div>
             </div>
 
@@ -242,7 +242,7 @@ $categorias = listaCategorias($conexao);
                   ?>
                         <td><?= $presente->id ?></td>
                         <td><?= $presente->titulo ?></td>
-                        <td>R$ <?= $presente->valor ?></td>
+                        <td>R$ <?= str_replace(".", ",", $presente->valor) ?></td>
                         <td><a href="<?= $presente->link ?>" target="_blank">Abrir link</a></td>
                         <td><?= $presente->categoria ?></td>
                         <td>
@@ -316,4 +316,45 @@ item.classList.add("active");
 var submenu = document.querySelectorAll('#liCadProd');
 var item = submenu[0];
 item.classList.add("active");
+</script>
+
+
+<!-- MASK -->
+<script src="js/jquery.mask.js"></script>
+<script>
+$(document).ready(function(){
+  $('.date').mask('00/00/0000');
+  $('.time').mask('00:00:00');
+  $('.date_time').mask('00/00/0000 00:00:00');
+  $('.cep').mask('00000-000');
+  $('.phone').mask('0000-0000');
+  $('.phone_with_ddd').mask('(00) 0000-0000');
+  $('.phone_us').mask('(000) 000-0000');
+  $('.mixed').mask('AAA 000-S0S');
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.money2').mask("#.##0,00", {reverse: true});
+  $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+    translation: {
+      'Z': {
+        pattern: /[0-9]/, optional: true
+      }
+    }
+  });
+  $('.ip_address').mask('099.099.099.099');
+  $('.percent').mask('##0,00%', {reverse: true});
+  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('.fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/,
+          fallback: '/'
+        },
+        placeholder: "__/__/____"
+      }
+    });
+  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+});
 </script>

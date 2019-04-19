@@ -7,7 +7,10 @@ require_once ('class/Presente.php');
 $presente = new Presente();
 
 $presente->titulo = $_POST["titulo"];
-$presente->valor = $_POST["valor"];
+$recebe_valor = $_POST["valor"];
+$valor = str_replace(".", "", $recebe_valor);
+$valor = str_replace(",", ".", $valor);
+$presente->valor = $valor;
 $presente->link = $_POST["link"];
 $presente->categoria = $_POST["codCategoria"];
 

@@ -1,5 +1,6 @@
 <?php 
 require_once 'logica-usuario.php';
+verificaUsuario(); verificaAdmin();
 require_once 'conecta.php';
 require_once 'banco-meusite.php';
 ?>
@@ -23,24 +24,19 @@ require_once 'banco-meusite.php';
     
       <?php 
       
-      $nome = $_POST["nome"];
-
-      $recebe_valor = $_POST["valor"];
-      $valor = str_replace(".", "", $recebe_valor);
-      $valor = str_replace(",", ".", $valor);
-      $data = date('y/m/d');
-      $operacao = $_POST["operacao"];
-      $obs = $_POST["obs"];
+      $id = $_GET["id"];
       
-      if(insereTransferencia($conexao, $nome, $valor, $data, $operacao, $obs))
+      if(excluiTransferencia($conexao,$id))
       {
-        header ("Location: index?transferencia=true#presentes");
+        header ("Location: transferencias?exclusao=true");
         die();
-      }else{ 
+      } elseif(mysqli_errno($conexao)==1451) {
+        header ("Location: transferencias?erro=1451");
+      } else { 
       ?>
         <h1>Algo deu errado:</h1>
         <?php
-          printf("Connect failed: %s\n", mysqli_error($conexao));
+          printf("Connect failed: %s\n", mysqli_errno($conexao));
         exit();
       }
       ?>
