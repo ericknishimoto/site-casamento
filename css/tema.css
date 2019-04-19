@@ -151,8 +151,12 @@ div#modal-confirm {
 }
 
 .img-md3 {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-md4 {
+  height: 16rem; 
   object-fit: cover;
 }
 
@@ -272,4 +276,14 @@ modal-dialog {
 
 .link:hover {
   background-color: rgba(128, 128, 128, 0.151)!important;
+}
+
+.btn-mapa{
+  background-color: #DDD;
+  color: #6c757d;
+}
+
+.btn-mapa:hover{
+  background-color: #6c757d;
+  color: white;
 }

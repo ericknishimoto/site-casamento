@@ -24,19 +24,10 @@ require_once 'banco-meusite.php';
     
       <?php 
 
-      //Captura somente src do iframe Google Maps
-      if (preg_match( '@src="([^"]+)"@' , $_POST["local_local02_mapa"], $match )) {
-        preg_match( '@src="([^"]+)"@' , $_POST["local_local02_mapa"], $match );
-        $src = array_pop($match);
-      } else {
-        $src = $_POST["local_local02_mapa"];
-      }
-
-      
       $local_local02_titulo = $_POST["local_local02_titulo"];
-      $local_local02_subtitulo = $_POST["local_local02_subtitulo"];
+      $local_local02_horario = $_POST["local_local02_horario"];
       $local_local02_texto = $_POST["local_local02_texto"];
-      $local_local02_mapa = $src;
+      $local_local02_mapa = $_POST["local_local02_mapa"];
 
       if($_FILES['local_local02_imagem']['name'] != "") {
         $extensao = strtolower(substr($_FILES['local_local02_imagem']['name'], -4)); //pega a extensao do arquivo
@@ -49,7 +40,7 @@ require_once 'banco-meusite.php';
 
       if(alteraLocal02($conexao,
         $local_local02_titulo,
-        $local_local02_subtitulo,
+        $local_local02_horario,
         $local_local02_texto,
         $local_local02_imagem,
         $local_local02_mapa

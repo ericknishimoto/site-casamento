@@ -99,7 +99,7 @@ function alteraSecaoLocal (
 function alteraLocal01 (
         $conexao,
         $local_local01_titulo,
-        $local_local01_subtitulo,
+        $local_local01_horario,
         $local_local01_texto,
         $local_local01_imagem,
         $local_local01_mapa
@@ -108,7 +108,7 @@ function alteraLocal01 (
     { 
         $query = "UPDATE meusite set
         local_local01_titulo = '{$local_local01_titulo}',
-        local_local01_subtitulo = '{$local_local01_subtitulo}',
+        local_local01_horario = '{$local_local01_horario}',
         local_local01_texto = '{$local_local01_texto}',
         local_local01_imagem = '{$local_local01_imagem}',
         local_local01_mapa = '{$local_local01_mapa}'
@@ -120,7 +120,7 @@ function alteraLocal01 (
 function alteraLocal02 (
     $conexao,
     $local_local02_titulo,
-    $local_local02_subtitulo,
+    $local_local02_horario,
     $local_local02_texto,
     $local_local02_imagem,
     $local_local02_mapa
@@ -129,7 +129,7 @@ function alteraLocal02 (
 { 
     $query = "UPDATE meusite set
     local_local02_titulo = '{$local_local02_titulo}',
-    local_local02_subtitulo = '{$local_local02_subtitulo}',
+    local_local02_horario = '{$local_local02_horario}',
     local_local02_texto = '{$local_local02_texto}',
     local_local02_imagem = '{$local_local02_imagem}',
     local_local02_mapa = '{$local_local02_mapa}'

@@ -87,8 +87,8 @@ clearstatcache();
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Subtitulo:</h4>
-                      <input value="<?= ($infos['local_local01_subtitulo']) ?>" type="text" name="local_local01_subtitulo" class="form-control">
+                      <h4>Horário:</h4>
+                      <input value="<?= ($infos['local_local01_horario']) ?>" type="text" name="local_local01_horario" class="form-control" placeholder="30 Dezembro 2019, 10h - 12h">
                     </div>
                 </div>
 
@@ -115,9 +115,8 @@ clearstatcache();
 
                 <div class="col-md-12">
                   <div class="form-group">
-                    <h4>Cole o mapa aqui:</h4>
-                    <p>(Adicione o mapa compartilhado do Google maps <a href="img/maps.gif" target="_blank">veja aqui como pegar o endereço</a>)</p>
-                    <textarea type="text" name="local_local01_mapa" class="form-control"><?= ($infos['local_local01_mapa']) ?></textarea>
+                    <span class="h4">Endereço: </span><span>(Coloque o endereço o mais completo possível)</p>
+                    <input type="text" name="local_local01_mapa" class="form-control" value="<?= ($infos['local_local01_mapa']) ?>" placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100">
                   </div>
                 </div>
 

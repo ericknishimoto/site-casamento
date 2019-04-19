@@ -53,6 +53,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+
   <!-- Custom styles for this template -->
 
   <link href="css/index.css" rel="stylesheet">
@@ -227,24 +230,23 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         
         <!-- LOCAL 01 -->
         <div class="row mb-5">
-        <div class="col-lg-1 text-center"></div>
-          <div class="col-lg-7 text-left">
+          <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local01_titulo'] ?></b></h4>
-            <p class="section-heading" style="color:white;"><?= $infos['local_local01_subtitulo'] ?></p>
+            <i class="ion-location" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local01_mapa'] ?></span>
+            <br>
+            <i class="ion-clock" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local01_horario'] ?></span>
+            <br><br>
             <p class="section-heading" style="color:white;">
             <?= $infos['local_local01_texto'] ?>
             </p>
+            <a href="https://www.google.com.br/maps/search/<?= ($infos['local_local01_mapa']) ?>" class="btn btn-mapa mr-2" target="_blank">
+            Ver mapa
+            </a>
           </div>
-          <div class="col-lg-3 text-center">
-            <img class="img-thumbnail thumbnail img-rounded img-md3" src="upload/<?= ($infos['local_local01_imagem']) ?>" alt="Another alt text">
-          </div>
-          <div class="col-lg-1 text-center"></div>
+          <div class="col-lg-4 text-center">
+            <img class="img-thumbnail thumbnail img-rounded img-md4" src="upload/<?= ($infos['local_local01_imagem']) ?>" alt="Another alt text">
+          </div>          
         </div>    
-
-        <!-- MAPA GOOGLE -->
-        <div class="text-center">
-          <iframe src="<?= ($infos['local_local01_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 350px; max-width: 950px" allowfullscreen></iframe>       
-        </div>
 
         <div class="d-flex mt-5 mb-5">
             <hr class="my-auto flex-grow-1" style="border-top: 1px solid #fff;">
@@ -254,18 +256,28 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
         <!-- LOCAL 02 -->
         <div class="row mb-5">
-        <div class="col-lg-1 text-center"></div>
-          <div class="col-lg-7 text-left">
+
+          <div class="col-lg-4 text-center">
+            <img class="img-thumbnail thumbnail img-rounded img-md4" src="upload/<?= ($infos['local_local02_imagem']) ?>" alt="Another alt text">
+          </div>
+
+          <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local02_titulo'] ?></b></h4>
-            <p class="section-heading" style="color:white;"><?= $infos['local_local02_subtitulo'] ?></p>
+          
+            <i class="ion-location" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local02_mapa'] ?></span>
+            <br>
+            <i class="ion-clock" style="color:white;"></i><span style="color:white;"> <?= $infos['local_local02_horario'] ?></span>
+            <br><br>
             <p class="section-heading" style="color:white;">
             <?= $infos['local_local02_texto'] ?>
             </p>
-            <button type="button" class="btn btn-lg text-muted bg-color-gray" data-toggle="modal" data-target="#modal-local02">Ver mapa</button>
+
+            <a href="https://www.google.com.br/maps/search/<?= ($infos['local_local02_mapa']) ?>" class="btn btn-mapa mr-2" target="_blank">
+            Ver mapa
+            </a>
+            
           </div>
-          <div class="col-lg-3 text-center">
-            <img class="img-thumbnail thumbnail img-rounded img-md3" src="upload/<?= ($infos['local_local02_imagem']) ?>" alt="Another alt text">
-          </div>
+
         </div>         
 
         </form>
@@ -645,22 +657,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       </div>
     </div>
   </div>
-<!-- MODAL LOCAL02 -->
-<div class="modal fade" id="modal-local02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog text-center">
-    <div class="modal-content">
-      <div class="container">
-        <div class="row">
-          <!-- MAPA GOOGLE -->
-          <iframe src="<?= ($infos['local_local02_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px;" allowfullscreen></iframe>     
-        </div>
-      </div>
-    </div>
-    <br>
-    <button type="button" class="btn" style="background-color: gray; color: white;" data-dismiss="modal">Fechar</button>  
-    </div>
-  </div>
-</div>
 
     <!-- MODAL FOTO -->
     <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -712,15 +708,15 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     bg.style.backgroundSize = "cover";
 
     let bg2 = document.querySelector("#mensagens");
-    bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .2)),url('upload/<?= $infos['mensagens_imagem']?>";
+    bg2.style.background= "linear-gradient(0deg,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2)),url('upload/<?= $infos['mensagens_imagem']?>";
     
 
     let bg3 = document.querySelector("#local");
-    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .8)),url(upload/<?= $infos['local_imagem']?>";
+    bg3.style.background= "linear-gradient(0deg,rgba(0, 0, 0, .2),rgba(0, 0, 0, .6)),url(upload/<?= $infos['local_imagem']?>";
    
 
     let bg4 = document.querySelector("#fotos");
-    bg4.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.4)),url('img/bg-4.jpg')";
+    bg4.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.4)),url('img/bg-4.jpg')";
    
     </script>
 
