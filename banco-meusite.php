@@ -348,7 +348,7 @@ function inserePresente ($conexao, Presente $presente) {
 function listaPresentes($conexao) {
     $presentes = array();
     $query = "select *,lp.id as id, c.nome as categoria from lista_presentes as lp join categorias as c
-    on lp.codCategoria = c.id order by titulo asc";
+    on lp.codCategoria = c.id order by titulo asc, categoria asc";
     $resultado = mysqli_query($conexao, $query);
     while ($presente_array = mysqli_fetch_assoc($resultado)) {
         
