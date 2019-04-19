@@ -150,7 +150,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
           <div class="box-header with-border">
             <i class="fa fa-pie-chart"></i>
 
-            <h3 class="box-title">Total de Convites Confimados</h3>
+            <h3 class="box-title">Contador de Visitas</h3>
 
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
