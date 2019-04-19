@@ -253,7 +253,7 @@ $categorias = listaCategorias($conexao);
                         <?php
                           } else {
                         ?>
-                          <p style="color: green;">Disponível</p>
+                          <p style="color: #00a65a;">Disponível</p>
                         <?php
                           }
                         ?>

@@ -63,6 +63,21 @@ clearstatcache();
             </div>
             <!-- /. tools -->
           </div>
+
+          <div class="col-md-12">
+                  <div class="box box-warning box-solid mt-2">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Atenção</h3>
+                      <!-- /.box-tools -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                    <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
+                    </div>
+                  <!-- /.box-body -->
+                  </div>
+                </div>
+
           <!-- /.box-header -->
           <div class="box-body pad" style="">
             <div class="box-body mb-1">
@@ -105,19 +120,6 @@ clearstatcache();
                     </div>
                 </div>
 
-                <div class="col-md-12">
-                  <div class="box box-warning box-solid mt-2">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">Atenção</h3>
-                      <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                    <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
-                    </div>
-                  <!-- /.box-body -->
-                  </div>
-                </div>
               </div>
             </div>
           </div>

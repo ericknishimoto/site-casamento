@@ -431,7 +431,16 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
-                            <input type="text" name="obs" class="form-control">
+                            <input type="text" name="operacao" class="form-control">
+                            <div class="text-right">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="form-group mt-1">
+                            <label>Observação</label><span class="text-muted"> (Opcional)</span>
+                            <textarea type="text" rows="2" maxlength="200" required name="obs" class="form-control" id="TxtObservacoes"></textarea>
                             <div class="text-right">
                             </div>
                           </div>
@@ -755,7 +764,41 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     ?>
 
     <!-- Abre modal de presenca enviada -->
-    <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true) {
+    <?php if(isset($_GET["transferencia"]) && $_GET["transferencia"]==true) {
+      ?>
+      <script>
+        $( document ).ready(function() {
+          $("#modal-confirm-presenca").modal();
+      });
+      </script>
+
+      <div class="modal fade" id="modal-confirm-presenca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="modal-body"></div>
+                      <div class="row m-3">
+                        <p class="titulo-modal">Transferencia cadastrada!</p>
+                        <p class="text-muted">Qualquer dúvida entre em contato com os noivos.</p>
+                        <div class="col-12 text-right">
+                            <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php
+        }
+    ?>
+
+     <!-- Abre modal de transferencia enviada -->
+     <?php if(isset($_GET["presenca"]) && $_GET["presenca"]==true) {
       ?>
       <script>
         $( document ).ready(function() {

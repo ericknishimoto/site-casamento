@@ -148,7 +148,11 @@
             <li id="liCadProd"><a href="presentes"><i class="fa fa-circle-o"></i> Cadastro de produtos</a></li>
             <li id="liCadCat"><a href="categorias"><i class="fa fa-circle-o"></i> Cadastro de categorias</a></li>
           </ul>
-        </li>
+        </li><li id="liTransfer"><a href="transferencias">
+          <i class="fa fa-money"></i> <span>Transferência de Valores</span>
+          <span class="pull-right-container">
+          </span>
+        </a></li>
         <li id="liUser"><a href="cadastro-usuarios">
           <i class="fa fa-users"></i> <span>Usuário</span>
           <span class="pull-right-container">

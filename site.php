@@ -53,7 +53,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
               <span class="info-box-number">Total: <?= $totalGeral ?></span>
               <span class="info-box-number">Confimados: 
                   <?php if($totalGeral < $totalConfirmado) {
-                  ?>  <span style="color: red"><?= $totalConfirmado ?></span>
+                  ?>  <span style="color: #f56954"><?= $totalConfirmado ?></span>
                   <?php
                   }else{
                   ?>
@@ -76,7 +76,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
               <span class="info-box-number">Total: <?= $convitesNoiva ?></span>
               <span class="info-box-number">Confimados: 
                   <?php if($convitesNoiva < $confirmadoNoiva) {
-                  ?>  <span style="color: red"><?= $confirmadoNoiva ?></span>
+                  ?>  <span style="color: #f56954"><?= $confirmadoNoiva ?></span>
                   <?php
                   }else{
                   ?>
@@ -103,7 +103,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
               <span class="info-box-number">Total: <?= $convitesNoivo ?></span>
               <span class="info-box-number">Confimados: 
                   <?php if($convitesNoivo < $confirmadoNoivo) {
-                  ?>  <span style="color: red"><?= $confirmadoNoivo ?></span>
+                  ?>  <span style="color: #f56954"><?= $confirmadoNoivo ?></span>
                   <?php
                   }else{
                   ?>
@@ -126,7 +126,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
               <span class="info-box-number">Total: <?= $convitesFamilia ?></span>
               <span class="info-box-number">Confimados: 
                   <?php if($convitesFamilia < $confirmadoFamilia) {
-                  ?>  <span style="color: red"><?= $confirmadoFamilia ?></span>
+                  ?>  <span style="color: #f56954"><?= $confirmadoFamilia ?></span>
                   <?php
                   }else{
                   ?>

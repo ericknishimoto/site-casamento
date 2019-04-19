@@ -20,6 +20,16 @@ function listaMensagens($conexao) {
     return $mensagens;
 }
 
+function listaTransferencias($conexao) {
+    $transferencias = array();
+    $query = "select * from transferencia_valores order by data desc";
+    $resultado = mysqli_query($conexao, $query);
+    while ($trasnferencia = mysqli_fetch_assoc($resultado)) {
+        array_push($transferencias, $trasnferencia);
+    }
+    return $transferencias;
+}
+
 function listaFotos($conexao) {
     $fotos = array();
     $query = "select * from fotos";
@@ -215,7 +225,13 @@ function alteraMensagensQuantidade ($conexao,
     return mysqli_query($conexao, $query);
     }
 
-function insereMensagem ($conexao, $nome, $dataMensagem, $mensagem) { 
+function insereTransferencia ($conexao, $nome, $valor, $data, $operacao, $obs) { 
+    $query = "INSERT INTO transferencia_valores (nome, valor, data, operacao, obs)
+    VALUES ('{$nome}','{$valor}','{$data}','{$operacao}','{$obs}')"; 
+    return mysqli_query($conexao, $query);
+}
+
+function insereMensagem ($conexao, $nome, $dataTransferencia, $mensagem) { 
     $query = "INSERT INTO mensagens (nome, data, mensagem)
     VALUES ('{$nome}','{$dataMensagem}','{$mensagem}')"; 
     return mysqli_query($conexao, $query);
@@ -223,6 +239,16 @@ function insereMensagem ($conexao, $nome, $dataMensagem, $mensagem) {
 
 function confirmaMensagem ($conexao,$id,$confirmacao) { 
     $query = "UPDATE mensagens set
+    confirmacao = '{$confirmacao}'
+    
+    where id = '{$id}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function confirmaTransferencia ($conexao,$id,$confirmacao) { 
+    $query = "UPDATE transferencia_valores set
     confirmacao = '{$confirmacao}'
     
     where id = '{$id}'

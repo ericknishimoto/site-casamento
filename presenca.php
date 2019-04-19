@@ -223,11 +223,11 @@ $totalRestante = $totalGeral - $totalUtilizado;
                     <?php
                       if($convidado->confirmacao == 1) {
                     ?>
-                      <p style="color: green;">Confirmado</p>
+                      <p style="color: #00a65a;">Confirmado</p>
                     <?php
                       } else {
                     ?>
-                      <p style="color: red;">Não irá</p>
+                      <p style="color: #f56954;">Não irá</p>
                     <?php
                       }
                     ?>
@@ -236,7 +236,7 @@ $totalRestante = $totalGeral - $totalUtilizado;
                     <td><?= $convidado->email ?></td>                    
                     <td>
                       <?php if($convidado->categoria == '') {
-                      ?> <p style="color: red;">Verificar</p>
+                      ?> <p style="color: #f56954;">Verificar</p>
                       <?php  
                       }else{
                       ?>  <?= $convidado->categoria ?>

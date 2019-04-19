@@ -5,7 +5,7 @@ require_once 'header.php';
 require_once 'conecta.php';
 require_once 'banco-meusite.php';
 
-$mensagens = listaMensagens($conexao);
+$transferencias = listaTransferencias($conexao);
 
 ?>
  <!-- Content Wrapper. Contains page content -->
@@ -13,12 +13,12 @@ $mensagens = listaMensagens($conexao);
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Mensagens Recebidas
-        <small>administre as mensagens recebidas</small>
+        Trasnferências Recebidas
+        <small>administre as transferências recebidas</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Mensagens Recebidas</li>
+        <li class="active">Trasnferências de Valores</li>
       </ol>
     </section>
 
@@ -68,8 +68,11 @@ $mensagens = listaMensagens($conexao);
                             <thead>
                             <tr>
                               <th>#ID</th>
+                              <th>Data</th>
                               <th>Nome</th>
-                              <th>Mensagem</th>
+                              <th>Valor</th>
+                              <th>Operação</th>
+                              <th>Observação</th>
                               <th>Aprovação</th>
                               <th>Ações</th>
                             </tr>
@@ -77,17 +80,20 @@ $mensagens = listaMensagens($conexao);
                             <tbody>
             
                             <?php
-                            foreach ($mensagens as $mensagem) {
+                            foreach ($transferencias as $transferencia) {
                             ?>
             
-                                  <td><?= $mensagem['id'] ?></td>
-                                  <td><?= $mensagem['nome'] ?></td>
-                                  <td><?= $mensagem['mensagem'] ?></td>
+                                  <td><?= $transferencia['id'] ?></td>
+                                  <td><?= date('d/m/Y', strtotime( $transferencia['data'])) ?></td>
+                                  <td><?= $transferencia['nome'] ?></td>
+                                  <td><?= $transferencia['valor'] ?></td>
+                                  <td><?= $transferencia['operacao'] ?></td>
+                                  <td><?= $transferencia['obs'] ?></td>
                                   <td>
                                   <?php
-                                    if($mensagem['confirmacao'] == 1) {
+                                    if($transferencia['confirmacao'] == 1) {
                                   ?>
-                                    <p style="color: #00a65a;">Confirmado</p>
+                                    <p style="color: #00a65a; ">Confirmado</p>
                                   <?php
                                     } else {
                                   ?>
@@ -97,8 +103,8 @@ $mensagens = listaMensagens($conexao);
                                   ?>
                                   </td>
                                   <td class="text-center">
-                                    <a href="confirma-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                                    <a href="nega-mensagem.php?id=<?= $mensagem['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                                    <a href="confirma-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                                    <a href="nega-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
                                   </td>
                               </tr>
             
@@ -125,7 +131,7 @@ require_once 'footer.php';
 
 <!-- Active Menu -->
 <script>
-var menu = document.querySelectorAll('#liMensagens');
+var menu = document.querySelectorAll('#liTransfer');
 var item = menu[0];
 item.classList.add("active");
 </script>
