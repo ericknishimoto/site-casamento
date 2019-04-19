@@ -127,7 +127,7 @@ div#modal-confirm {
 
 .hover {
   border-color: lightgray;
-  box-shadow: 0 0 10px rgba(211, 211, 211, 0);
+  box-shadow: 0 0 10px lightgray;
   transition: box-shadow 0.2s ease-out;
 }
 
@@ -260,6 +260,10 @@ modal-dialog {
     background-position: center !important;
     background-size: cover !important;
   }
+  
+  .bg-color-gray {
+    background-color: #DDD !important;
+  }
 }
 
 .link {
@@ -269,5 +273,4 @@ modal-dialog {
 .link:hover {
   background-color: rgba(128, 128, 128, 0.151)!important;
 }
-
 }
