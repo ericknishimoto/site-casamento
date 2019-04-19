@@ -43,6 +43,7 @@
 <script>
   $(function () {
       $('#tabela').DataTable({
+        'order'       : [],
         'paging'      : false,
         'searching'      : true,
         'lengthMenu'  : false,
