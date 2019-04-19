@@ -127,7 +127,7 @@ div#modal-confirm {
 
 .hover {
   border-color: lightgray;
-  box-shadow: 0 0 10px lightgray;
+  box-shadow: 0 0 10px rgba(211, 211, 211, 0);
   transition: box-shadow 0.2s ease-out;
 }
 
