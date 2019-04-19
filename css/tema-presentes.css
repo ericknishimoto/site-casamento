@@ -39,14 +39,14 @@
   padding: 15px;
   border: 1px solid rgba(0,0,0,.125) !important;
   box-shadow: 0 0 10px rgba(211, 211, 211, 0);
-  transition: box-shadow 0.3s ease-out;
+  transition: box-shadow 0.2s ease-out;
   animation: fadeIn .5s;  
 }
 
 .card-presentes:hover {
   border-color: lightgray;
   box-shadow: 0 0 10px lightgray;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .card-comprado {
