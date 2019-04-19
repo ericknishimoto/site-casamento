@@ -265,7 +265,16 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
-                            <input type="text" name="obs" class="form-control">
+                            <input type="text" name="operacao" class="form-control">
+                            <div class="text-right">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="form-group mt-1">
+                            <label>Observação</label><span class="text-muted"> (Opcional)</span>
+                            <textarea type="text" rows="2" maxlength="200" required name="obs" class="form-control" id="TxtObservacoes"></textarea>
                             <div class="text-right">
                             </div>
                           </div>
