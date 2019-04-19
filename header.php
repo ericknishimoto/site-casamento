@@ -149,11 +149,6 @@
             <li id="liCadCat"><a href="categorias"><i class="fa fa-circle-o"></i> Cadastro de categorias</a></li>
           </ul>
         </li>
-        <li id="liLocal"><a href="#">
-          <i class="fa fa-map-marker"></i> <span>Local do Evento</span>
-          <span class="pull-right-container">
-          </span>
-        </a></li>
         <li id="liUser"><a href="cadastro-usuarios">
           <i class="fa fa-users"></i> <span>Usuário</span>
           <span class="pull-right-container">
