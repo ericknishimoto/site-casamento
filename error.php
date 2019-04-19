@@ -76,36 +76,18 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     </nav>
 
     <!-- Header -->
-     <section id="presenca" class="presenca text-center">
+    <header class="masthead masthead2">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Lista de Presentes</h2>
-            <h3 class="section-subheading text-muted">Sem presentes, sem festa =)</h3>
+        <div class="intro-text">
+        <div class="col-lg-12 text-center">
+            <img src="img/error.gif">
+            <h4 class="text-muted">-</h4>
+            <h1 class="section-subheading text-muted">Página não encontrada...</h1>
+            <h4 class="section-subheading text-muted">Verifique o link e tente novamente.</h4>
+            
           </div>
-        </div>
-        <div class="d-flex">
-            <hr class="my-auto flex-grow-1" style="color:gray;">
-            <div class="px-4" style="color:gray;">CATEGORIAS</div>
-            <hr class="my-auto flex-grow-1" style="color:gray;">
-        </div>              
-        
-        <div class="row d-flex justify-content-center">
-        <button type="button" id="categoria" class="btn botao-categoria text-muted mostrarTodos">
-          TODOS            
-        </button>    
-          <?php foreach($categorias as $categoria) :?>
-            <button type="button" id="categoria" class="btn botao-categoria text-muted">
-            <?=$categoria['nome']?>
-            </button>    
-          <?php endforeach ?>  
-        </div>
-
       </div>
-      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
-    </section>
-
-   
+  </header>
 
 <!-- Footer -->
 <footer>
@@ -117,106 +99,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
     </div>
   </div>
 </footer>
-
-<!-- ********************************** MODAL TRANSFERENCIA ********************************** -->
-<div class="modal fade" id="modal-transferencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="modal-body">
-              <form action="adiciona-transferencia.php" id="form-transferencia" method="POST">
-                  <div class="row">
-                    <div class="col-xs-12 p-4">
-
-                      <div class="row">
-                        <div class="col-12">
-
-                          <div class="form-group mt-1 text-center">
-                              <label class="titulo-modal">Transferir Valor</label>
-                          </div>
-
-                          <div class="row text-center">
-                            <p class="col-md-12 text-muted">Transfira um valor diretamente para os noivos.</p>
-                          </div>
-
-                          <div class="form-group row text-center">
-                            <div class="col-md-12 text-center mt-1 mb-1">
-                              <span class="h3 text-muted"><b>Itaú</b></span><br>
-                              <span class="h4 text-muted">Agência: 0123</span><br>
-                              <span class="h4 text-muted">C/C: 81234-5</span>
-                            </div>
-                            <!-- <div class="col-md-6 text-center">
-                              <img src="img/pig.png" style="max-height: 100px;">
-                            </div> -->
-                          </div>
-
-                          <div class="row text-center">
-                            <p class="col-md-12 text-muted"><b>*Após fazer a transferência, envie-nos os dados abaixo.</b></p>
-                          </div>
-                        </div>
-
-                        <!-- DIVISÓRIA -->
-                        <div class="col-12 mt-1 mb-1">
-                          <div class="d-flex mb-1">
-                            <hr class="my-auto flex-grow-1" style="color:gray;">
-                            <div class="px-4" style="color:gray;">♥</div>
-                            <hr class="my-auto flex-grow-1" style="color:gray;">
-                          </div>
-                        </div>
-
-                        <div class="col-12">
-                          <div class="form-group mt-1">
-                            <label>Nome</label><span class="text-muted"> (*)</span>
-                            <input type="text" name="nome" class="form-control">
-                            <div class="text-right">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-6">
-                          <div class="form-group mt-1">
-                            <label>Valor</label><span class="text-muted"> (*)</span>
-                            <input name="valor" class="form-control money">
-                              <div class="text-right">
-                              </div>
-                          </div>
-                        </div>
-
-                        <div class="col-6">
-                          <div class="form-group mt-1">
-                            <label>Data</label><span class="text-muted"> (*)</span>
-                            <input type="date" name="data" class="form-control">
-                              <div class="text-right">
-                              </div>
-                          </div>
-                        </div>
-
-                        <div class="col-12">
-                          <div class="form-group mt-1">
-                            <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
-                            <input type="text" name="obs" class="form-control">
-                            <div class="text-right">
-                            </div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button class="btn text-muted bg-color-gray mr-2" type="submit" form="form-transferencia" value="Submit">Enviar</button>
-                        <button type="button" class="btn text-muted bg-color-gray" data-dismiss="modal">Fechar</button>
-                    </div>
-                  </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
