@@ -260,7 +260,7 @@ modal-dialog {
     background-position: center !important;
     background-size: cover !important;
   }
-  
+
   .bg-color-gray {
     background-color: #DDD !important;
   }
@@ -272,5 +272,4 @@ modal-dialog {
 
 .link:hover {
   background-color: rgba(128, 128, 128, 0.151)!important;
-}
 }
