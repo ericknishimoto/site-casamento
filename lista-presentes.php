@@ -121,7 +121,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
               <span class="badge badge-presente mb-2">Transferência</span>
               </a>
               <button type="button" class="btn botao-comprar" data-toggle="modal" data-target="#modal-transferencia">
-              Transferir Valor
+              Transferir valor
               </button>
             </div>
           </div>

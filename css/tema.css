@@ -125,6 +125,18 @@ div#modal-confirm {
   margin-bottom: 15px;
 }
 
+.hover {
+  border-color: lightgray;
+  box-shadow: 0 0 10px rgba(211, 211, 211, 0);
+  transition: box-shadow 0.2s ease-out;
+}
+
+.hover:hover {
+  border-color: lightgray;
+  box-shadow:  0 0 10px lightgray;
+  transition: box-shadow 0.2s ease-out;
+}
+
 .img-md {
   width: 100%;
   min-width: 300px;

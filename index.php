@@ -327,7 +327,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                     <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                       data-image="upload/<?= ($foto['nome']) ?>"
                       data-target="#image-gallery">
-                      <img class="img-thumbnail thumbnail img-rounded img-md2" src="upload/<?= ($foto['nome']) ?>" alt="Another alt text">
+                      <img class="hover img-thumbnail thumbnail img-rounded img-md2" src="upload/<?= ($foto['nome']) ?>" alt="Another alt text">
                     </a>
                   </div>
                 <?php 
