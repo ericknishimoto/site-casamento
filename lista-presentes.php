@@ -228,11 +228,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                         <!-- DIVISÓRIA -->
                         <div class="col-12 mt-1 mb-1">
-                          <div class="d-flex mb-1">
-                            <hr class="my-auto flex-grow-1" style="color:gray;">
-                            <div class="px-4" style="color:gray;">♥</div>
-                            <hr class="my-auto flex-grow-1" style="color:gray;">
-                          </div>
+                          <div class="d-flex mt-4 mb-4">
+                            <hr class="my-auto flex-grow-1" style="border-top: 1px dashed lightgray;">
+                          </div> 
                         </div>
 
                         <div class="col-12">
