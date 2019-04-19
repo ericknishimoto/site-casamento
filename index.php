@@ -261,17 +261,12 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <p class="section-heading" style="color:white;">
             <?= $infos['local_local02_texto'] ?>
             </p>
+            <button type="button" class="btn btn-lg text-muted bg-color-gray" data-toggle="modal" data-target="#modal-local02">Ver mapa</button>
           </div>
           <div class="col-lg-3 text-center">
             <img class="img-thumbnail thumbnail img-rounded img-md3" src="upload/<?= ($infos['local_local02_imagem']) ?>" alt="Another alt text">
           </div>
-          <div class="col-lg-1 text-center"></div>
-        </div>    
-
-        <!-- MAPA GOOGLE -->
-        <div class="text-center">
-          <iframe src="<?= ($infos['local_local02_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px; max-width: 950px" allowfullscreen></iframe>       
-        </div>
+        </div>         
 
         </form>
       </div>
@@ -644,6 +639,21 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- MODAL CONFIRMACAO PRESENCA -->
+<div class="modal fade" id="modal-local02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <!-- MAPA GOOGLE -->
+              <iframe src="<?= ($infos['local_local02_mapa']) ?>" width="100%" height="100%" frameborder="0" style="border:0; max-height: 400px;" allowfullscreen></iframe>     
+              <button type="button" class="btn" style="background-color: gray; color: white; border-radius: 0px;" data-dismiss="modal">Fechar</button>  
             </div>
           </div>
         </div>
