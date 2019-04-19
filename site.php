@@ -144,7 +144,32 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
 
       <div class="row">
 
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <!-- Donut chart -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <i class="fa fa-pie-chart"></i>
+
+            <h3 class="box-title">Total de Convites Confimados</h3>
+
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body text-center">
+           
+          <iframe width="600" height="295" src="https://datastudio.google.com/embed/reporting/1KDxSrwvjFhdXUy-Pkc0dyqvSUcNaCQu6/page/6zcn" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+          </div>
+          <!-- /.box-body-->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+
+      <div class="col-md-6">
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
