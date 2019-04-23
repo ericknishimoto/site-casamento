@@ -113,6 +113,8 @@
           <ul class="treeview-menu" style="">
             <li id="liPersoBanner"><a href="personalizar-banner-principal"><i class="fa fa-circle-o"></i> Banner Principal</a></li>
             <li id="liPersoSecaoBoasVindas"><a href="personalizar-secao-boas-vindas"><i class="fa fa-circle-o"></i> Seção de Boas Vindas</a></li>
+            <li id="liPersoSecaoBoasVindasNoiva"><a href="personalizar-secao-boas-vindas-noiva"> &nbsp &nbsp <i class="fa fa-female"></i>Dados da Noiva</a></li>
+            <li id="liPersoSecaoBoasVindasNoivo"><a href="personalizar-secao-boas-vindas-noivo"> &nbsp &nbsp <i class="fa fa-male"></i>Dados do Noivo</a></li>
             <li id="liPersoSecaoMensagens"><a href="personalizar-secao-mensagens"><i class="fa fa-circle-o"></i> Seção de Mensagens</a></li>
             <li id="liPersoSecaoPresenca"><a href="personalizar-secao-presenca"><i class="fa fa-circle-o"></i> Seção de Confirm. de Presença</a></li>
             <li id="liPersoSecaoLocal"><a href="personalizar-secao-local"><i class="fa fa-circle-o"></i> Seção de Local</a></li>

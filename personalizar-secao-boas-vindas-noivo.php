@@ -16,13 +16,13 @@ clearstatcache();
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Definir Local 01
+        Dados da Noivo
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li>Personalizar Página</li>
-        <li>Seção Local</li>
-        <li class="active">Definir Local 01</li>
+        <li>Seção de Boas Vindas</li>
+        <li class="active">Dados do Noivo</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -51,12 +51,12 @@ clearstatcache();
 <?php
   }
 ?>
-      <form action="altera-secao-local-local01.php" method="POST" enctype="multipart/form-data">
+      <form action="altera-secao-boas-vindas-noivo.php" method="POST" enctype="multipart/form-data">
 
         <!-- Cabecalho -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Local</h3>
+            <h3 class="box-title">Dados do Noivo</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -71,24 +71,24 @@ clearstatcache();
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Imagem do quadro:</h4>
-                      <img id="imgLocal" src="upload/<?= ($infos['local_local01_imagem']) ?>" class="thumbnail img-rounded img-md"/>
-                      <input id="imgLocalInput" value="<?= ($infos['local_local01_imagem']) ?>" type="file" name="local_local01_imagem" class="form-control-file">
-                      <input value="<?= ($infos['local_local01_imagem']) ?>" type="hidden" name="local_local01_imagem_anterior">
+                      <h4>Imagem:</h4>
+                      <img id="imgLocal" src="upload/<?= ($infos['noivo_img']) ?>" class="thumbnail img-rounded img-md"/>
+                      <input id="imgLocalInput" value="<?= ($infos['noivo_img']) ?>" type="file" name="noivo_img" class="form-control-file">
+                      <input value="<?= ($infos['noivo_img']) ?>" type="hidden" name="noivo_img_anterior">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Titulo:</h4>
-                      <input value="<?= ($infos['local_local01_titulo']) ?>" type="text" name="local_local01_titulo" class="form-control">
+                      <h4>Nome:</h4>
+                      <input value="<?= ($infos['noivo_nome']) ?>" type="text" name="noivo_nome" class="form-control">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Horário:</h4>
-                      <input value="<?= ($infos['local_local01_horario']) ?>" type="text" name="local_local01_horario" class="form-control" placeholder="30 Dezembro 2019, 10h - 12h">
+                      <h4>Descrição:</h4>
+                      <input value="<?= ($infos['noivo_desc']) ?>" type="text" name="noivo_desc" class="form-control">
                     </div>
                 </div>
 
@@ -103,20 +103,6 @@ clearstatcache();
                     <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
                     </div>
                   <!-- /.box-body -->
-                  </div>
-                </div>
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <h4>Texto:</h4>                    
-                    <textarea type="text" name="local_local01_texto" class="form-control"><?= ($infos['local_local01_texto']) ?></textarea>                     
-                  </div>
-                </div>
-
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <span class="h4">Endereço: </span><span>(Coloque o endereço o mais completo possível)</p>
-                    <input type="text" name="local_local01_mapa" class="form-control" value="<?= ($infos['local_local01_mapa']) ?>" placeholder="Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100">
                   </div>
                 </div>
 
@@ -169,7 +155,7 @@ var menu = document.querySelectorAll('#liPerso');
 var item = menu[0];
 item.classList.add("active");
 
-var submenu = document.querySelectorAll('#liPersoSecaoLocal01');
+var submenu = document.querySelectorAll('#liPersoSecaoBoasVindasNoivo');
 var item = submenu[0];
 item.classList.add("active");
 </script>

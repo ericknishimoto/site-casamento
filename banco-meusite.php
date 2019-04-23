@@ -138,6 +138,41 @@ function alteraLocal02 (
 return mysqli_query($conexao, $query);
 }
 
+
+function alteraBoasVindasNoiva (
+    $conexao,
+    $noiva_nome,
+    $noiva_desc,
+    $noiva_img
+)
+
+{ 
+    $query = "UPDATE meusite set
+    noiva_nome = '{$noiva_nome}',
+    noiva_desc = '{$noiva_desc}',
+    noiva_img = '{$noiva_img}'
+";
+
+return mysqli_query($conexao, $query);
+}
+
+function alteraBoasVindasNoivo (
+    $conexao,
+    $noivo_nome,
+    $noivo_desc,
+    $noivo_img
+)
+
+{ 
+    $query = "UPDATE meusite set
+    noivo_nome = '{$noivo_nome}',
+    noivo_desc = '{$noivo_desc}',
+    noivo_img = '{$noivo_img}'
+";
+
+return mysqli_query($conexao, $query);
+}
+
 function alteraSecaoMensagens (
     $conexao,
     $mensagens_titulo,

@@ -136,11 +136,40 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <div class="px-4" style="color:gray;">♥</div>
             <hr class="my-auto flex-grow-1" style="color:gray;">
         </div>
+      <!-- NOIVOS -->
+      <div class="row text-center mt-5">
+        <!-- NOIVA -->
+        <div class="col-md-5">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="upload/<?= ($infos['noiva_img']) ?>" alt="">
+            <h4><?= ($infos['noiva_nome']) ?></h4>
+            <p class="text-muted"><?= ($infos['noiva_desc']) ?></p>
+          </div>
+        </div>
+
+          <!-- SEPARADOR -->
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+          <div class="team-member team-separator">
+            <img class="mx-auto rounded-circle" src="img/wedding.png" alt="">
+          </div>
+        </div>
+
+        <!-- NOIVO -->
+        <div class="col-md-5">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="upload/<?= ($infos['noivo_img']) ?>" alt="">
+            <h4><?= ($infos['noivo_nome']) ?></h4>
+            <p class="text-muted"><?= ($infos['noivo_desc']) ?></p>
+          </div>
+        </div>
+      </div>
+
         <div class="row text-center">
           <div class="col-md-12">
             <p class="text-muted mb-5"><?= ($infos['section01_texto']) ?></p>
           </div>
         </div>
+
       </div>
       <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>

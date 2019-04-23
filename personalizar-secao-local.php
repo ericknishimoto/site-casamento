@@ -21,7 +21,7 @@ clearstatcache();
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li>Personalizar Página</li>
-        <li class="active">Local</li>
+        <li class="active">Seção Local</li>
       </ol>
     </section>
     <!-- Main content -->
