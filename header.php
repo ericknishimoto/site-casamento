@@ -71,7 +71,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li>
-          <a href="index" target="_blank">Visualizar Site &nbsp <i class="fa fa-share"></i></a>
+          <a href="\" target="_blank">Visualizar Site &nbsp <i class="fa fa-share"></i></a>
           </li>
           <li>
             <a href="logout">Sair</i></a>
