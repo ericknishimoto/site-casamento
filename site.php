@@ -160,7 +160,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
           </div>
           <div class="box-body text-center">
            
-          <iframe width="600" height="295" src="https://datastudio.google.com/embed/reporting/1KDxSrwvjFhdXUy-Pkc0dyqvSUcNaCQu6/page/6zcn" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe width="100%" height="295" src="https://datastudio.google.com/embed/reporting/1KDxSrwvjFhdXUy-Pkc0dyqvSUcNaCQu6/page/6zcn" frameborder="0" style="border:0" ></iframe>
 
           </div>
           <!-- /.box-body-->
