@@ -638,6 +638,12 @@ section#presenca {
   max-height: 450px;
 }
 
+section#presentes {
+  padding: 100px 0;
+  min-height: 0;
+  max-height: 450px;
+}
+
 @media (max-width: 500px) {
 
   #mensagens, .masthead {
