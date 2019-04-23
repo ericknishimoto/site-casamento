@@ -76,10 +76,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
   <body id="page-top">
 
-  <!-- PRELOADE -->
-<div id="loader">
-</div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container" style="max-width: 1300px;">
@@ -918,17 +914,6 @@ $(document).ready(function(){
     });
   $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
 });
-</script>
-
-<!-- PRELOADER -->
-
-<script>
-
-  var loader = document.getElementById("loader");
-  window.addEventListener("load", function() {
-    loader.style.visibility= "hidden";
-  })
-
 </script>
 
 </body>

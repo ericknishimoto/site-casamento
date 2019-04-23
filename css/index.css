@@ -647,18 +647,3 @@ section#presenca {
   background-size : cover;
   }
 }
-
-#loader {
-  height: 1500px;
-  width: 1500px;
-  background-color: white;
-  position: fixed;
-  opacity: 0;
-  z-index: 99999;
-  transition: all 1s;
-}
-
-#loader img{
-  position: absolute;
-  opacity: 1;
-}
