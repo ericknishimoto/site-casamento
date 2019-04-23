@@ -191,11 +191,11 @@ function alteraSecaoFotos (
 
 function alteraSecaoPresentes (
     $conexao,
-        $presentes_titulo,
-        $presentes_subtitulo,
-        $presentes_banco,
-        $presentes_agencia,al
-        $presentes_conta
+    $presentes_titulo,
+    $presentes_subtitulo,
+    $presentes_banco,
+    $presentes_agencia,
+    $presentes_conta
     )
 
     { 
