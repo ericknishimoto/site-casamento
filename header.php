@@ -104,7 +104,7 @@
           </span>
         </a></li>
         <li id="liPerso" class=" treeview">
-          <a href="presentes">
+          <a href="personalizar-banner-principal">
             <i class="fa fa-paint-brush"></i> <span>Personalizar Página</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
