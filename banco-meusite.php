@@ -174,6 +174,42 @@ function alteraSecaoPresenca (
     return mysqli_query($conexao, $query);
 }
 
+function alteraSecaoFotos (
+    $conexao,
+    $fotos_titulo,
+    $fotos_subtitulo
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    fotos_titulo = '{$fotos_titulo}',
+    fotos_subtitulo = '{$fotos_subtitulo}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
+function alteraSecaoPresentes (
+    $conexao,
+        $presentes_titulo,
+        $presentes_subtitulo,
+        $presentes_banco,
+        $presentes_agencia,al
+        $presentes_conta
+    )
+
+    { 
+    $query = "UPDATE meusite set
+    presentes_titulo = '{$presentes_titulo}',
+    presentes_subtitulo = '{$presentes_subtitulo}',
+    presentes_banco = '{$presentes_banco}',
+    presentes_agencia = '{$presentes_agencia}',
+    presentes_conta = '{$presentes_conta}'
+    ";
+
+    return mysqli_query($conexao, $query);
+}
+
 
 function alteraBannerPrincipal (
     $conexao,

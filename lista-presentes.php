@@ -70,6 +70,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/#local">Local</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#fotos">Fotos</a>
+            </li> 
           </ul>
         </div>
       </div>
@@ -212,9 +215,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                           <div class="form-group row text-center">
                             <div class="col-md-12 text-center mt-1 mb-1">
-                              <span class="h3 text-muted"><b>Itaú</b></span><br>
-                              <span class="h4 text-muted">Agência: 0123</span><br>
-                              <span class="h4 text-muted">C/C: 81234-5</span>
+                              <span class="h3 text-muted"><b><?= ($infos['presentes_banco']) ?></b></span><br>
+                              <span class="h4 text-muted">Agência: <?= ($infos['presentes_agencia']) ?></span><br>
+                              <span class="h4 text-muted"><?= ($infos['presentes_conta']) ?></span>
                             </div>
                             <!-- <div class="col-md-6 text-center">
                               <img src="img/pig.png" style="max-height: 100px;">

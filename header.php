@@ -118,8 +118,8 @@
             <li id="liPersoSecaoLocal"><a href="personalizar-secao-local"><i class="fa fa-circle-o"></i> Seção de Local</a></li>
             <li id="liPersoSecaoLocal01"><a href="personalizar-secao-local01"> &nbsp &nbsp <i class="fa fa-map-marker"></i>Definir Local 01</a></li>
             <li id="liPersoSecaoLocal02"><a href="personalizar-secao-local02"> &nbsp &nbsp <i class="fa fa-map-marker"></i>Definir Local 02</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Lista de Presentes</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Seção de Fotos</a></li>
+            <li id="liPersoSecaoPresentes"><a href="personalizar-secao-presentes"><i class="fa fa-circle-o"></i> Seção de Lista de Presentes</a></li>
+            <li id="liPersoSecaoFotos"><a href="personalizar-secao-fotos"><i class="fa fa-circle-o"></i> Seção de Fotos</a></li>
           </ul>
         </li>
         <li id="liUpFotos"><a href="fotos">

@@ -101,6 +101,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#presentes">Presentes</a>
             </li> 
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#fotos">Fotos</a>
+            </li> 
           </ul>
         </div>
       </div>
@@ -298,8 +301,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container mb-3">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Lista de Presentes</h2>
-            <h3 class="section-subheading text-muted">Ajude os noivos a montar a casa nova. Presenteie!</h3>
+            <h2 class="section-heading"><?= ($infos['presentes_titulo']) ?></h2>
+            <h3 class="section-subheading text-muted"><?= ($infos['presentes_subtitulo']) ?></h3>
           </div>
         </div>
         <div class="d-flex">
@@ -393,9 +396,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                           <div class="form-group row text-center">
                             <div class="col-md-12 text-center mt-1 mb-1">
-                              <span class="h3 text-muted"><b>Itaú</b></span><br>
-                              <span class="h4 text-muted">Agência: 0123</span><br>
-                              <span class="h4 text-muted">C/C: 81234-5</span>
+                              <span class="h3 text-muted"><b><?= ($infos['presentes_banco']) ?></b></span><br>
+                              <span class="h4 text-muted">Agência: <?= ($infos['presentes_agencia']) ?></span><br>
+                              <span class="h4 text-muted"><?= ($infos['presentes_conta']) ?></span>
                             </div>
                             <!-- <div class="col-md-6 text-center">
                               <img src="img/pig.png" style="max-height: 100px;">
