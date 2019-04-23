@@ -281,10 +281,10 @@ modal-dialog {
 
 .btn-mapa{
   background-color: #DDD;
-  color: #6c757d;
+  color: gray;
 }
 
 .btn-mapa:hover{
-  background-color: #6c757d;
+  background-color: gray;
   color: white;
 }
