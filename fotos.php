@@ -185,7 +185,7 @@ $fotos = listaFotos($conexao);
 require_once 'footer.php';
 ?>
 
-<!-- MODAL ALTERAR -->
+<!-- MODAL EXCLUIR -->
 <div class="modal fade" id="modal-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

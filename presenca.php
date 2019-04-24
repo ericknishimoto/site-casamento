@@ -248,7 +248,9 @@ $totalRestante = $totalGeral - $totalUtilizado;
                       <a href="confirma-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
                       <a href="nega-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
                       <a href="form-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a> 
-                      <a href="exclui-presenca.php?id=<?= $convidado->id ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>          
+                      <a data-url="exclui-presenca?id=" data-id="<?= $convidado->id ?>" class="btn btn-danger" data-toggle="modal" data-target="#modal-excluir">
+                          <i class="fa fa-trash-o"></i>
+                      </a>           
                     </td>
                 </tr>
 
@@ -270,6 +272,25 @@ $totalRestante = $totalGeral - $totalUtilizado;
 <?php
 require_once ('footer.php');
 ?>
+
+<!-- MODAL EXCLUIR -->
+<div class="modal fade" id="modal-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-danger">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Excluir</h4>
+        </div>
+        <div class="modal-body">
+         <h4>Tem certeza que deseja excluir o item?</h4>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-danger delete">Excluir</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 <!-- Active Menu -->
 <script>
