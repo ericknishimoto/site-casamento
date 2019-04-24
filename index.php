@@ -271,7 +271,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>
         
         <!-- LOCAL 01 -->
-        <div class="row mb-5">
+        <div class="row mb-5 mt-4">
+          <div class="col-lg-4 text-center">
+            <img class="img-thumbnail thumbnail img-rounded img-md4" src="upload/<?= ($infos['local_local01_imagem']) ?>" alt="Another alt text">
+          </div>     
           <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local01_titulo'] ?></b></h4>
             <i class="ion-ios-location-outline" style="color:white; font-size: 1.3rem;"></i><span style="color:white;">&nbsp <?= $infos['local_local01_mapa'] ?></span>
@@ -284,10 +287,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <a href="https://www.google.com.br/maps/search/<?= ($infos['local_local01_mapa']) ?>" class="btn btn-mapa mr-2" target="_blank">
             Ver mapa
             </a>
-          </div>
-          <div class="col-lg-4 text-center">
-            <img class="img-thumbnail thumbnail img-rounded img-md4" src="upload/<?= ($infos['local_local01_imagem']) ?>" alt="Another alt text">
-          </div>          
+          </div>     
         </div>    
 
         <div class="d-flex mt-5 mb-5">
@@ -295,12 +295,10 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
         </div>        
 
         <!-- LOCAL 02 -->
-        <div class="row mb-5">
-
+        <div class="row mb-4">
           <div class="col-lg-4 text-center">
             <img class="img-thumbnail thumbnail img-rounded img-md4" src="upload/<?= ($infos['local_local02_imagem']) ?>" alt="Another alt text">
           </div>
-
           <div class="col-lg-8 text-left">
             <h4 class="section-heading" style="color:white;"><b><?= $infos['local_local02_titulo'] ?></b></h4>
           
@@ -317,7 +315,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             </a>
             
           </div>
-
         </div>         
 
         </form>
