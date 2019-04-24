@@ -446,7 +446,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Nome</label><span class="text-muted"> (*)</span>
-                            <input type="text" name="nome" class="form-control">
+                            <input type="text" name="nome" maxlength="30" class="form-control" required>
                             <div class="text-right">
                             </div>
                           </div>
@@ -455,7 +455,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-6">
                           <div class="form-group mt-1">
                             <label>Valor</label><span class="text-muted"> (*)</span>
-                            <input name="valor" class="form-control money">
+                            <input name="valor" class="form-control money" maxlength="30" required>
                               <div class="text-right">
                               </div>
                           </div>
@@ -464,7 +464,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-6">
                           <div class="form-group mt-1">
                             <label>Data</label><span class="text-muted"> (*)</span>
-                            <input type="date" name="data" class="form-control">
+                            <input type="date" name="data" class="form-control" required>
                               <div class="text-right">
                               </div>
                           </div>
@@ -473,7 +473,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
-                            <input type="text" name="operacao" class="form-control">
+                            <input type="text" name="operacao" class="form-control" maxlength="30">
                             <div class="text-right">
                             </div>
                           </div>
@@ -483,6 +483,9 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                           <div class="form-group mt-1">
                             <label>Observação</label><span class="text-muted"> (Opcional)</span>
                             <textarea type="text" rows="2" maxlength="200" name="obs" class="form-control" id="TxtObservacoes"></textarea>
+                            <div class="text-right">
+                              <p class="contador-caracteres">Caracteres <span class="contador-caracteres caracteres">200</span> Restantes<br></p>
+                            </div>
                             <div class="text-right">
                             </div>
                           </div>
@@ -513,7 +516,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             <div class="col-lg-12">
               <div class="modal-body">
                 <div class="row">
-                  <div class="col-xs-12">
+                  <div class="col-lg-12">
                     <div class="row">
                       <div class="col-12">
 
@@ -582,7 +585,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
                               <div class="form-group mt-1">
                                   <label>Nome</label><span class="text-muted"> (*)</span>
-                                  <input type="text" required name="nome" class="form-control">
+                                  <input type="text" maxlength="30" required name="nome" class="form-control">
                               </div>
                             </div>
 
@@ -631,11 +634,11 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-md-12 mb-3">
 
                           <p class="text-muted text-center">
-                           <?= $infos['presenca_aviso'] ?>
+                           <b><?= $infos['presenca_aviso'] ?></b>
                           </p>
 
                           <label>Nome do convidado <span class="text-muted">(*)</span></label>
-                          <input name="nome" type="text" class="form-control" placeholder="Nome completo" required>
+                          <input name="nome" type="text" maxlength="30" class="form-control" placeholder="Nome completo" required>
                           
                           <div class="my-3">
                             <label>Você irá ao evento? <span class="text-muted">(*)</span></label>
@@ -667,12 +670,12 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       
                           <div class="mb-3">
                             <label for="email">Email</label>
-                            <input name="email" type="email" class="form-control" placeholder="seu@email.com.br">
+                            <input name="email" type="email" maxlength="30" class="form-control" placeholder="seu@email.com.br">
                           </div>
             
                           <div class="mb-3">
                             <label for="email">Telefone</label> <span class="text-muted">(*)</span></label>
-                            <input name="telefone" type="text" class="form-control phone_with_ddd" required placeholder="(11) 9999-9999">
+                            <input name="telefone" type="text" maxlength="30" class="form-control phone_with_ddd" required placeholder="(11) 9999-9999">
                           </div>
 
                           <div class="col-12 text-center mt-4">
@@ -881,8 +884,8 @@ $(document).ready(function(){
   $('.time').mask('00:00:00');
   $('.date_time').mask('00/00/0000 00:00:00');
   $('.cep').mask('00000-000');
-  $('.phone').mask('0000-0000');
-  $('.phone_with_ddd').mask('(00) 0000-0000');
+  $('.phone').mask('00000-0000');
+  $('.phone_with_ddd').mask('(00) 00000-0000');
   $('.phone_us').mask('(000) 000-0000');
   $('.mixed').mask('AAA 000-S0S');
   $('.cpf').mask('000.000.000-00', {reverse: true});

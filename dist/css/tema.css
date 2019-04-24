@@ -8,3 +8,8 @@
 .uppercase {
     text-transform: uppercase;
 }
+
+
+table#tabela {
+    word-break: break-all;
+  }

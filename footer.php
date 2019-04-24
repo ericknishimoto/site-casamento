@@ -42,14 +42,17 @@
 <!-- MODAL E DATEPICKER -->
 <script>
   $(function () {
-      $('#tabela').DataTable({
+      $('#tabela').removeAttr('width').DataTable({
+        scrollY:        "100%",
+        scrollCollapse: true,
+        fixedColumns: true,
         'order'       : [],
         'paging'      : false,
-        'searching'      : true,
+        'searching'   : true,
         'lengthMenu'  : false,
-        'responsive'  : true
+        'responsive'  : true,
         
-      })
+      });
     })
 </script>
 

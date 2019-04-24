@@ -235,3 +235,9 @@ footer {
 .visivel {
   display: block;
 }
+
+.contador-caracteres {
+  color: gray;
+  font-size: 15px;
+  font-weight: 300;
+}

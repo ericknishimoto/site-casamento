@@ -12,7 +12,7 @@ function listaMeusite($conexao) {
 
 function listaMensagens($conexao) {
     $mensagens = array();
-    $query = "select * from mensagens order by data desc";
+    $query = "select * from mensagens order by id desc";
     $resultado = mysqli_query($conexao, $query);
     while ($mensagem = mysqli_fetch_assoc($resultado)) {
         array_push($mensagens, $mensagem);
@@ -302,9 +302,9 @@ function insereTransferencia ($conexao, $nome, $valor, $data, $operacao, $obs) {
     return mysqli_query($conexao, $query);
 }
 
-function insereMensagem ($conexao, $nome, $dataTransferencia, $mensagem) { 
+function insereMensagem ($conexao, $nome, $data, $mensagem) { 
     $query = "INSERT INTO mensagens (nome, data, mensagem)
-    VALUES ('{$nome}','{$dataMensagem}','{$mensagem}')"; 
+    VALUES ('{$nome}','{$data}','{$mensagem}')"; 
     return mysqli_query($conexao, $query);
 }
 

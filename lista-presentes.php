@@ -239,7 +239,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Nome</label><span class="text-muted"> (*)</span>
-                            <input type="text" name="nome" class="form-control">
+                            <input type="text" name="nome" maxlength="30" class="form-control" required>
                             <div class="text-right">
                             </div>
                           </div>
@@ -248,7 +248,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-6">
                           <div class="form-group mt-1">
                             <label>Valor</label><span class="text-muted"> (*)</span>
-                            <input name="valor" class="form-control money">
+                            <input name="valor" class="form-control money" maxlength="30" required>
                               <div class="text-right">
                               </div>
                           </div>
@@ -257,7 +257,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-6">
                           <div class="form-group mt-1">
                             <label>Data</label><span class="text-muted"> (*)</span>
-                            <input type="date" name="data" class="form-control">
+                            <input type="date" name="data" class="form-control" required>
                               <div class="text-right">
                               </div>
                           </div>
@@ -266,7 +266,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                         <div class="col-12">
                           <div class="form-group mt-1">
                             <label>Número de Operação</label><span class="text-muted"> (Opcional)</span>
-                            <input type="text" name="operacao" class="form-control">
+                            <input type="text" name="operacao" class="form-control" maxlength="30">
                             <div class="text-right">
                             </div>
                           </div>
@@ -277,6 +277,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
                             <label>Observação</label><span class="text-muted"> (Opcional)</span>
                             <textarea type="text" rows="2" maxlength="200" name="obs" class="form-control" id="TxtObservacoes"></textarea>
                             <div class="text-right">
+                              <p class="contador-caracteres">Caracteres <span class="contador-caracteres caracteres">200</span> Restantes<br></p>
                             </div>
                           </div>
                         </div>
@@ -324,6 +325,46 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
 
 <script src="js/adicionaFiltro.js"></script>
 <script src="js/filtraPresentes.js"></script>
+
+<!-- MASK -->
+<script src="js/jquery.mask.js"></script>
+<script>
+$(document).ready(function(){
+  $('.date').mask('00/00/0000');
+  $('.time').mask('00:00:00');
+  $('.date_time').mask('00/00/0000 00:00:00');
+  $('.cep').mask('00000-000');
+  $('.phone').mask('00000-0000');
+  $('.phone_with_ddd').mask('(00) 00000-0000');
+  $('.phone_us').mask('(000) 000-0000');
+  $('.mixed').mask('AAA 000-S0S');
+  $('.cpf').mask('000.000.000-00', {reverse: true});
+  $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.money').mask('000.000.000.000.000,00', {reverse: true});
+  $('.money2').mask("#.##0,00", {reverse: true});
+  $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+    translation: {
+      'Z': {
+        pattern: /[0-9]/, optional: true
+      }
+    }
+  });
+  $('.ip_address').mask('099.099.099.099');
+  $('.percent').mask('##0,00%', {reverse: true});
+  $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+  $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('.fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/,
+          fallback: '/'
+        },
+        placeholder: "__/__/____"
+      }
+    });
+  $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+});
+</script>
 
   </body>
 
