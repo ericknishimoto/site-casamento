@@ -96,5 +96,16 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+$('a[data-target="#modal-excluir"]').on('click', function (e) { 
+      e.preventDefault();
+      var url = $(this).data('url');
+      var id = $(this).data('id');
+      $('.delete').attr('href', url + id);
+      $('#modal-excluir').modal('show');
+      return false;
+  });
+</script>
+
 </body>
 </html>

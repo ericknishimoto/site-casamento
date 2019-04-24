@@ -150,7 +150,9 @@ $fotos = listaFotos($conexao);
                     <div class="col-md-3 text-center">
                       <img src="upload/<?= $foto['nome'] ?>"  class="img-thumbnail thumbnail img-rounded img-cover mt-4">
                       <div class="col-md-12">
-                        <button type="button" class="btn btn-danger fa fa-trash-o" data-toggle="modal" data-target="#modal-excluir"></button>
+                        <a data-url="apaga-foto?id=" data-id="<?= $foto['id'] ?>" class="btn btn-danger" data-toggle="modal" data-target="#modal-excluir">
+                          <i class="fa fa-trash-o"></i>
+                        </a>                        
                       </div>
                     </div>
                     <?php
@@ -195,7 +197,7 @@ require_once 'footer.php';
          <h4>Tem certeza que deseja excluir o item?</h4>
         </div>
         <div class="modal-footer">
-          <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger">Excluir</a>
+          <a type="button" class="btn btn-danger delete">Excluir</a>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
         </div>
       </div>
