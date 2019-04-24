@@ -70,6 +70,28 @@ $fotos = listaFotos($conexao);
   }
 ?>
 
+
+<?php if(isset($_GET["exclusao"]) && $_GET["exclusao"]=="true") {
+?>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="box box-success box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Excluído com sucesso!</h3>                  
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+        <p>Item excluído com sucesso.</p>
+        </div>
+        <!-- /.box-body -->
+        </div>
+      </div>
+  </div>
+<?php
+  }
+?>
+
       <form action="adiciona-foto.php" method="POST" enctype="multipart/form-data">
         
         <!-- Fotos -->
@@ -128,7 +150,7 @@ $fotos = listaFotos($conexao);
                     <div class="col-md-3 text-center">
                       <img src="upload/<?= $foto['nome'] ?>"  class="img-thumbnail thumbnail img-rounded img-cover mt-4">
                       <div class="col-md-12">
-                        <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger fa fa-trash-o"></a>
+                        <button type="button" class="btn btn-danger fa fa-trash-o" data-toggle="modal" data-target="#modal-excluir"></button>
                       </div>
                     </div>
                     <?php
@@ -162,32 +184,18 @@ require_once 'footer.php';
 ?>
 
 <!-- MODAL ALTERAR -->
-<div class="modal fade" id="modal-altera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modal-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header modal-success">
+        <div class="modal-header modal-danger">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Alterar Empresa</h4>
+          <h4 class="modal-title" id="myModalLabel">Excluir</h4>
         </div>
         <div class="modal-body">
-          <form action="altera-empresa.php" id="form-altera" method="POST">
-          <input type="hidden" name="id" class="altera-id"/>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group mt-1">
-                      <label>Nome:</label>
-                      <input type="text" required name="nome" class="form-control altera-nome">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+         <h4>Tem certeza que deseja excluir o item?</h4>
         </div>
         <div class="modal-footer">
-          <button type="submit" form="form-altera" class="btn btn-success" value="Submit">Alterar</button>
+          <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger">Excluir</a>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
         </div>
       </div>
