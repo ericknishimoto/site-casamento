@@ -128,7 +128,7 @@ var menu = document.querySelectorAll('#liPerso');
 var item = menu[0];
 item.classList.add("active");
 
-var submenu = document.querySelectorAll('#liPersoSecaoPresenca');
+var submenu = document.querySelectorAll('#liPersoSecaoFotos');
 var item = submenu[0];
 item.classList.add("active");
 </script>
