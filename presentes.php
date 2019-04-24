@@ -160,15 +160,15 @@ $categorias = listaCategorias($conexao);
 
             <div class="col-md-6">
                 <div class="form-group">
-                  <h4>Título do produto:</h4>
-                  <input type="text" name="titulo" class="form-control">
+                  <h4>Nome do produto: (*)</h4>
+                  <input type="text" name="titulo" class="form-control" required>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-group">
-                  <h4>Preço médio:</h4>
-                  <input name="valor" class="form-control money">
+                  <h4>Preço médio: (*)</h4>
+                  <input name="valor" class="form-control money" required>
                 </div>
             </div>
 
@@ -187,8 +187,8 @@ $categorias = listaCategorias($conexao);
 
             <div class="col-md-6">
                 <div class="form-group">
-                  <h4>Link:</h4>
-                  <input type="text" name="link" class="form-control">
+                  <h4>Link: (*)</h4>
+                  <input type="text" name="link" class="form-control" required>
                 </div>
             </div>
 

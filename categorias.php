@@ -139,8 +139,8 @@ $categorias = listaCategorias($conexao);
           <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                  <h4>Nome da Categoria:</h4>
-                  <input type="text" name="categoria" class="form-control uppercase">
+                  <h4>Nome da Categoria: (*)</h4>
+                  <input type="text" name="categoria" maxlength="20" class="form-control uppercase" required>
                 </div>
             </div>
             <div class="col-md-12">

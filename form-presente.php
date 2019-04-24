@@ -82,21 +82,21 @@ $categorias = listaCategorias($conexao);
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <h4>Nome do produto</h4>
+                    <h4>Nome do produto: (*)</h4>
                     <input name="titulo" type="text" class="form-control" placeholder="Nome completo" value="<?= $presente->titulo ?>" required>
                   </div>
                 </div>
  
                 <div class="col-md-6">
                   <div class="form-group">
-                    <h4>Preço Médio</h4>
+                    <h4>Preço Médio: (*)</h4>
                     <input name="valor" class="form-control money" value="<?= $presente->valor ?>" required placeholder="0">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <h4>Categoria</h4>
+                    <h4>Categoria:</h4>
                     <select name="categoria" class="form-control">
                     <option value="<?= $presente->categoriaId ?>" selected>
                       <?= $presente->categoria ?>
@@ -117,7 +117,7 @@ $categorias = listaCategorias($conexao);
          
                 <div class="col-md-6">
                   <div class="form-group">
-                    <h4>Link</h4>
+                    <h4>Link: (*)</h4>
                     <input name="link" type="text" class="form-control" value="<?= $presente->link ?>" required placeholder="0" >
                   </div>
                 </div>
