@@ -24,8 +24,8 @@ function listaTransferencias($conexao) {
     $transferencias = array();
     $query = "select * from transferencia_valores order by data desc";
     $resultado = mysqli_query($conexao, $query);
-    while ($Transferencia = mysqli_fetch_assoc($resultado)) {
-        array_push($transferencias, $Transferencia);
+    while ($transferencia = mysqli_fetch_assoc($resultado)) {
+        array_push($transferencias, $transferencia);
     }
     return $transferencias;
 }
