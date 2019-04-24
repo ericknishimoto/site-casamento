@@ -153,7 +153,7 @@ $categorias = listaCategorias($conexao);
             <div class="col-md-6">
                 <div class="form-group text-center">
                   <h4>Imagem do produto:</h4>
-                  <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md2"/>
+                  <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md"/>
                   <input type='file' id="imgInp" type="file" name="produto_imagem" class="form-control-file">
                 </div> 
             </div>
