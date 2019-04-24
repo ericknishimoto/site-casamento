@@ -83,8 +83,8 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Lista de Presentes</h2>
-            <h3 class="section-subheading text-muted">Sem presentes, sem festa =)</h3>
+            <h2 class="section-heading"><?= ($infos['presentes_titulo']) ?></h2>
+            <h3 class="section-subheading text-muted"><?= ($infos['presentes_subtitulo']) ?></h3>
           </div>
         </div>
         <div class="d-flex">
