@@ -104,7 +104,7 @@ $fotos = listaFotos($conexao);
             <div class="col-md-6">
               <div class="form-group">
                 <h4>Inserir foto:</h4>
-                <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md2"/>
+                <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md"/>
                 <input required id="imgInp"  type="file" name="nova_foto" class="form-control-file">
               </div>
             </div>
@@ -125,9 +125,9 @@ $fotos = listaFotos($conexao);
                   
                   foreach ($fotos as $foto) {
                     ?>
-                    <div class="col-xs-3 col-md-3 col-lg-3 text-center">
+                    <div class="col-md-3 text-center">
                       <img src="upload/<?= $foto['nome'] ?>"  class="img-thumbnail thumbnail img-rounded img-cover mt-4">
-                      <div class="col-xs-12">
+                      <div class="col-md-12">
                         <a href="apaga-foto?id=<?= $foto['id'] ?>" class="btn btn-danger fa fa-trash-o"></a>
                       </div>
                     </div>
