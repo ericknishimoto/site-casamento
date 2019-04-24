@@ -13,12 +13,12 @@ $transferencias = listaTransferencias($conexao);
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Trasnferências Recebidas
+        Transferências Recebidas
         <small>administre as transferências recebidas</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Trasnferências de Valores</li>
+        <li class="active">Transferências de Valores</li>
       </ol>
     </section>
 
