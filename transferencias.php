@@ -104,8 +104,10 @@ $transferencias = listaTransferencias($conexao);
                                   </td>
                                   <td class="text-center">
                                     <a href="confirma-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                                    <a href="nega-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
-                                    <a href="exclui-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1"><i class="fa fa-trash-o"></i></a>      
+                                    <a href="nega-transferencia.php?id=<?= $transferencia['id'] ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>   
+                                    <a data-url="exclui-transferencia?id=" data-id="<?= $transferencia['id'] ?>" class="btn btn-danger" data-toggle="modal" data-target="#modal-excluir">
+                                      <i class="fa fa-trash-o"></i>
+                                    </a>
                                   </td>
                               </tr>
             
@@ -129,6 +131,25 @@ $transferencias = listaTransferencias($conexao);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- MODAL EXCLUIR -->
+<div class="modal fade" id="modal-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-danger">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Excluir</h4>
+        </div>
+        <div class="modal-body">
+         <h4>Tem certeza que deseja excluir o item?</h4>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-danger delete">Excluir</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 <!-- Active Menu -->
 <script>
