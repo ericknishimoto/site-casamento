@@ -21,7 +21,7 @@ clearstatcache();
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li>Personalizar Página</li>
-        <li class="active">Seção Local</li>
+        <li class="active">Seção de Local</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -55,7 +55,7 @@ clearstatcache();
         <!-- Cabecalho -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Local</h3>
+            <h3 class="box-title">Insira as informações da seção de local:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">

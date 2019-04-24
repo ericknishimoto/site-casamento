@@ -56,7 +56,7 @@ clearstatcache();
         <!-- Cabecalho -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Local</h3>
+            <h3 class="box-title">Insira as informações do local02:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -71,7 +71,7 @@ clearstatcache();
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Imagem do quadro:</h4>
+                      <h4>Imagem</h4>
                       <img id="imgLocal" src="upload/<?= ($infos['local_local02_imagem']) ?>" class="thumbnail img-rounded img-md"/>
                       <input id="imgLocalInput" value="<?= ($infos['local_local02_imagem']) ?>" type="file" name="local_local02_imagem" class="form-control-file">
                       <input value="<?= ($infos['local_local02_imagem']) ?>" type="hidden" name="local_local02_imagem_anterior">

@@ -16,7 +16,7 @@ clearstatcache();
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dados da Noivo
+        Dados do Noivo
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
@@ -56,7 +56,7 @@ clearstatcache();
         <!-- Cabecalho -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Dados do Noivo</h3>
+            <h3 class="box-title">Insira as informações do noivo:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">

@@ -16,11 +16,10 @@ $fotos = listaFotos($conexao);
     <section class="content-header">
       <h1>
         Alterar meu site
-        <small>altere os dados do seu site principal</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Galeria de Fotos</li>
+        <li class="active">Upload de Fotos</li>
       </ol>
     </section>
 
@@ -97,7 +96,7 @@ $fotos = listaFotos($conexao);
         <!-- Fotos -->
         <div id="fotos" class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Galeria de Fotos</h3>
+            <h3 class="box-title">Insira as fotos para galeria:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -106,20 +105,6 @@ $fotos = listaFotos($conexao);
             <!-- /. tools -->
           </div>
           <!-- /.box-header -->
-          
-          <div class="col-md-12">
-                  <div class="box box-warning box-solid mt-2">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">Atenção</h3>
-                      <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                    <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
-                    </div>
-                  <!-- /.box-body -->
-                  </div>
-                </div>
 
           <div class="box-body">
 
@@ -128,6 +113,23 @@ $fotos = listaFotos($conexao);
                 <h4>Inserir foto:</h4>
                 <img id="blah" src="img/img.jpg" class="thumbnail img-rounded img-md"/>
                 <input required id="imgInp"  type="file" name="nova_foto" class="form-control-file">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+              <h4>&nbsp</h4>
+              <div class="box box-warning box-solid mt-5">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Atenção</h3>
+                  <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                <p>Fotos com mais de 2mb não são carregadas, use este aplicativo <a href="https://tinypng.com/" target="_blank">TinyPNG</a> para diminuí-la e tente novamente.</p>
+                </div>
+              <!-- /.box-body -->
+              </div>
               </div>
             </div>
 

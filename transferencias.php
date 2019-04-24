@@ -52,7 +52,7 @@ $transferencias = listaTransferencias($conexao);
         <!-- Mensagens -->
         <div id="mensagens" class="box">
           <div class="box-header with-border responsive">
-            <h3 class="box-title">Aprovação de mensagens</h3>
+            <h3 class="box-title">Controle de transferências</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">

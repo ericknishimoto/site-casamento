@@ -32,11 +32,11 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Home
+        Home / Dashboard
         <small>vejas os dados principais do seu site</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Home / Dashboard</a></li>
       </ol>
     </section>
    
@@ -148,7 +148,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
         <!-- Donut chart -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <i class="fa fa-pie-chart"></i>
+            <i class="fa fa-area-chart"></i>
 
             <h3 class="box-title">Contador de Visitas</h3>
 
