@@ -280,11 +280,12 @@ modal-dialog {
 }
 
 .btn-mapa{
-  background-color: #DDD;
-  color: gray;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 2px solid white;
+  color: white;
 }
 
 .btn-mapa:hover{
-  background-color: gray;
-  color: white;
+  background-color:white;
+  color: gray;
 }
