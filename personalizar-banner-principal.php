@@ -17,6 +17,7 @@ clearstatcache();
     <section class="content-header">
       <h1>
         Banner Principal
+        <small>edite os dados do seu site</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
@@ -55,7 +56,7 @@ clearstatcache();
         <!-- Cabecalho -->
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Insira as informações iniciais do site:</h3>
+            <h3 class="box-title">Insira as informações principais do site:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -65,7 +66,7 @@ clearstatcache();
           </div>
 
           <div class="col-md-12">
-                  <div class="box box-warning box-solid mt-2">
+                  <div class="box box-default box-solid mt-2">
                     <div class="box-header with-border">
                       <h3 class="box-title">Atenção</h3>
                       <!-- /.box-tools -->

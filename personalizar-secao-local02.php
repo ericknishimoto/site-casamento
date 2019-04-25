@@ -17,6 +17,7 @@ clearstatcache();
     <section class="content-header">
       <h1>
         Definir Local 02
+        <small>edite os dados do seu site</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
@@ -71,7 +72,7 @@ clearstatcache();
 
                 <div class="col-md-6">
                     <div class="form-group">
-                      <h4>Imagem</h4>
+                      <h4>Imagem:</h4>
                       <img id="imgLocal" src="upload/<?= ($infos['local_local02_imagem']) ?>" class="thumbnail img-rounded img-md"/>
                       <input id="imgLocalInput" value="<?= ($infos['local_local02_imagem']) ?>" type="file" name="local_local02_imagem" class="form-control-file">
                       <input value="<?= ($infos['local_local02_imagem']) ?>" type="hidden" name="local_local02_imagem_anterior">
@@ -93,7 +94,7 @@ clearstatcache();
                 </div>
 
                 <div class="col-md-6">
-                  <div class="box box-warning box-solid mt-2">
+                  <div class="box box-default box-solid mt-2">
                     <div class="box-header with-border">
                       <h3 class="box-title">Atenção</h3>
                       <!-- /.box-tools -->

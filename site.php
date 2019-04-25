@@ -33,7 +33,7 @@ $restanteFamilia = $convitesFamilia - $confirmadoFamilia;
     <section class="content-header">
       <h1>
         Home / Dashboard
-        <small>vejas os dados principais do seu site</small>
+        <small>veja os dados principais do seu site</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home / Dashboard</a></li>

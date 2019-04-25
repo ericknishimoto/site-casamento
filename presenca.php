@@ -134,7 +134,7 @@ $totalRestante = $totalGeral - $totalUtilizado;
     <!-- Cabecalho -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Adionar total de convidados</h3>
+        <h3 class="box-title">Adicione a quantidade de convidados:</h3>
         <!-- tools box -->
         <div class="pull-right box-tools">
           <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -155,19 +155,19 @@ $totalRestante = $totalGeral - $totalUtilizado;
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                  <h4>Total para Noiva:</h4>
+                  <h4>Total para noiva:</h4>
                   <input type="number" value="<?= $total['noiva']?>" name="noiva" class="form-control">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                  <h4>Total para Noivo:</h4>
+                  <h4>Total para noivo:</h4>
                   <input type="number" value="<?= $total['noivo']?>" name="noivo" class="form-control">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                  <h4>Total para Família/Padrinhos:</h4>
+                  <h4>Total para família/padrinhos:</h4>
                   <input type="number" value="<?= $total['familia']?>" name="familia" class="form-control">
                 </div>
             </div>

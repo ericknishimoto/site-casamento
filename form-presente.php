@@ -54,7 +54,7 @@ $categorias = listaCategorias($conexao);
         <!-- Presente -->
         <div id="fotos" class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Alterar presente</h3>
+            <h3 class="box-title">Alterar presente:</h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
               <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -71,7 +71,7 @@ $categorias = listaCategorias($conexao);
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <h4>Imagem do presente:</h4>
+                    <h4>Imagem do produto:</h4>
                     <div class="form-group text-center">
                       <img src="upload/<?= $presente->imagem ?>" id="blah" class="thumbnail img-rounded img-md"/>
                       <input value="<?= $presente->imagem ?>" type="file" name="presente_imagem" id="imgInp" class="form-control-file">
@@ -165,3 +165,14 @@ readURL(this);
 <?php
 require_once 'footer.php';
 ?>
+
+<!-- Active Menu -->
+<script>
+var menu = document.querySelectorAll('#liPresentes');
+var item = menu[0];
+item.classList.add("active");
+
+var submenu = document.querySelectorAll('#liCadProd');
+var item = submenu[0];
+item.classList.add("active");
+</script>

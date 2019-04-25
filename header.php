@@ -147,7 +147,7 @@
             </span>
           </a>
           <ul class="treeview-menu" style="">
-            <li id="liCadProd"><a href="presentes"><i class="fa fa-circle-o"></i> Cadastro de produtos</a></li>
+            <li id="liCadProd"><a href="presentes"><i class="fa fa-circle-o"></i> Cadastro de presentes</a></li>
             <li id="liCadCat"><a href="categorias"><i class="fa fa-circle-o"></i> Cadastro de categorias</a></li>
           </ul>
         </li><li id="liTransfer"><a href="transferencias">

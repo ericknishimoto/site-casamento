@@ -14,7 +14,7 @@ $categorias = listaCategorias($conexao);
     <section class="content-header">
       <h1>
         Lista de Presentes
-        <small>altere a lista de presentes</small>
+        <small>administre a lista de presentes</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
@@ -110,7 +110,7 @@ $categorias = listaCategorias($conexao);
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <p>Imagem do produto não localizada, tente novamente.</p>
+            <p>Imagem do presente não localizada, tente novamente.</p>
             </div>
             <!-- /.box-body -->
           </div>
@@ -124,7 +124,7 @@ $categorias = listaCategorias($conexao);
     <!-- Cabecalho -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Adionar Produto</h3>
+        <h3 class="box-title">Adionar Presente:</h3>
         <!-- tools box -->
         <div class="pull-right box-tools">
           <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -134,7 +134,7 @@ $categorias = listaCategorias($conexao);
       </div>
       <!-- Atenção -->
       <div class="col-md-12">
-        <div class="box box-warning box-solid mt-2">
+        <div class="box box-default box-solid mt-2">
           <div class="box-header with-border">
             <h3 class="box-title">Atenção</h3>
             <!-- /.box-tools -->
@@ -259,9 +259,9 @@ $categorias = listaCategorias($conexao);
                         ?>
                         </td>
                         <td class="text-center">
-                          <a href="confirma-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
-                          <a href="nega-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
-                          <a href="form-presente.php?id=<?= $presente->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
+                          <a href="confirma-presente?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa  fa-thumbs-o-up"></a>
+                          <a href="nega-presente?id=<?= $presente->id ?>" class="btn btn-default mr-1 fa fa-thumbs-o-down"></a>
+                          <a href="form-presente?id=<?= $presente->id ?>" class="btn btn-default mr-1"><i class="fa fa-edit"></i></a>       
                           <a data-url="exclui-presente?id=" data-id="<?= $presente->id ?>" class="btn btn-danger" data-toggle="modal" data-target="#modal-excluir">
                             <i class="fa fa-trash-o"></i>
                           </a>

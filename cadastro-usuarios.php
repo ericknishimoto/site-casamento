@@ -128,7 +128,7 @@ $usuarios = listaUsuarios($conexao);
 
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Todos usuários</h3>
+              <h3 class="box-title">Todos usuários:</h3>
             </div>
             <!-- /.box-header -->
             <!-- TABLE -->

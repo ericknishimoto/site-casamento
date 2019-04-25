@@ -124,7 +124,7 @@ $categorias = listaCategorias($conexao);
     <!-- Cabecalho -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Adionar categoria</h3>
+        <h3 class="box-title">Adionar categoria:</h3>
         <!-- tools box -->
         <div class="pull-right box-tools">
           <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
@@ -202,9 +202,7 @@ $categorias = listaCategorias($conexao);
                 </table>
               </div>
             </div>
- 
         </div>
-      </div>
 
     </section>
     <!-- /.content -->

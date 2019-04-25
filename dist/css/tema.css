@@ -13,3 +13,19 @@
 table#tabela {
     word-break: break-all;
   }
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #FF5D73;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+
+.box-primary {
+    border-top: 3px solid #FF5D73;
+    border-top-color: #FF5D73 !important;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}

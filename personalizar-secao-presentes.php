@@ -17,6 +17,7 @@ clearstatcache();
     <section class="content-header">
       <h1>
         Seção de Lista de Presentes
+        <small>edite os dados do seu site</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>

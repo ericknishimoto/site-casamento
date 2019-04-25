@@ -14,6 +14,7 @@ $infos = listaMeusite($conexao);
     <section class="content-header">
       <h1>
         Seção de Boas Vindas
+        <small>edite os dados do seu site</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
