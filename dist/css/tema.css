@@ -27,5 +27,12 @@ table#tabela {
 .box-primary {
     border-top: 3px solid #FF5D73;
     border-top-color: #FF5D73 !important;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+
+.box.box-default.box-solid {
+    box-shadow: 0 2px 10px rgb(196, 196, 196);
+}
+
+.main-sidebar {
+    box-shadow: 0 5px 10px #666;
 }
