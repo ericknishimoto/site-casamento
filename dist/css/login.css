@@ -1,11 +1,5 @@
-.login-page, .register-page {
-    background: #FF5D73;
-    color: white;
-}
-
-.login-box-body {
-    border-radius: 5px;
-    box-shadow: 2px 5px 10px #3333337d;
+.box-body {
+    color:black;
 }
 
 .btn {
@@ -15,9 +9,18 @@
     transition: 0.3s;
 }
 
-
 .btn:hover , .btn:focus, .btn:active {
     background-color: rgb(248, 70, 94);
     border-color: rgb(248, 70, 94);
     color: #fff;
+}
+
+.login-page{
+    background: #FF5D73;
+    color: white;
+}
+
+.login-box-body {
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px #3333337d;
 }

@@ -10,38 +10,39 @@ if(isset($_SESSION["usuario_logado"])) {
 }
 ?>
 
-<html><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BoraCasar | Painel de Administração</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
-  <!-- Espacamento -->
-  <link rel="stylesheet" href="dist/css/espacamento.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BoraCasar | Painel de Administração</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
+    <!-- Espacamento -->
+    <link rel="stylesheet" href="dist/css/espacamento.css">
 
-  <!-- TEMA MODIFICADO -->
-  <link rel="stylesheet" href="dist/css/login.css">
+    <!-- TEMA MODIFICADO -->
+    <link rel="stylesheet" href="dist/css/login.css">
 
-  <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  </head>
 <body class="hold-transition login-page">
     
 <div class="login-box">
@@ -49,75 +50,75 @@ if(isset($_SESSION["usuario_logado"])) {
      <b>BoraCasar</b> | Admin
   </div>
 
-
 <?php
 if(isset($_GET["falhaDeSeguranca"])) {
 ?>
 <div class="row">
-        <div class="col-xs-12">
-          <div class="box box-danger box-solid">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Falha no login!</h3>
-                  <!-- /.box-tools -->
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                Entre com o e-mail e senha corretos.
-                </div>
-                <!-- /.box-body -->
-            </div>
-          </div>
+  <div class="col-xs-12">
+    <div class="box box-danger box-solid">
+      <div class="box-header with-border">
+        <h3 class="box-title">Falha no login</h3>
+        <!-- /.box-tools -->
       </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+       Faça login para continuar!
+      </div>
+      <!-- /.box-body -->
+    </div>
+  </div>
+</div>
 <?php
 }
 ?>
 
-<?php if(isset($_GET["logout"]) && $_GET["logout"]==true) {
-    ?>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box box-success box-solid">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Deslogado</h3>                  
-                  <!-- /.box-tools -->
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                Usuário deslogado com sucesso!
-                </div>
-                <!-- /.box-body -->
-            </div>
-          </div>
+<?php
+if(isset($_GET["logout"]) && $_GET["logout"]==true) {
+?>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-success box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Deslogado</h3>                  
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          Usuário deslogado com sucesso!
+        </div>
+        <!-- /.box-body -->
       </div>
-    <?php
-      }
+    </div>
+  </div>
+<?php
+  }
   ?>
 
-<?php if(isset($_GET["login"]) && $_GET["login"]==0) {
-    ?>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box box-danger box-solid">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Erro!</h3>                  
-                  <!-- /.box-tools -->
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                Usuário ou senha inválido!
-                </div>
-                <!-- /.box-body -->
-            </div>
-          </div>
+<?php
+if(isset($_GET["login"]) && $_GET["login"]==0) {
+?>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-danger box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Erro</h3>                  
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          Usuário ou senha inválidos!
+        </div>
+        <!-- /.box-body -->
       </div>
-    <?php
-      }
-  ?>
+    </div>
+  </div>
+<?php
+}
+?>
+  
   <!-- /.login-logo -->
   <div class="login-box-body">
-  
- <p class="login-box-msg">Faça login para continuar &nbsp =)</p>
-
+  <p class="login-box-msg">Faça login para continuar</p>
     <form action="login.php" method="post">
       <div class="form-group has-feedback">
         <input required class="form-control" type="email" name="email" placeholder="Email">
@@ -146,13 +147,14 @@ if(isset($_GET["falhaDeSeguranca"])) {
 <script src="plugins/iCheck/icheck.min.js"></script>
 
 <script>
-    $(function () {
-      $('input').iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' /* optional */
-      });
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
     });
+  });
 </script>
 
-</body></html>
+</body>
+</html>
