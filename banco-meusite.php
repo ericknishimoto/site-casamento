@@ -3,6 +3,21 @@
 require_once('class/Convidado.php');
 require_once('class/Presente.php');
 
+function protect( &$str ) {
+/*** Função para retornar uma string/Array protegidos contra SQL/Blind/XSS Injection*/
+    if( !is_array( $str ) ) {                      
+            $str = preg_replace( '/(from|select|insert|delete|where|drop|union|order|update|database)/i', '', $str );
+            $str = preg_replace( '/(&lt;|<)?script(\/?(&gt;|>(.*))?)/i', '', $str );
+            $tbl = get_html_translation_table( HTML_ENTITIES );
+            $tbl = array_flip( $tbl );
+            $str = addslashes( $str );
+            $str = strip_tags( $str );
+            return strtr( $str, $tbl );
+    } else {
+            return array_filter( $str, "protect" );
+    }
+}
+
 function listaMeusite($conexao) {
     $infos = array();
     $query = "select * from meusite";
@@ -296,13 +311,25 @@ function alteraMensagensQuantidade ($conexao,
     return mysqli_query($conexao, $query);
     }
 
-function insereTransferencia ($conexao, $nome, $valor, $data, $operacao, $obs) { 
+function insereTransferencia ($conexao, $nome, $valor, $data, $operacao, $obs) {
+    
+    $nome = protect($nome);
+    $valor = protect($valor);
+    $data = protect($data);
+    $operacao = protect($operacao);
+    $obs = protect($obs);
+    
     $query = "INSERT INTO transferencia_valores (nome, valor, data, operacao, obs)
     VALUES ('{$nome}','{$valor}','{$data}','{$operacao}','{$obs}')"; 
     return mysqli_query($conexao, $query);
 }
 
 function insereMensagem ($conexao, $nome, $data, $mensagem) { 
+    
+    $nome = protect($nome);
+    $data = protect($data);
+    $mensagem = protect($mensagem);
+    
     $query = "INSERT INTO mensagens (nome, data, mensagem)
     VALUES ('{$nome}','{$data}','{$mensagem}')"; 
     return mysqli_query($conexao, $query);
@@ -351,16 +378,21 @@ function excluiFoto($conexao, $id) {
 
 // CONVIDADOS
 
-function insereConvidado ($conexao, Convidado $convidado) { 
+function insereConvidado ($conexao, Convidado $convidado) {
+    $nome = protect($convidado->nome);
+    $confirmacao = protect($convidado->confirmacao);
+    $email = protect($convidado->email);
+    $telefone = protect($convidado->telefone);
+    $categoria = protect($convidado->categoria);
+
     $query = "INSERT INTO convidados (nome, confirmacao, email, telefone, categoria)
-    VALUES ('{$convidado->nome}','{$convidado->confirmacao}',
-            '{$convidado->email}','{$convidado->telefone}','{$convidado->categoria}')"; 
+    VALUES ('{$nome}','{$confirmacao}','{$email}','{$telefone}','{$categoria}')"; 
     return mysqli_query($conexao, $query);
 }
 
 function listaConvidados($conexao) {
     $convidados = array();
-    $query = "select * from convidados";
+    $query = "select * from convidados order by nome asc";
     $resultado = mysqli_query($conexao, $query);
     while ($convidado_array = mysqli_fetch_assoc($resultado)) {
         

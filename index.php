@@ -120,7 +120,7 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           <a class="seta-inicio js-scroll-trigger animated fadeIn delay-1s" href="#section01"><i class="fas fa-angle-down animated pulse infinite"></i></a>
         </div>
       </div>
-  </header>
+    </header>
 
     <!-- Section #01 -->
     <section id="section01" class="section01 text-center">
@@ -255,7 +255,6 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
           </button>
         </div>
 
-        </form>
       </div>
       <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>
@@ -314,53 +313,46 @@ https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE
             Ver mapa
             </a>
             
-          </div>
-        </div>         
-
-        </form>
-      </div>
-      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
+            </div>
+          </div>         
+        </div>
+        <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
     </section>
 
  <!-- LISTA DE PRESENTES -->
  <section id="presentes" class="presentes text-center">
-      <div class="container mb-3">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading"><?= ($infos['presentes_titulo']) ?></h2>
-            <h3 class="section-subheading text-muted"><?= ($infos['presentes_subtitulo']) ?></h3>
-          </div>
-        </div>
-        <div class="d-flex">
-            <hr class="my-auto flex-grow-1" style="color:gray;">
-            <div class="px-4" style="color:gray;"><i class="fas fa-gift"></i></div>
-            <hr class="my-auto flex-grow-1" style="color:gray;">
-        </div>              
-        
-        <div class="row d-flex justify-content-center">
-          <a href="lista-presentes" class="btn btn-lg botao-todos text-muted link mr-2">
-            Ver lista
-          </a>
-          <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-transferencia">
-            Transferir valor
-          </button>
-        </div>
-
-        </form>
+  <div class="container mb-3">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading"><?= ($infos['presentes_titulo']) ?></h2>
+        <h3 class="section-subheading text-muted"><?= ($infos['presentes_subtitulo']) ?></h3>
       </div>
-      <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
-    </section>
+    </div>
+    <div class="d-flex">
+        <hr class="my-auto flex-grow-1" style="color:gray;">
+        <div class="px-4" style="color:gray;"><i class="fas fa-gift"></i></div>
+        <hr class="my-auto flex-grow-1" style="color:gray;">
+    </div>              
+    
+    <div class="row d-flex justify-content-center">
+      <a href="lista-presentes" class="btn btn-lg botao-todos text-muted link mr-2">
+        Ver lista
+      </a>
+      <button type="button" class="btn btn-lg botao-todos text-muted bg-color-gray" data-toggle="modal" data-target="#modal-transferencia">
+        Transferir valor
+      </button>
+      </div>
+    </div>
+    <!-- <a class="seta-section js-scroll-trigger" href="#mensagens"><i class="fas fa-angle-down animated pulse infinite"></i></a> -->
+  </section>
 
 
     <!-- Fotos -->
-    <section id="fotos">
-
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading" style="color:white;"><?= ($infos['fotos_titulo']) ?></h2>
-              <h3 class="section-subheading" style="color:white;"><?= ($infos['fotos_subtitulo']) ?></h3>
-            </div>
-
-
+   <section id="fotos">  
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading" style="color:white;"><?= ($infos['fotos_titulo']) ?></h2>
+        <h3 class="section-subheading" style="color:white;"><?= ($infos['fotos_subtitulo']) ?></h3>
+      </div>
       <div class="container">
         <div class="row text-center d-flex justify-content-center">
             <?php
