@@ -13,7 +13,7 @@ if(isset($_SESSION["usuario_logado"])) {
 <html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MeuS2 | Painel de Administração</title>
+  <title>BoraCasar | Painel de Administração</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -24,10 +24,11 @@ if(isset($_SESSION["usuario_logado"])) {
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
-  <!-- Principal -->
-  <link rel="stylesheet" href="dist/css/style.css">
   <!-- Espacamento -->
   <link rel="stylesheet" href="dist/css/espacamento.css">
+
+  <!-- TEMA MODIFICADO -->
+  <link rel="stylesheet" href="dist/css/login.css">
 
   <link rel="shortcut icon" type="image/png" href="dist/img/favicon.ico">
 
@@ -45,7 +46,7 @@ if(isset($_SESSION["usuario_logado"])) {
     
 <div class="login-box">
   <div class="login-logo">
-     <b>MeuS2</b> | Administração
+     <b>BoraCasar</b> | Admin
   </div>
 
 
@@ -115,7 +116,7 @@ if(isset($_GET["falhaDeSeguranca"])) {
   <!-- /.login-logo -->
   <div class="login-box-body">
   
- <p class="login-box-msg">Faça login para continuar</p>
+ <p class="login-box-msg">Faça login para continuar &nbsp =)</p>
 
     <form action="login.php" method="post">
       <div class="form-group has-feedback">
