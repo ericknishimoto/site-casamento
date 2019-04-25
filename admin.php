@@ -77,11 +77,7 @@ if(isset($_GET["logout"]) && $_GET["logout"]==true) {
 ?>
   <div class="row">
     <div class="col-xs-12">
-      <div class="box box-success box-solid">
-        <div class="box-header with-border">
-          <h3 class="box-title">Deslogado</h3>                  
-          <!-- /.box-tools -->
-        </div>
+      <div class="box box-default box-solid">
         <!-- /.box-header -->
         <div class="box-body">
           Usuário deslogado com sucesso!
