@@ -152,5 +152,14 @@ if(isset($_GET["login"]) && $_GET["login"]==0) {
   });
 </script>
 
+<script>
+    let bg = document.querySelector(".login-page");
+    bg.style.background= "linear-gradient(0deg,rgba(0, 0, 0, 0),rgba(0, 0, 0, .4)),url('img/bg-admin.jpg')";
+    bg.style.backgroundRepeat = "no-repeat";
+    bg.style.backgroundAttachment = "fixed";
+    bg.style.backgroundPosition = "center";
+    bg.style.backgroundSize = "cover";
+  </script>
+
 </body>
 </html>
