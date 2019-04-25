@@ -6,9 +6,9 @@ RewriteRule ^(.*)$ $1\.php
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-ErrorDocument 401 http://jades2allan.com.br/error
-ErrorDocument 403 http://jades2allan.com.br/error
-ErrorDocument 500 http://jades2allan.com.br/error
+ErrorDocument 401 https://jades2allan.com.br/error
+ErrorDocument 403 https://jades2allan.com.br/error
+ErrorDocument 500 https://jades2allan.com.br/error
